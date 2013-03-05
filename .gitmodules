@@ -1,0 +1,6 @@
+[submodule "spirit"]
+	path = spirit
+	url = https://github.com/cschaffner/spirit
+[submodule "windmill"]
+	path = windmill
+	url = https://github.com/cschaffner/windmill
