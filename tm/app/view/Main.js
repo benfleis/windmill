@@ -11,7 +11,7 @@ Ext.define('TouchMill.view.Main', {
                 align: 'center',
             },
         },
-        tabBarPosition: 'bottom',
+        tabBarPosition: 'top',
         items: [
             {
                 xtype: 'v_events',
