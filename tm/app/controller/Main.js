@@ -1,8 +1,22 @@
 Ext.define('TouchMill.controller.Main', {
     extend: 'Ext.app.Controller',
 
-    init: function() {
-        console.log('TouchMill.controller.Main.init()');
+    config: {
+        cls: 'app',
+
+        //console.log('TouchMill.controller.Main.init()');
+        refs: { games: 'v_games_list' },
+
+        control: {
+            'v_games_list': {
+                //disclose: function() { this.push_game_view(); },
+            }
+        },
+
+        push_game_view: function() {
+            console.log('asdf');
+            this.getGames().push({ xtype: 'v_game_view' });
+        },
     },
 
 });

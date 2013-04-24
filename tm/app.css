@@ -1,0 +1,790 @@
+/**
+* Elements en standaard classes
+*/
+body{
+    text-align:center; /* text-align om IE - die zich niet aan de standaarden houdt - ook te lcentreren */
+    margin:0;
+    font: normal 90% 'Helvetica Neue',Helvetica, Arial, sans-serif;
+    color: #eed2b1;
+    letter-spacing:1px;
+    line-height:140%;
+    background:#442d20 url(../img/bg_tile.jpg) center repeat-y;
+}
+
+/* DEFAULT STYLE CLASSES /**********************************************/
+img{border: none;}
+h1{     
+    font-weight: bold;
+    font-size: 140%;
+    color: #f08201; 
+    margin: 20px 0 0 0; 
+    /*text-transform:uppercase;*/
+    letter-spacing:1px;
+    line-height: 100%;
+}
+h2{ 
+    font-weight: bold;
+    font-size: 120%;
+    color: #ffc820; 
+    margin-top: 20px; 
+    letter-spacing:1px;
+    line-height: 100%;
+}
+h2 a{
+    color: #ffc820 !important;
+}
+h3{ 
+    font-weight: bold;
+    font-size: 100%;
+    color: #ffc820; 
+    margin: 24px 0 2px 0;
+    letter-spacing:1px;
+    line-height: 100%;
+}
+h3 a{
+    font-weight: bold;
+    font-size: 100%;
+    color: #ffc820; 
+    margin: 24px 0 2px 0;
+    letter-spacing:1px;
+    line-height: 100%;
+    text-decoration:none;
+}
+h4{ 
+    font-weight: bold;
+    font-size: 100%;
+    color: #eed2b1; 
+    margin: 0;
+}
+a{ 
+    color: #eed2b1;
+    text-decoration:underline;
+    /*border-bottom:thin dotted;*/
+}
+a:hover{
+    color: #ffc820;
+}
+.highlight {
+    background-color:#eed2b1;
+    color: #000;
+}
+.ancortop{
+    text-align: right;
+}
+.linethrough{
+    text-decoration:line-through;
+}
+
+/**
+* ID's en specifieke classes
+*/
+#bg{
+    background: url(../img/bg_sky_2011.jpg) repeat-x;
+}
+/* WRAPPER */
+#wrapper{
+    position:relative;
+    margin:0 auto;      /*centreren: margins op auto zodat de mares even groot zijn */
+    width: 100%;
+    text-align:left;
+    background:url(../img/bg_underground_2011.jpg) no-repeat center 229px;
+}
+/* HEADER /**********************************************/
+#newdate{
+    display: none;
+    margin: 0;
+    margin-left: -92px;
+    margin-top: -25px;
+
+}
+#header{
+    position:relative;
+    margin: 0;
+    margin-top: -27px;
+    width: 100%;
+    height: 229px;
+    background:url(../img/bg_header_2012.jpg) no-repeat center top;
+    text-align:center;
+    
+    cursor:pointer;
+}
+#header #banner{
+    margin-top: -20px;
+    margin-left: 0; 
+}
+.alt {
+    display:none;
+}
+#header #banner #alternateContent h1{
+    display:none;
+}
+#header #banner #alternateContent h2{
+    display: none;
+}
+#header #banner #alternateContent p{
+    display:none;
+}
+#header #banner #alternateContent #windmillwinduplogo{
+    display:none;
+}
+#header #banner #alternateContent #olifant{
+    z-index:10;
+    position:relative;
+    background:url(../img/olifant_vliegend.png) no-repeat center 10px; 
+    margin: 0 auto;
+    width: 480px;
+    height: 200px;
+    text-indent:-9999em; /* text niet laten zien in het design*/
+    font-size:0px;
+    text-decoration:none;
+}
+
+/* SCHEDULE*/
+ul.schedule {
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding: 0;
+    width: 600px;
+}
+ul.schedule li{
+    padding: 4px 0;
+}
+ul.schedule li:first-of-type{
+    color: #eed2b1;
+    background-color:#19100c;
+    border-bottom:solid 1px #442d20;
+    font-style:italic;
+    font-weight:normal;
+}
+ul.schedule li:nth-of-type(2n){
+    background-color:#19100c;
+}
+ul.schedule li span.time{
+    display: inline-block;
+    width: 60px;
+    vertical-align:top;
+}
+ul.schedule li span.description{
+    display:inline-block;
+    width: 470px;
+    vertical-align:top;
+}
+div#textthursday, div#textfriday, div#textsaturday, div#textsunday{
+    display:block;
+}
+
+/* LIVE MENU /**********************************************/
+#livemenu{
+    display:none;
+    -webkit-transform:rotate(-60deg);
+    -moz-transform:rotate(-60deg);
+    -o-transform:rotate(-60deg);
+    -ie-transform:rotate(-60deg);
+    transform:rotate(-60deg);
+    margin: 0 auto;
+    margin-top: -260px;
+    margin-left: 70%;
+    width: 300px;
+    z-index:999;
+}
+#livemenu a{
+    display: block;
+    margin: 4px 0;
+    text-decoration:none;
+    text-align: left;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+#livemenu .mobile{
+    margin-left: -40px;
+    padding: 9px;
+    background:#19100c;
+    font-size: 1.3em;
+}
+#livemenu .livescoring{
+    margin-left: -80px;
+    padding: 12px;
+    background:#ffc820;
+    color: #19100c;
+    font-size: 1.45em;
+}
+#livemenu .livescoring:hover{
+    color: white;
+}
+#livemenu .picasa{
+    margin-left: -40px;
+    padding: 9px;
+    background:#f90;
+    color: #333;
+    font-size: 1.3em;
+}
+#livemenu .picasa:hover{
+    color: #FFF;
+}
+#livemenu .twitter{
+    margin-left: -20px;
+    padding: 6px;
+    background:#3c0;
+    color: #050;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+#livemenu .twitter:hover{
+    color: #FFF;
+}
+#livemenu .clinic{
+    margin-left: 0px;
+    padding: 22px 12px;
+    background:#09f;
+    color: #FFF;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+}
+#livemenu .clinic:hover{
+    background:#9cf;
+    color: #09f;
+}
+
+
+
+/* MENU /**********************************************/
+#menu_wrapper{
+    margin: 0 auto;
+    margin-top:16px;
+    width: 1000px;
+    height:40px;
+}
+
+
+a.mobileNav{
+    display: block;
+    margin:0;
+    padding: 6px;
+
+    position:relative;
+    top: 0px;
+    right: 0px;
+    background:#19100c;
+
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0;
+    text-decoration:none;
+
+    text-align: right;  
+}
+
+
+#facebook_share{
+    float: left;
+    margin: 6px 0 0 10px;
+}
+#twitter{
+    background:url(../img/logos/twitter_small-a.png) no-repeat; 
+    width: 22px;
+    height: 22px;
+    float: left;
+    margin: 3px 0 0 30px;
+    text-indent:-9999em; /* text niet laten zien in het design*/
+    font-size:0px;
+    text-decoration:none;
+}
+
+
+/*
+ul#menu{
+    width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+ul#menu li{
+    float: left;
+    margin:0;
+    padding: 0 5px;
+    font: bold 13px Helvetica, Verdana, Arial, sans-serif;
+    letter-spacing: 1px;
+    line-height:12px;
+    min-height: 1px;
+    vertical-align: bottom;
+}
+ul#menu li a{ 
+    display: block;
+    text-decoration: none;
+    color: #fe0;
+    background: #2f2825;
+    padding: 4px 8px;
+    border-bottom: 0;
+}
+ul#menu li a:hover{
+    color: #FFF;
+}
+ul#menu li a.selected{
+    color: #FFF;
+}
+
+ul#menu li ul{
+    display:none;
+}
+*/
+
+
+/* CONTENT /**********************************************/
+#content_wrapper{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    text-align:left;
+}
+#content_wrapper #main{
+    float: left;
+    width: 580px;
+    margin: 0 0 0 50px;
+    padding: 10px 50px;
+}
+#content_wrapper #sidebar{
+    width: 210px;
+    margin: 10px 0 0 720px;
+    padding: 10px 35px;
+}
+#content_wrapper #sidebar h2{
+    margin: 10px 0 0 0;
+    text-transform:uppercase;
+    /*font-variant: small-caps;*/
+    line-height:120%;
+    letter-spacing:0px;
+}
+
+#content_wrapper #sidebar .partner{
+    margin-bottom: 16px;
+}
+
+
+/* pickup scroll list in sidebar*/
+#pscroller1{
+    width: 200px;
+    height: 60px;
+    padding: 4px 0;
+    margin-bottom: 10px;
+    border-top:1px solid #442d20;
+    border-bottom:1px solid #442d20;
+}
+.rssclass .rsstitle{
+    display:inline;
+    font-weight: bold;
+}
+.rssclass .rssdescription{
+    display:inline;
+    text-indent: 6px;
+}
+.rssclass .rssdate{
+    display:inline;
+    font-size:80%;
+}
+.rssclass a{
+
+}
+/* Carbon footprint*/
+#carbonfootprint{
+    width:220px; 
+    height:280px;
+    margin:0; 
+    float:right;
+    text-align:left;
+    background-image:url(../img/carbonfootprint_leaf.gif);
+    background-repeat:no-repeat;
+    background-position:top right;
+}
+#carbonfootprint h2{
+    font-weight: bold;
+    font-size: 22px;
+    margin: 40px 0 0 44px; 
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+#carbonfootprint .euro{
+    display:block;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin: 16px 0 0 34px;
+}
+#carbonfootprint .teams{
+    display:block;
+    font-size:12px;
+    font-weight:bold;
+    color:#efdfbf;
+    line-height: 100%;
+    margin: 18px 0 0 44px;
+}
+#carbonfootprint .date{
+    display: block;
+    font-size:11px;
+    font-style:italic;
+    margin: 2px 0 0 62px;
+}
+
+
+
+/* Twitter */
+#twitter_div {
+    width: 200px;
+    padding: 4px 0;
+    margin-bottom: 10px;
+}
+#twitter_div ul{
+    list-style: none;
+    margin: 4px 0 6px 0;
+    padding: 0;
+    letter-spacing:1px;
+    line-height:17px;
+    border-bottom:1px solid #442d20;
+}
+#twitter_div ul li {
+    padding: 6px 0;
+    border-top:1px solid #442d20;
+} 
+#twitter_div ul li a {
+}
+#twitter_div ul li a:hover {
+} 
+
+/* HOME*/
+.dark{
+    background-color: #19100c;  
+}
+/* NEWS pagina*/
+#news{
+    margin: 40px 0;
+}
+/* news op home */
+#latestnews{
+    margin: 20px 0;
+    vertical-align: top;
+    }
+#latestnews .text{
+    display:inline-block;
+    width: 270px;
+    padding: 0;
+    margin: 10px 20px 10px 0;
+    text-align:top;
+    vertical-align: top;
+}
+#latestnews .text h3 a{
+    margin-bottom:4px;
+    letter-spacing: 1px;
+    text-decoration:none;
+}
+#latestnews .text .date{
+    display: block;
+    margin-bottom: 6px;
+    font-size: 80%;
+    color: #eed2b1;
+    /*border-bottom: solid 1px #19100c;*/
+}
+/* news archive*/
+#newsarchive .text h3 a{
+    font-weight: bold;
+    color: #ffc820; 
+    margin: 0;
+    letter-spacing: 1px;
+    text-decoration:none;
+}
+/* news article*/
+#newsarticle{
+    margin: 20px 0;
+}
+#newsarticle .text .date{
+    /*margin-left: 10px;*/
+    margin-bottom: 20px;
+    display: block;
+    font-size: 80%;
+    color: #eed2b1;
+    /*border-bottom: solid 1px #19100c;*/
+}
+
+/* teams */
+#teams ol{
+    list-style-position: outside;
+    margin-left: 0px;
+    width: 550px;
+}
+#teams li{
+    margin-top: 4px;
+    clear: left;
+}
+#teams .odd{
+    background-color:#19100c;
+}
+#teams .teamname{
+    display:inline-block;
+    width: 260px;
+}
+#teams .teamfee{
+    display:inline-block;
+    width: 180px;
+}
+#teams .playersfee{
+    width: 60px;
+}
+#teams .tableheader{
+    font-size: 80%;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* ****************** */
+#photosvideo .topalbum{
+    float: left;
+    margin: 10px 20px 10px 0;
+    text-align:center;
+}
+#photosvideo .topalbum img{
+    border:solid 6px #fff;
+    margin-top: 2px;
+    width: 260px;
+}
+#photosvideo .album{
+    float: left;
+    margin: 10px 40px;
+}
+#video h2{
+    margin-top: 40px;
+
+}
+#video div{
+    display:inline-block;
+    margin: 0 10px 20px 0;
+}
+#video p{
+    margin:0;
+}
+
+
+/*pickup */
+#pickup .tableheader{
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+#pickup ol{
+    margin-left:-20px   ;
+}
+#pickup li{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+#pickup li p{
+    
+}
+#pickup li.odd{
+    background-color:#19100c;
+}
+#pickup span.date{
+    font-size:10px;
+    font-style: italic;
+    display: block;
+}
+#pickup .quote{display:none;}
+#pickup #lookingforteam{margin-top: 10px;}
+#pickup #lookingforteam span.team{display:none;}
+#pickup #lookingforplayer{margin-top: 10px;}
+#pickup form{
+    background-color: #19100c;
+    /*color:#19100c;*/
+    padding: 12px;
+    margin-top: 20px;
+}
+/* */
+#staff div.staff{
+    width: 120px;
+    height: 160px;
+    float: left;
+    text-align:center;
+    margin: 10px;
+}
+#staff .staff .text{
+    font-size:11px;
+    line-height: 100%;
+    text-align: center;
+    display:block;
+    margin: 6px 0;
+}
+
+
+/* GOOGLE FORM */
+#volunteers form{
+    background-color: #19100c;
+    /*color:#19100c;*/
+    padding: 12px;
+    margin-top: 20px;
+    }
+.ss-text{
+}
+.ss-q-title{
+    font-weight: bold;
+    font-size: 13px;
+    color: #eed2b1; 
+    margin: 0;
+}
+.ss-q-help{
+    display: block;
+}
+.ss-choices{
+    list-style: none;
+    margin: 10px 0 40px 0;
+    padding: 0;
+    width: 600px;
+}
+.ss-required-asterisk{
+    font-size: 22px;
+    color: #f08201;
+}
+
+/* sponsors */
+#home ul.sponsorlist{
+    list-style: none;
+    width: 100%;
+    margin: 0 0 40px 0;
+    padding: 0;
+    vertical-align: top;
+    text-align:center;
+}
+#home ul.sponsorlist li{
+    width: 190px;
+    height: 170px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align:center;
+    vertical-align: top;
+}
+#home ul.sponsorlist li a{
+    cursor:auto;
+}
+/******** Sponsor pagina *******/
+#sponsors ul.sponsorlist{
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding: 0;
+    vertical-align: top;
+}
+#sponsors ul.sponsorlist li{
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 20px;
+}
+#sponsors ul.sponsorlist li a.logo{
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+#sponsors ul.sponsorlist li a.logo img{
+    width: 190px;
+}
+#sponsors ul.sponsorlist li span{
+    width: 360px;
+    margin-left: 10px;
+    display:inline-block;
+}
+
+/* press */
+#press .image{
+    float: left;
+    margin-right: 10px;
+}
+
+/* style voor ffindr lijst */
+#main #registration .counter{ /* die irritante bullet in de team lijst van ffindr*/
+    display:none;
+}
+#main #registration .bold{ 
+    font-weight: bold;
+}
+#main #registration .normal{
+    font-weight:normal;
+}
+#main #registration .small{
+    font-size:10px;
+}
+#main #registration .grey{
+    color: #4f423d;
+}
+
+/* FOOTER /**********************************************/
+#footer_wrapper{
+    padding: 0;
+    width: 100%;
+    height: 400px;
+    background:url(../img/bg_footer.jpg) no-repeat center top;
+    text-align:center;
+    vertical-align:bottom;
+}
+#footer_wrapper .footertext{
+    width: 800px;
+    padding-top: 220px;
+    margin: 0 auto;
+    text-align:center;
+}
+#footer_wrapper .footertext .text{
+    width: 200px;
+    text-align:center;
+    float: left;
+    margin: 0;
+}
+#footer_wrapper .footertext .textttwwoo{
+    width: 200px;
+    text-align:center;
+    float: left;
+    margin-top: 70px;
+}
+#footer_wrapper .footertext .textttwwoo a{
+    padding: 2px;
+    background-color:#eed2b1;
+    color: #000;
+    text-decoration: none;
+}
+#footer_wrapper .footertext .textttwwoo a:hover{
+    background-color: #00c2f3;
+}
+
+/**********************************************/
+.clearer{
+  height:1px;
+  overflow:hidden;
+  margin-top:-1px;
+  clear:both;
+}
+
+
+/************/
+/* STAR */
+span.clinic {
+    position: absolute;
+    top: 10px;
+    right: 260px;
+    width: 187px;
+    height: 187px;
+    z-index: 3; 
+
+    background-image: url(../img/star.png);
+
+    
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
+    
+    text-align:center;
+}
+span.clinic a{
+    display: block;
+    color: black;
+    text-align:center;
+    font-size: 130%;
+    line-height: 140%;
+    font-weight: bold;
+    text-decoration: none;
+
+    margin-top: 60px;
+}
+
