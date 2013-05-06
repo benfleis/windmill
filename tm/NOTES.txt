@@ -59,3 +59,10 @@ Name
 
 Player main
 
+--------
+
+scores can only be entered by team members, client side filtering || or use windmill w/ no team binding
+
+code in team pack?  4 digit from paper at first login
+
+email invitation to create accounts

@@ -4,7 +4,6 @@ Ext.define('TouchMill.controller.Main', {
     config: {
         cls: 'app',
 
-        //console.log('TouchMill.controller.Main.init()');
         refs: { games: 'v_games_list' },
 
         control: {
