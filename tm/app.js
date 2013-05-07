@@ -2,13 +2,14 @@ Ext.Loader.setConfig({
     enabled: true,
 });
 
+// XXX need to add way to logout, effectively clearing localStorage.TouchMill
 Ext.application({
     name: 'TouchMill',
 
-    models: [ 'Tournament', 'TournamentTeam' ],
-    // XXX need to add way to logout, effectively clearing localStorage.TouchMill
-    views: [ 'Main', 'Events', 'Games', 'GameView', ],
+    models: [ 'Event', 'Tournament', ], //'TournamentTeam' ],
+    views: [ 'Main', 'Events', 'Tournaments', 'Games', 'GameView', 'DevConfig', ],
     controllers: [ 'Main', ],
+    stores: [ 'Events', 'Tournaments', ],
 
     launch: function() {
         // local storage debugging:
@@ -31,7 +32,7 @@ Ext.application({
 
         // XXX debug hack for localhost testing
         var debug = !!url_params.debug;
-        if (session.length === 0 && window.location.origin === 'http://localhost:8080')
+        if (window.location.origin === 'http://localhost:8080')
             hash_params = { access_token: '9944451a27', expires_in: 60 * 60 * 24 * 365 * 5, scope: 'universal', };
 
         if (url_params.logout) {
@@ -47,8 +48,9 @@ Ext.application({
         logged_in = session.lv_token && (Date.now() < (session.lv_expiration || 0));
 
         if (logged_in) {
-            if (window.location.hash) {
-                // http://stackoverflow.com/questions/1397329/how-to-remove-the-hash-from-window-location-with-javascript-without-page-refresh
+            if (window.location.hash && window.location.hash.search('access_token=') != -1) {
+                // remove trailing hash IFF it contains LV info; not sure how
+                // this will complicate using routes in Touch.
                 var l = window.location;
                 history.replaceState('', document.title, l.pathname + l.search);
             }
@@ -58,5 +60,24 @@ Ext.application({
             if (!url_params.dont_login)
                 window.open('http://playwithlv.com/oauth2/authorize/?client_id=4836b4afe7458d0bbeb43f593a7e89&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/index.html', '_self')
         }
+    },
+
+    // --------------------------------------------------------------------------
+    // application wide variables here
+    //
+    servers: {
+        leaguevine: {
+            app_url: 'http://monkey.org/~ben/tm/index.html',
+            client_id: '4836b4afe7458d0bbeb43f593a7e89',
+            login_url: 'http://leaguevine.com/oauth2/authorize/?client_id=4836b4afe7458d0bbeb43f593a7e89&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/index.html',
+            api_url: 'http://api.playwithlv.com/v1',
+
+        },
+        playwithlv: {
+            app_url: 'http://monkey.org/~ben/tm/index.html',
+            client_id: '4836b4afe7458d0bbeb43f593a7e89',
+            login_url: 'http://playwithlv.com/oauth2/authorize/?client_id=4836b4afe7458d0bbeb43f593a7e89&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/index.html',
+            api_url: 'http://api.playwithlv.com/v1',
+        },
     },
 });

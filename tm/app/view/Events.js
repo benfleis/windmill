@@ -3,9 +3,8 @@ Ext.define('TouchMill.view.Events', {
     xtype: 'v_events',
 
     config: {
-        title: 'Events',
         iconCls: 'star',
-
+        store: 'Events',
         itemTpl: '{name} / <small>{description}</small>',
     },
 });

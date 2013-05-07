@@ -1,15 +1,21 @@
-Ext.define('TouchMill.store.Tournament', {
+Ext.define('TouchMill.store.Events', {
     extend  : 'Ext.data.Store',
 
     config: {
-        model: 'TouchMill.model.Tournament',
-        //groupField: 'fullTitle',
+        model: 'TouchMill.model.Event',
         autoLoad: true,
 
         proxy: {
             type: 'ajax',
-            url: 'test/data/Tournament.json',   // will change once dynamic
+            url: 'test/data/events.json',     // will change once dynamic
             reader: { type: 'json', },
+
+            // XXX why do these do nothing?
+            success: function(response) { console.log('fetched Tournament successfully.'); },
+            failure: function(response) { console.log('Tournament fetch failed!'); },
+            callback: function(options, success, response) {
+                console.log('Events store callback.');
+            },
 
             // The following must be set to disable extra parameters being sent to the API, which breaks it
             //noCache: false,

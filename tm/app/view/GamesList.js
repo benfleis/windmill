@@ -4,7 +4,7 @@ Ext.define('TouchMill.view.GamesList', {
     //requires: 'TouchMill.store.Games',
 
     config: {
-        title: 'GamesList',
+        //title: 'GamesList',
         itemTpl: '{team_1} vs. {team_2}<br/><small>{time} @ {location}</small>',
         onItemDisclosure: true,
     },

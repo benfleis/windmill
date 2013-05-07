@@ -9,7 +9,7 @@ Ext.define('TouchMill.view.GameView', {
             styleHtmlContent: true,
         },
         direction: 'horizontal',
-        title: 'Game Summary',
+        //title: 'Game Summary',
         items: [
             {
                 html: [

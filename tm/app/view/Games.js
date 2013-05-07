@@ -7,7 +7,7 @@ Ext.define('TouchMill.view.Games', {
     ],
 
     config: {
-        title: 'Games',
+        //title: 'Games',
         iconCls: 'calendar2',
         items: [
             {

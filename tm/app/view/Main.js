@@ -12,18 +12,10 @@ Ext.define('TouchMill.view.Main', {
             },
         },
         tabBarPosition: 'top',
+
         items: [
-            {
-                xtype: 'v_events',
-                store: {
-                    fields: ['name', 'description', 'link'],
-                    data: [
-                        {name: 'Drinks @ the Bar!', description: 'duh.', link: 'http://www.nl'},
-                        {name: 'Opening Ceremony', description: 'Watch Yves give a long boring speech.', link: 'http://www.nl'},
-                        {name: 'Showcase Game', description: 'Fearsome Threesome vs. Toes on Fire', link: 'http://www.nl'},
-                    ],
-                },
-            },
+            { xtype: 'v_events', },
+            { xtype: 'v_tournaments', },
             { xtype: 'v_games', },
             {
                 xtype: 'v_game_view',
@@ -43,6 +35,7 @@ Ext.define('TouchMill.view.Main', {
                     ],
                 },
             },
+            { xtype: 'v_dev_config', },
         ],
     }
 });
