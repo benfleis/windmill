@@ -25,4 +25,3 @@ Ext.define('TouchMill.store.TournamentTeams', {
 
     }
 });
-

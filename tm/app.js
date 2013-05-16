@@ -1,3 +1,70 @@
+//
+// Configuration elements.  Put into application.tm_config.
+//
+// XXX
+//
+// sencha class system video:
+//
+// coding convention:
+//  Org.group[.subgroup].ClassName
+//  one class per file
+//  file name matches class name [Org.view.ClassName -> Org/view/ClassName.js]
+//
+// class definition:
+//  Ext.define('My.sample.Person', {
+//      constructor: function(name) { this.name = name; },
+//      walk: function(steps) { alert('walking ' + steps + ' steps.';); },
+//  }
+//  var tommy = new My.sample.Person('tommy');
+//  tommy.walk(5);
+//
+// class 'config' objects automatically gets getFoo() and setFoo() funcs, for
+// every child
+//
+// when using setFoo(), applyFoo() is called before set - for validation,
+// transformation, etc.; similarly updateFoo() gets called after its set, for
+// notification, etc.
+//
+var _config = {
+    servers: {
+        'real': {
+            app_url: 'http://monkey.org/~ben/tm/real.html',
+            client_id: 'ec72ad44ea54d9af1d38d56f41a738',
+            client_key: '83f6273168fd588a65af52259369ef',
+            login_url: 'http://leaguevine.com/oauth2/authorize/?client_id=ec72ad44ea54d9af1d38d56f41a738&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/real.html',
+            api_url: 'http://api.leaguevine.com/v1',
+            tournament_ids: '[18091,18093,18094]',
+            // XXX this will come from user
+            access_token: '91bd68e2a1'
+        },
+        'play': {
+            app_url: 'http://monkey.org/~ben/tm/play.html',
+            client_id: '4836b4afe7458d0bbeb43f593a7e89',
+            login_url: 'http://playwithlv.com/oauth2/authorize/?client_id=4836b4afe7458d0bbeb43f593a7e89&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/play.html',
+            api_url: 'http://api.playwithlv.com/v1',
+            tournament_ids: '[18091,18093,18094]',
+            // XXX comes from user
+            access_token: 'a042642c0f',
+        },
+        'local': {
+            app_url: 'http://localhost:8080/local.html',
+            client_id: 'FAKE',
+            login_url: null,
+            api_url: null,
+            tournament_ids: '',
+        },
+    },
+};
+
+var _util = {
+    setup_server_config: function(server_config) {
+        console.log('IN setup_server_config(' + server_config + ')');
+        Ext.getStore('Tournaments').config.proxy.extraParams.tournament_ids = '[18091]';
+        Ext.getStore('Tournaments').load();
+    },
+};
+
+
 Ext.Loader.setConfig({
     enabled: true,
 });
@@ -12,6 +79,9 @@ Ext.application({
     stores: [ 'Events', 'Tournaments', ],
 
     launch: function() {
+        // setup first
+        TouchMill.app.util.setup_server_config(serverConfig);
+
         // local storage debugging:
         window.addEventListener('storage', function(evt) {
             if (evt.key === null)
@@ -65,19 +135,6 @@ Ext.application({
     // --------------------------------------------------------------------------
     // application wide variables here
     //
-    servers: {
-        leaguevine: {
-            app_url: 'http://monkey.org/~ben/tm/index.html',
-            client_id: '4836b4afe7458d0bbeb43f593a7e89',
-            login_url: 'http://leaguevine.com/oauth2/authorize/?client_id=4836b4afe7458d0bbeb43f593a7e89&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/index.html',
-            api_url: 'http://api.playwithlv.com/v1',
-
-        },
-        playwithlv: {
-            app_url: 'http://monkey.org/~ben/tm/index.html',
-            client_id: '4836b4afe7458d0bbeb43f593a7e89',
-            login_url: 'http://playwithlv.com/oauth2/authorize/?client_id=4836b4afe7458d0bbeb43f593a7e89&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/index.html',
-            api_url: 'http://api.playwithlv.com/v1',
-        },
-    },
+    config: _config,
+    util: _util,
 });
