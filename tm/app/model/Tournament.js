@@ -5,8 +5,9 @@ Ext.define('TouchMill.model.Tournament', {
         idProperty: 'id',
         hasMany: [
             {
-                model: 'TouchMill.model.TournamentTeams',
-                foreignKey: 'team_id',
+                model: 'TouchMill.model.TournamentTeam',
+                foreignKey: 'tournament_id',
+                name: 'getTournamentTeams',
             },
         ],
 
@@ -21,6 +22,8 @@ Ext.define('TouchMill.model.Tournament', {
             { name: 'timezone', },                          //: 'Europe/Amsterdam',
             { name: 'uses_seeds', },                        //: false,
             { name: 'visibility', },                        //: 'live'
+
+            { name: 'is_mine', type: 'boolean', defaultValue: false, },
         ],
     },
 });

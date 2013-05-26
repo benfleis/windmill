@@ -1,6 +1,6 @@
 Ext.define('TouchMill.view.Events', {
     extend: 'Ext.List',
-    xtype: 'v_events',
+    xtype: 'events',
 
     config: {
         iconCls: 'star',

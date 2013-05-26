@@ -1,140 +1,72 @@
-//
-// Configuration elements.  Put into application.tm_config.
-//
-// XXX
-//
-// sencha class system video:
-//
-// coding convention:
-//  Org.group[.subgroup].ClassName
-//  one class per file
-//  file name matches class name [Org.view.ClassName -> Org/view/ClassName.js]
-//
-// class definition:
-//  Ext.define('My.sample.Person', {
-//      constructor: function(name) { this.name = name; },
-//      walk: function(steps) { alert('walking ' + steps + ' steps.';); },
-//  }
-//  var tommy = new My.sample.Person('tommy');
-//  tommy.walk(5);
-//
-// class 'config' objects automatically gets getFoo() and setFoo() funcs, for
-// every child
-//
-// when using setFoo(), applyFoo() is called before set - for validation,
-// transformation, etc.; similarly updateFoo() gets called after its set, for
-// notification, etc.
-//
-var _config = {
-    servers: {
-        'real': {
-            app_url: 'http://monkey.org/~ben/tm/real.html',
-            client_id: 'ec72ad44ea54d9af1d38d56f41a738',
-            client_key: '83f6273168fd588a65af52259369ef',
-            login_url: 'http://leaguevine.com/oauth2/authorize/?client_id=ec72ad44ea54d9af1d38d56f41a738&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/real.html',
-            api_url: 'http://api.leaguevine.com/v1',
-            tournament_ids: '[18091,18093,18094]',
-            // XXX this will come from user
-            access_token: '91bd68e2a1'
-        },
-        'play': {
-            app_url: 'http://monkey.org/~ben/tm/play.html',
-            client_id: '4836b4afe7458d0bbeb43f593a7e89',
-            login_url: 'http://playwithlv.com/oauth2/authorize/?client_id=4836b4afe7458d0bbeb43f593a7e89&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/play.html',
-            api_url: 'http://api.playwithlv.com/v1',
-            tournament_ids: '[18091,18093,18094]',
-            // XXX comes from user
-            access_token: 'a042642c0f',
-        },
-        'local': {
-            app_url: 'http://localhost:8080/local.html',
-            client_id: 'FAKE',
-            login_url: null,
-            api_url: null,
-            tournament_ids: '',
-        },
-    },
-};
-
-var _util = {
-    setup_server_config: function(server_config) {
-        console.log('IN setup_server_config(' + server_config + ')');
-        Ext.getStore('Tournaments').config.proxy.extraParams.tournament_ids = '[18091]';
-        Ext.getStore('Tournaments').load();
-    },
-};
-
-
 Ext.Loader.setConfig({
     enabled: true,
+    disableCaching: false,      // false == disable "disable caching" -- confusing, yes.  in production, flip.
 });
 
 // XXX need to add way to logout, effectively clearing localStorage.TouchMill
 Ext.application({
     name: 'TouchMill',
 
-    models: [ 'Event', 'Tournament', ], //'TournamentTeam' ],
-    views: [ 'Main', 'Events', 'Tournaments', 'Games', 'GameView', 'DevConfig', ],
+    // requires that are used all around
+    requires: [ 'TouchMill.data.proxy.ConfigurableRest', 'TouchMill.util.Config', ],
+
+    models: [ 'Event', 'Tournament', 'TournamentTeam', 'Team', 'Game', 'TeamPlayer', 'Player', ],
+    stores: [ 'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'TeamPlayers', 'Players', 'Me', ],
+
+    views: [ 'Main', 'Home', 'Events', 'Tournaments', 'Games', 'GameView', 'GamesList', 'DevConfig', ],
+
     controllers: [ 'Main', ],
-    stores: [ 'Events', 'Tournaments', ],
 
     launch: function() {
-        // setup first
-        TouchMill.app.util.setup_server_config(serverConfig);
-
-        // local storage debugging:
-        window.addEventListener('storage', function(evt) {
-            if (evt.key === null)
-                console.log('localStorage.clear()d');
-            else if (evt.newValue === null)
-                console.log('localStorage.removeItem(' + evt.key + ')');
-            else {
-                console.log('localStorage.setItem(' + evt.key + ')');
-                console.log(evt.newValue);
-            }
-        }, false);
+        // load base config first
+        Config.loadActive(serverConfig);
+        Config.loadSession();
 
         // check if access token is available; if not redir to LV login
-        var logged_in = false;
-        var url_params = Ext.Object.fromQueryString(window.location.search.substring(1));
-        var hash_params = Ext.Object.fromQueryString(window.location.hash.substring(1));
-        var session = JSON.parse(localStorage.getItem('TouchMill')) || {};
+        var urlParams = Ext.Object.fromQueryString(window.location.search.substring(1));
+        var hashParams = Ext.Object.fromQueryString(window.location.hash.substring(1));
+        var loggedIn = false;
 
-        // XXX debug hack for localhost testing
-        var debug = !!url_params.debug;
-        if (window.location.origin === 'http://localhost:8080')
-            hash_params = { access_token: '9944451a27', expires_in: 60 * 60 * 24 * 365 * 5, scope: 'universal', };
-
-        if (url_params.logout) {
-            session = {};
-            localStorage.removeItem('TouchMill');
+        // XXX if there's a login error, stop here o/w we descend into infinite loop
+        if (hashParams.error) {
+            console.log('Login error: ' + hashParams.error + '; ' + hashParams.error_description);
+            urlParams.dont_login = true;
         }
-        else if (hash_params.access_token) {
-            session.lv_token = hash_params.access_token;
-            session.lv_expiration = Date.now() + (hash_params.expires_in * 1000);
-            session.lv_scope = hash_params.scope;
-            localStorage.setItem('TouchMill', JSON.stringify(session));
-        }
-        logged_in = session.lv_token && (Date.now() < (session.lv_expiration || 0));
 
-        if (logged_in) {
+        if (urlParams.logout) {
+            Config.clearSession();
+        }
+        else {
+            if (window.location.origin === 'http://localhost:8080') {
+                Config.loadDebugSession();
+                urlParams = Config.session.urlParams;
+                hashParams = Config.session.hashParams;
+            }
+            else if (hashParams.access_token) {
+                Config.session.urlParams = urlParams;
+                Config.session.hashParams = hashParams;
+                Config.storeSession();
+            }
+            if (hashParams.expires_in && hashParams.access_token) {
+                expiration = Date.now() + (hashParams.expires_in * 1000);
+                loggedIn = hashParams.access_token && Date.now() < expiration;
+            }
+        }
+
+        if (loggedIn) {
+            // replace browser URL with clean version - remove trailing hash
+            // IFF it contains LV info; will this complicate using routes?
             if (window.location.hash && window.location.hash.search('access_token=') != -1) {
-                // remove trailing hash IFF it contains LV info; not sure how
-                // this will complicate using routes in Touch.
                 var l = window.location;
                 history.replaceState('', document.title, l.pathname + l.search);
             }
+            Config.mergeActive({ apiParams: { access_token: hashParams.access_token } });
+            this.getController('Main').loadInitialData();
             Ext.create('TouchMill.view.Main');
         }
         else {
-            if (!url_params.dont_login)
-                window.open('http://playwithlv.com/oauth2/authorize/?client_id=4836b4afe7458d0bbeb43f593a7e89&scope=universal&response_type=token&redirect_uri=http://monkey.org/~ben/tm/index.html', '_self')
+            if (!urlParams.dont_login)
+                window.open(Config.active.apiLoginUrl, '_self');
         }
     },
-
-    // --------------------------------------------------------------------------
-    // application wide variables here
-    //
-    config: _config,
-    util: _util,
 });

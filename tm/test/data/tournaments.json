@@ -1,0 +1,128 @@
+{
+    "meta": {
+        "limit": 20,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total_count": 2
+    },
+    "objects": [
+        {
+            "end_date": "2012-06-17",
+            "id": 18091,
+            "info": "",
+            "leaguevine_url": "http://www.playwithlv.com/tournaments/18091/windmill-windup-2012-open/",
+            "name": "Windmill Windup 2012 open",
+            "number_of_sets": null,
+            "resource_uri": "http://api.playwithlv.com/v1/tournaments/18091/",
+            "scheduling_format": "swiss",
+            "season": {
+                "end_date": "2012-12-31",
+                "id": 20068,
+                "league": {
+                    "id": 6979,
+                    "leaguevine_url": "http://www.playwithlv.com/leagues/6979/club-open/",
+                    "name": "Club Open",
+                    "resource_uri": "http://api.playwithlv.com/v1/leagues/6979/"
+                },
+                "league_id": 6979,
+                "leaguevine_url": "http://www.playwithlv.com/seasons/20068/club-open-2012/",
+                "name": "2012",
+                "resource_uri": "http://api.playwithlv.com/v1/seasons/20068/",
+                "start_date": "2012-01-01",
+                "time_created": "2012-04-13T13:10:16+00:00",
+                "time_last_updated": "2012-04-13T13:10:22+00:00"
+            },
+            "season_id": 20068,
+            "start_date": "2012-06-15",
+            "swiss_pairing_type": "adjacent pairing",
+            "swiss_points_for_bye": "1.0",
+            "swiss_scoring_system": "victory points",
+            "swiss_victory_points_cap": 25,
+            "swiss_victory_points_games_to": 15,
+            "time_created": "2012-05-24T17:13:02.614883+00:00",
+            "time_last_updated": "2012-06-12T08:19:58.615630+00:00",
+            "timezone": "Europe/Amsterdam",
+            "uses_seeds": false,
+            "visibility": "live"
+        },
+        {
+            "end_date": "2012-06-17",
+            "id": 18093,
+            "info": "",
+            "leaguevine_url": "http://www.playwithlv.com/tournaments/18093/windmill-windup-2012-mixed/",
+            "name": "Windmill Windup 2012 mixed",
+            "number_of_sets": null,
+            "resource_uri": "http://api.playwithlv.com/v1/tournaments/18093/",
+            "scheduling_format": "swiss",
+            "season": {
+                "end_date": "2012-12-31",
+                "id": 20067,
+                "league": {
+                    "id": 7512,
+                    "leaguevine_url": "http://www.playwithlv.com/leagues/7512/club-mixed/",
+                    "name": "Club Mixed",
+                    "resource_uri": "http://api.playwithlv.com/v1/leagues/7512/"
+                },
+                "league_id": 7512,
+                "leaguevine_url": "http://www.playwithlv.com/seasons/20067/club-mixed-2012/",
+                "name": "2012",
+                "resource_uri": "http://api.playwithlv.com/v1/seasons/20067/",
+                "start_date": "2012-01-01",
+                "time_created": "2012-04-13T13:09:07+00:00",
+                "time_last_updated": "2012-04-13T13:09:12+00:00"
+            },
+            "season_id": 20067,
+            "start_date": "2012-06-15",
+            "swiss_pairing_type": "adjacent pairing",
+            "swiss_points_for_bye": "1.0",
+            "swiss_scoring_system": "victory points",
+            "swiss_victory_points_cap": 25,
+            "swiss_victory_points_games_to": 15,
+            "time_created": "2012-05-24T17:22:59.685270+00:00",
+            "time_last_updated": "2012-06-12T08:35:42.062825+00:00",
+            "timezone": "Europe/Amsterdam",
+            "uses_seeds": false,
+            "visibility": "live"
+        },
+        {
+            "end_date": "2012-06-17",
+            "id": 18094,
+            "info": "",
+            "leaguevine_url": "http://www.playwithlv.com/tournaments/18094/windmill-windup-2012-women/",
+            "name": "Windmill Windup 2012 women",
+            "number_of_sets": null,
+            "resource_uri": "http://api.playwithlv.com/v1/tournaments/18094/",
+            "scheduling_format": "swiss",
+            "season": {
+                "end_date": "2012-12-31",
+                "id": 20069,
+                "league": {
+                    "id": 7514,
+                    "leaguevine_url": "http://www.playwithlv.com/leagues/7514/club-women39s/",
+                    "name": "Club Women's",
+                    "resource_uri": "http://api.playwithlv.com/v1/leagues/7514/"
+                },
+                "league_id": 7514,
+                "leaguevine_url": "http://www.playwithlv.com/seasons/20069/club-women39s-2012/",
+                "name": "2012",
+                "resource_uri": "http://api.playwithlv.com/v1/seasons/20069/",
+                "start_date": "2012-01-01",
+                "time_created": "2012-04-13T13:10:58+00:00",
+                "time_last_updated": "2012-04-13T13:11:03+00:00"
+            },
+            "season_id": 20069,
+            "start_date": "2012-06-15",
+            "swiss_pairing_type": "adjacent pairing",
+            "swiss_points_for_bye": "1.0",
+            "swiss_scoring_system": "victory points",
+            "swiss_victory_points_cap": 25,
+            "swiss_victory_points_games_to": 15,
+            "time_created": "2012-05-24T17:24:50.877590+00:00",
+            "time_last_updated": "2013-04-19T20:30:48.331192+00:00",
+            "timezone": "Europe/Amsterdam",
+            "uses_seeds": false,
+            "visibility": "live"
+        }
+    ]
+}

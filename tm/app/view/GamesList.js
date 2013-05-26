@@ -1,12 +1,11 @@
 Ext.define('TouchMill.view.GamesList', {
     extend: 'Ext.List',
-    xtype: 'v_games_list',
-    //requires: 'TouchMill.store.Games',
+    xtype: 'gamesList',
 
     config: {
-        //title: 'GamesList',
-        itemTpl: '{team_1} vs. {team_2}<br/><small>{time} @ {location}</small>',
-        onItemDisclosure: true,
+        title: 'My Games',
+        store: 'Games',
+        itemTpl: '{team_1_id} vs. {team_2_id}<br/><small>{start_time} @ {game_site_id}</small>',
     },
 });
 

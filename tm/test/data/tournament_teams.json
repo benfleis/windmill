@@ -1,0 +1,191 @@
+{
+    "meta": {
+        "limit": 20,
+        "next": "http://api.playwithlv.com/v1/tournament_teams/?limit=20&offset=20&tournament_ids=%5B18091%2C18093%2C18094%5D&access_token=831de84163",
+        "offset": 0,
+        "previous": null,
+        "total_count": 80
+    },
+    "objects": [
+        {
+            "final_standing": 11,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18093/19178/",
+            "seed": 7,
+            "team_id": 19178,
+            "time_created": "2012-06-04T11:17:58.224380+00:00",
+            "time_last_updated": "2012-06-17T12:24:35.430936+00:00",
+            "tournament_id": 18093
+        },
+        {
+            "final_standing": 39,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19176/",
+            "seed": 38,
+            "team_id": 19176,
+            "time_created": "2012-06-02T17:58:03.919948+00:00",
+            "time_last_updated": "2012-06-17T11:25:39.977606+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 29,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19070/",
+            "seed": 19,
+            "team_id": 19070,
+            "time_created": "2012-06-02T17:55:34.861000+00:00",
+            "time_last_updated": "2012-06-17T11:25:36.166688+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 17,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19076/",
+            "seed": 33,
+            "team_id": 19076,
+            "time_created": "2012-06-02T17:55:33.620351+00:00",
+            "time_last_updated": "2012-06-17T11:28:30.616680+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 13,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19075/",
+            "seed": 20,
+            "team_id": 19075,
+            "time_created": "2012-06-02T17:55:32.398727+00:00",
+            "time_last_updated": "2012-06-17T11:28:30.037817+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 34,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19074/",
+            "seed": 23,
+            "team_id": 19074,
+            "time_created": "2012-06-02T17:55:31.150160+00:00",
+            "time_last_updated": "2012-06-17T11:25:36.626012+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 26,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19073/",
+            "seed": 29,
+            "team_id": 19073,
+            "time_created": "2012-06-02T17:55:29.866517+00:00",
+            "time_last_updated": "2012-06-17T11:25:37.582703+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 18,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19072/",
+            "seed": 26,
+            "team_id": 19072,
+            "time_created": "2012-06-02T17:55:28.679167+00:00",
+            "time_last_updated": "2012-06-17T11:28:30.338835+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 10,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19071/",
+            "seed": 14,
+            "team_id": 19071,
+            "time_created": "2012-06-02T17:55:27.507836+00:00",
+            "time_last_updated": "2012-06-17T11:25:35.496673+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 15,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19068/",
+            "seed": 21,
+            "team_id": 19068,
+            "time_created": "2012-06-02T17:55:26.401152+00:00",
+            "time_last_updated": "2012-06-17T11:59:10.672688+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 20,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19066/",
+            "seed": 11,
+            "team_id": 19066,
+            "time_created": "2012-06-02T17:55:24.228879+00:00",
+            "time_last_updated": "2012-06-17T11:28:28.189288+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 22,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19065/",
+            "seed": 32,
+            "team_id": 19065,
+            "time_created": "2012-06-02T17:55:22.761656+00:00",
+            "time_last_updated": "2012-06-17T11:28:30.470411+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 2,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19064/",
+            "seed": 3,
+            "team_id": 19064,
+            "time_created": "2012-06-02T17:55:21.276821+00:00",
+            "time_last_updated": "2012-06-17T19:28:21.112800+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 12,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19063/",
+            "seed": 39,
+            "team_id": 19063,
+            "time_created": "2012-06-02T17:55:20.110981+00:00",
+            "time_last_updated": "2012-06-17T11:28:31.003664+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 32,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19062/",
+            "seed": 22,
+            "team_id": 19062,
+            "time_created": "2012-06-02T17:55:18.776914+00:00",
+            "time_last_updated": "2012-06-17T11:25:36.475809+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 7,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19061/",
+            "seed": 5,
+            "team_id": 19061,
+            "time_created": "2012-06-02T17:55:17.246225+00:00",
+            "time_last_updated": "2012-06-17T11:28:27.046126+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 36,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18091/19060/",
+            "seed": 36,
+            "team_id": 19060,
+            "time_created": "2012-06-02T17:55:16.005403+00:00",
+            "time_last_updated": "2012-06-17T11:25:39.258292+00:00",
+            "tournament_id": 18091
+        },
+        {
+            "final_standing": 13,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18094/19115/",
+            "seed": 14,
+            "team_id": 19115,
+            "time_created": "2012-05-24T17:25:28.425127+00:00",
+            "time_last_updated": "2012-06-17T12:32:12.630068+00:00",
+            "tournament_id": 18094
+        },
+        {
+            "final_standing": 1,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18094/18979/",
+            "seed": 2,
+            "team_id": 18979,
+            "time_created": "2012-05-24T17:25:26.389217+00:00",
+            "time_last_updated": "2012-06-17T19:28:53.735791+00:00",
+            "tournament_id": 18094
+        },
+        {
+            "final_standing": 5,
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/18094/19113/",
+            "seed": 8,
+            "team_id": 19113,
+            "time_created": "2012-05-24T17:25:24.739664+00:00",
+            "time_last_updated": "2012-06-17T12:32:11.142553+00:00",
+            "tournament_id": 18094
+        }
+    ]
+}

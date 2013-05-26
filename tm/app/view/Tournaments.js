@@ -1,6 +1,6 @@
 Ext.define('TouchMill.view.Tournaments', {
     extend: 'Ext.List',
-    xtype: 'v_tournaments',
+    xtype: 'tournaments',
 
     config: {
         iconCls: 'star',

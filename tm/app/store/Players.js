@@ -1,27 +1,28 @@
 Ext.define('TouchMill.store.Players', {
     extend: 'Ext.data.Store',
 
-    requires: [
-        'TouchMill.model.Player'
-    ],
-
     config: {
         model: 'TouchMill.model.Player',
-        autoLoad: true,
 
         proxy: {
-            type: 'ajax',
-            url: 'test/data/Players.json',
-            reader: {
-                type: 'json',
-                rootProperty: 'guests'
-            }
+            type: 'configurableRest',
+            url: 'players/',
+            reader: { type: 'json', rootProperty: 'objects', },
         },
 
-        //sorters: [{
-        //    property : 'guestName',
-        //    direction: 'ASC'
-        //}]
+        listeners: {
+            refresh: 'setMine',
+        },
+    },
 
-    }
+    // walk the whole store and update 'is_mine' across the board.
+    setMine: function() {
+        console.log('Players.setMine()');
+        var my_player_id = Ext.getStore('Me').getPlayerId();
+        this.each(function(rec) {
+            rec.set('is_mine', my_player_id !== null && rec.data.id === my_player_id);
+        });
+    },
+
 });
+

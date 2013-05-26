@@ -21,3 +21,7 @@ Pages
   * Teams/Location
   * Scoring history (live scoring instead of reporting)
   * Spirit score (when game marked complete)
+
+
+spirit scores only by team members
+regular scores by anybody

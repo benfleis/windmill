@@ -1,6 +1,6 @@
 Ext.define('TouchMill.view.DevConfig', {
     extend: 'Ext.Container',
-    xtype: 'v_dev_config',
+    xtype: 'devConfig',
 
     requires: [
         'Ext.form.Panel',

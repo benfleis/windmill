@@ -1,0 +1,6 @@
+[
+    { "name": "From test/data/events.json", "description": "data", "link": "http://www.nl" },
+    { "name": "Drinks @ the Bar!", "description": "duh.", "link": "http://www.nl" },
+    { "name": "Opening Ceremony", "description": "Watch Yves give a long boring speech.", "link": "http://www.nl" },
+    { "name": "Showcase Game", "description": "Fearsome Threesome vs. Toes on Fire", "link": "http://www.nl" }
+]

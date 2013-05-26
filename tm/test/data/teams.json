@@ -1,0 +1,38 @@
+{
+    "city": "",
+    "country": "",
+    "id": 18011,
+    "info": "",
+    "leaguevine_url": "http://www.playwithlv.com/teams/18011/machine/",
+    "losses": 5,
+    "name": "Machine",
+    "profile_image_200": "https://s3.amazonaws.com/playwithlv/v2/img/icons/teams/colored/ultimate2_3_200.png",
+    "profile_image_50": "https://s3.amazonaws.com/playwithlv/v2/img/icons/teams/colored/ultimate2_3_50.png",
+    "related_team_ids": [
+        1417
+    ],
+    "resource_uri": "http://api.playwithlv.com/v1/teams/18011/",
+    "season": {
+        "end_date": "2011-12-31",
+        "id": 7291,
+        "league": {
+            "id": 4,
+            "leaguevine_url": "http://www.playwithlv.com/leagues/4/usau-club-open/",
+            "name": "USAU Club Open",
+            "resource_uri": "http://api.playwithlv.com/v1/leagues/4/"
+        },
+        "league_id": 4,
+        "leaguevine_url": "http://www.playwithlv.com/seasons/7291/usau-club-open-2011/",
+        "name": "2011",
+        "resource_uri": "http://api.playwithlv.com/v1/seasons/7291/",
+        "start_date": "2011-01-01",
+        "time_created": "2011-02-26T04:31:20+00:00",
+        "time_last_updated": "2011-02-26T04:31:20+00:00"
+    },
+    "season_id": 7291,
+    "short_name": "",
+    "sport": "ultimate",
+    "time_created": "2011-09-03T15:30:16.987347+00:00",
+    "time_last_updated": "2011-09-03T15:30:16.987347+00:00",
+    "wins": 8
+}
