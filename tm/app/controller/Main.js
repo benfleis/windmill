@@ -1,43 +1,7 @@
 Ext.define('TouchMill.controller.Main', {
     extend: 'Ext.app.Controller',
 
-    requires: [
-        'TouchMill.view.GameView',
-        'TouchMill.view.GamesList',
-        'TouchMill.view.Games',
-    ],
-
-    config: {
-        refs: {
-            games: 'games',
-            games_list: 'gamesList',
-            gameView: 'gameView',
-        },
-
-        control: {
-            games_list: {
-                itemtap: 'onGameSelect',
-            },
-        },
-    },
-
-    // ------------------------------------------------------------------------
-
-    init: function() {
-    },
-
-    // ------------------------------------------------------------------------
-
-    onGameSelect: function(list, idx, item, rec, evt) {
-        console.log('onGameSelect(' + rec.data.team_1_id + '/' + rec.data.team_2_id + ')');
-        var gameView = this.getGameView();
-        if (!gameView) {
-            console.log('->  instantiate GameView');
-            gameView = Ext.create('TouchMill.view.GameView');
-        }
-        gameView.setRecord(rec);
-        this.getGames().push(gameView);
-    },
+    init: function() {},
 
     // ------------------------------------------------------------------------
 

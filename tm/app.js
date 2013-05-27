@@ -3,6 +3,9 @@ Ext.Loader.setConfig({
     disableCaching: false,      // false == disable "disable caching" -- confusing, yes.  in production, flip.
 });
 
+// kill HTTP OPTIONS requests: // http://stackoverflow.com/questions/10236056/when-loading-a-store-in-sencha-touch-2-how-can-i-stop-the-additional-options-ht
+Ext.Ajax.setUseDefaultXhrHeader(false);
+
 // XXX need to add way to logout, effectively clearing localStorage.TouchMill
 Ext.application({
     name: 'TouchMill',
@@ -10,12 +13,12 @@ Ext.application({
     // requires that are used all around
     requires: [ 'TouchMill.data.proxy.ConfigurableRest', 'TouchMill.util.Config', ],
 
-    models: [ 'Event', 'Tournament', 'TournamentTeam', 'Team', 'Game', 'TeamPlayer', 'Player', ],
-    stores: [ 'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'TeamPlayers', 'Players', 'Me', ],
+    models: [ 'Event', 'Tournament', 'TournamentTeam', 'Team', 'Game', 'GameScore', 'TeamPlayer', 'Player', ],
+    stores: [ 'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'GameScores', 'TeamPlayers', 'Players', 'Me', ],
 
     views: [ 'Main', 'Home', 'Events', 'Tournaments', 'Games', 'GameView', 'GamesList', 'DevConfig', ],
 
-    controllers: [ 'Main', ],
+    controllers: [ 'Main', 'Games', ],
 
     launch: function() {
         // load base config first
@@ -58,7 +61,7 @@ Ext.application({
             // IFF it contains LV info; will this complicate using routes?
             if (window.location.hash && window.location.hash.search('access_token=') != -1) {
                 var l = window.location;
-                history.replaceState('', document.title, l.pathname + l.search);
+                //history.replaceState('', document.title, l.pathname + l.search);
             }
             Config.mergeActive({ apiParams: { access_token: hashParams.access_token } });
             this.getController('Main').loadInitialData();

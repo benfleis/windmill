@@ -1,4 +1,3 @@
-
 Ext.define('TouchMill.model.GameScore', {
     extend: 'Ext.data.Model',
 

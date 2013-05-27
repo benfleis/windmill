@@ -7,6 +7,7 @@ Ext.define('TouchMill.store.Teams', {
         proxy: {
             type: 'configurableRest',
             url: 'teams/',
+            useStaticUrls: true,
             reader: { type: 'json', rootProperty: 'objects', },
         },
 
@@ -22,8 +23,8 @@ Ext.define('TouchMill.store.Teams', {
         this.each(function(rec) {
             rec.set('is_mine', !!my_tm_ids[rec.data.id]);
         });
-        console.log('Teams.setMine() ->');
-        console.log(this.getMyTeamIds());
+        //console.log('Teams.setMine() ->');
+        //console.log(this.getMyTeamIds());
     },
 
     // NOTE: this differs from TeamPlayers.getMyTeamIds() in that these are all
@@ -36,8 +37,8 @@ Ext.define('TouchMill.store.Teams', {
             var id = rec.data.id;
             tm_ids[id] = id;
         });
-        console.log('Teams.getMyTeamIds() ->');
-        console.log(tm_ids);
+        //console.log('Teams.getMyTeamIds() ->');
+        //console.log(tm_ids);
         return tm_ids;
     },
 
