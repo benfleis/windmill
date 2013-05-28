@@ -8,7 +8,7 @@ Ext.define('TouchMill.view.GameView', {
         title: 'Game Summary',
         record: null,
         tpl: [
-            '<p>GS id: {id}</p>',
+            '<p>game_id: {id}</p>',
             '<p>{team_1_id} vs. {team_2_id}</p>',
             '<p>{team_1_score} : { team_2_score}</p>',
             '<p>Is Final: {is_final}</p>',

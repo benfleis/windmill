@@ -40,7 +40,7 @@ Ext.application({
             Config.clearSession();
         }
         else {
-            if (window.location.origin === 'http://localhost:8080') {
+            if (serverConfig === 'local' || window.location.origin === 'http://localhost:8080') {
                 Config.loadDebugSession();
                 urlParams = Config.session.urlParams;
                 hashParams = Config.session.hashParams;

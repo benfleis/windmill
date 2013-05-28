@@ -26,4 +26,4 @@ http.createServer(function (req, res) {
         console.error('** ' + filename);
     }
     res.end(content);
-}).listen(8080);
+}).listen(process.argv[2] || 8080);
