@@ -35,5 +35,13 @@ Ext.define('TouchMill.model.Game', {
 
             { name: 'is_mine', type: 'boolean', defaultValue: false, },
         ],
+
+        hasMany: {
+            model: 'TouchMill.model.GameScore',
+            name: 'gameScores',
+            autoLoad: true,
+            //foreignKey: 'game_id',
+            //primaryKey: 
+        },
     },
 });

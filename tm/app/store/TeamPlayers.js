@@ -28,8 +28,8 @@ Ext.define('TouchMill.store.TeamPlayers', {
         this.each(function(rec) {
             rec.set('is_mine', rec.data.player_id === my_player_id);
         });
-        console.log('TeamPlayers.setMine() ->');
-        console.log(this.getMyTeamIds());
+        //console.log('TeamPlayers.setMine() ->');
+        //console.log(this.getMyTeamIds());
         Ext.getStore('Teams').setMine();    // trigger refresh on Teams
     },
 
@@ -37,8 +37,8 @@ Ext.define('TouchMill.store.TeamPlayers', {
         var tm_plyrs = this.queryBy(function(rec) { return rec.data.is_mine; });
         var tm_ids = {};
         tm_plyrs.each(function(rec) { var id = rec.data.team_id; tm_ids[id] = id; });
-        console.log('TeamPlayers.getMyTeamIds() ->');
-        console.log(tm_ids);
+        //console.log('TeamPlayers.getMyTeamIds() ->');
+        //console.log(tm_ids);
         return tm_ids;
     },
 

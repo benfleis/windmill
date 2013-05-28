@@ -8,7 +8,11 @@ Ext.define('TouchMill.store.GameScores', {
             type: 'configurableRest',
             url: 'game_scores/',
             reader: { type: 'json', rootProperty: 'objects', },
+
+            // remote sort param
+            extraParams: { order_by: '[-is_final,-time_last_updated]' },
         },
+
 
         listeners: {
             refresh: 'setMine',
@@ -24,18 +28,21 @@ Ext.define('TouchMill.store.GameScores', {
         });
     },
 
-    loadByGameId: function(game_id, callback) {
-
+    loadByGameId: function(game_id, opts) {
+        opts = opts || {};
+        opts.params = { game_id: game_id };
+        this.load(opts);
     },
 
-    loadByTeamId: function(team_id, callback) {
-        //this.load({
-            //params: _.extend({}, TouchMill.app.options.proxy_params, { team_ids: '[' + team_id + ']' }),
-            //callback: callback,
-        //});
+    getByGameId: function(game_id) {
+        console.log("Just use .findRecord('game_id', game_id)");
+        this.findRecord('game_id', game_id);
     },
 
-    getByTeamId: function(team_id) {
-
+    loadByTeamId: function(team_id, opts) {
+        opts = opts || {};
+        opts.params = { team_ids: [team_id] };
+        this.load(opts);
     },
+
 });

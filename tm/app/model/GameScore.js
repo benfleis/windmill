@@ -1,4 +1,3 @@
-
 Ext.define('TouchMill.model.GameScore', {
     extend: 'Ext.data.Model',
 
@@ -17,7 +16,7 @@ Ext.define('TouchMill.model.GameScore', {
             { name: 'team_2_id', },                 //": 19087,
             { name: 'time', },                      //": "2012-06-15T13:23:45.965067+02:00",
             //{ name: 'time_created', },              //": "2012-06-15T11:23:45.965067+00:00",
-            //{ name: 'time_last_updated', },         //": "2012-06-15T11:23:45.965099+00:00",
+            { name: 'time_last_updated', },         //": "2012-06-15T11:23:45.965099+00:00",
             { name: 'what_happened', },             //": ""
 
             { name: 'is_mine', type: 'boolean', defaultValue: false, },

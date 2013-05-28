@@ -7,7 +7,7 @@ Ext.define('TouchMill.store.TournamentTeams', {
         proxy: {
             type: 'configurableRest',
             url: 'tournament_teams/',
-            useStaticUrls: false,
+            useStaticUrls: true,
             reader: { type: 'json', rootProperty: 'objects' },
         },
 
