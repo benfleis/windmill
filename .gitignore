@@ -4,5 +4,4 @@
 .*.swp
 .DS_Store
 local_settings.py
-
-
+tm/third-party/touch/examples
