@@ -15,6 +15,10 @@ Ext.define('TouchMill.store.Teams', {
             refresh: 'setMine',
         },
 
+        sorters: [
+            { property: 'name', direction: 'ASC' },
+            { property: 'country', direction: 'ASC' },
+        ],
     },
 
     // walk the whole store and update 'is_mine' across the board.

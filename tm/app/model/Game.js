@@ -36,12 +36,45 @@ Ext.define('TouchMill.model.Game', {
             { name: 'is_mine', type: 'boolean', defaultValue: false, },
         ],
 
-        hasMany: {
-            model: 'TouchMill.model.GameScore',
-            name: 'gameScores',
-            autoLoad: true,
-            //foreignKey: 'game_id',
-            //primaryKey: 
+        proxy: {
+            type: 'configurableRest',
+            url: 'games/',
+            reader: { type: 'json', rootProperty: 'objects', },
         },
+
+        associations: [
+            {
+                type: 'hasMany',
+                model: 'TouchMill.model.GameScore',
+                name: 'gameScores',
+                autoLoad: true,
+                // kill store to revert to original model.
+                store: {
+                    //model: 'TouchMill.model.GameScore',
+                    proxy: {
+                        type: 'configurableRest',
+                        url: 'game_scores/',
+                        extraParams: { limit: 1, order_by: '[-is_final,-time_last_updated]' },
+                        reader: { type: 'json', rootProperty: 'objects', },
+                    },
+                },
+            },
+            {
+                type: 'hasMany',
+                model: 'TouchMill.model.SpiritScore',
+                name: 'spiritScores', getterName: 'spiritScores', // XXX only keep one, name for hasMany, getterName for hasOne
+                autoLoad: true,
+                // kill store to revert to original model.
+                store: {
+                    model: 'TouchMill.model.SpiritScore',
+                    proxy: {
+                        type: 'configurableRest',
+                        url: 'game_sportsmanship_scores/',
+                        extraParams: { limit: 1, order_by: '[-time_last_updated]' },
+                        reader: { type: 'json', rootProperty: 'objects', },
+                    },
+                },
+            },
+        ],
     },
 });

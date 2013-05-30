@@ -14,10 +14,8 @@ Ext.define('TouchMill.view.Main', {
         tabBarPosition: 'top',
 
         items: [
-            { xtype: 'home', },
+            { xtype: 'tournamentnavigator', },
             { xtype: 'events', },
-            { xtype: 'tournaments', },
-            { xtype: 'games', },
         ],
     }
 });

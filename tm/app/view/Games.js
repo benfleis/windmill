@@ -1,16 +1,12 @@
 Ext.define('TouchMill.view.Games', {
-    extend: 'Ext.navigation.View',
+    extend: 'Ext.List',
     xtype: 'games',
-    requires: [
-        'TouchMill.view.GamesList',
-        'TouchMill.view.GameView',
-    ],
 
     config: {
-        iconCls: 'calendar2',
-        items: [
-            { xtype: 'gamesList', },
-        ],
+        title: 'Games',
+        store: 'Games',
+        itemTpl: '{team_1_id} vs. {team_2_id}<br/><small>{start_time} @ {game_site_id}</small>',
     },
 });
+
 

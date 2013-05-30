@@ -1,0 +1,20 @@
+{
+    "name": "TouchMill",
+
+    "js": [
+        {
+            "path": "third-party/touch/sencha-touch-debug.js"
+        },
+        {
+            "path": "app.js",
+            "update": "delta"
+        }
+    ],
+    "css": [
+        {
+            "path": "third-party/touch/resources/css/sencha-touch.css",
+            "update": "delta"
+        },
+    ],
+ }
+

@@ -66,3 +66,15 @@ scores can only be entered by team members, client side filtering || or use wind
 code in team pack?  4 digit from paper at first login
 
 email invitation to create accounts
+
+
+
+----
+
+account needed for posting, but not bound to team/player
+
+anybody view/edit/anything
+
+favorites localstorage
+
+

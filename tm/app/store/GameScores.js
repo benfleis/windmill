@@ -1,3 +1,4 @@
+/*
 Ext.define('TouchMill.store.GameScores', {
     extend: 'Ext.data.Store',
 
@@ -46,3 +47,4 @@ Ext.define('TouchMill.store.GameScores', {
     },
 
 });
+*/

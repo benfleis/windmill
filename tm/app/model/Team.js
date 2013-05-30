@@ -22,5 +22,27 @@ Ext.define('TouchMill.model.Team', {
 
             { name: 'is_mine', type: 'boolean', defaultValue: false, },
         ],
+
+        /*
+        associations: [
+            {
+                type: 'hasMany',
+                model: 'TouchMill.model.Game',
+                name: 'games',
+                // autoLoad: true,
+                // kill store to revert to original model.
+                store: {
+                    model: 'TouchMill.model.Game',
+                    proxy: {
+                        type: 'configurableRest',
+                        url: 'teams/',
+                        useStaticUrls: true,
+                        reader: { type: 'json', rootProperty: 'objects', },
+                    },
+                },
+            },
+        ],
+        */
     },
+
 });

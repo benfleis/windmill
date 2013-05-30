@@ -3,8 +3,10 @@ Ext.define('TouchMill.view.Tournaments', {
     xtype: 'tournaments',
 
     config: {
-        iconCls: 'star',
+        title: 'Tournaments',
         store: 'Tournaments',
-        itemTpl: '{name} / <small>format: {scheduling_format}</small>',
+        itemTpl: '{name}',
     },
+
+
 });

@@ -1,6 +1,10 @@
 Ext.Loader.setConfig({
     enabled: true,
     disableCaching: false,      // false == disable "disable caching" -- confusing, yes.  in production, flip.
+    paths: {
+        'TouchMill': 'app',
+        //'Ext.ux.proxy': 'app/ux/proxy',
+    },
 });
 
 // kill HTTP OPTIONS requests: // http://stackoverflow.com/questions/10236056/when-loading-a-store-in-sencha-touch-2-how-can-i-stop-the-additional-options-ht
@@ -11,14 +15,14 @@ Ext.application({
     name: 'TouchMill',
 
     // requires that are used all around
-    requires: [ 'TouchMill.data.proxy.ConfigurableRest', 'TouchMill.util.Config', ],
+    requires: [ 'TouchMill.data.proxy.ConfigurableRest', 'TouchMill.util.Config', ], //'Ext.ux.proxy.ProxyCache', ],
 
-    models: [ 'Event', 'Tournament', 'TournamentTeam', 'Team', 'Game', 'GameScore', 'TeamPlayer', 'Player', ],
-    stores: [ 'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'GameScores', 'TeamPlayers', 'Players', 'Me', ],
+    models: [ 'Event', 'Tournament', 'TournamentTeam', 'Team', 'Game', 'GameScore', 'SpiritScore', 'TeamPlayer', 'Player', ],
+    stores: [ 'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'TeamPlayers', 'Players', 'Me', ],
 
-    views: [ 'Main', 'Home', 'Events', 'Tournaments', 'Games', 'GameView', 'GamesList', 'DevConfig', ],
+    views: [ 'Main', 'Home', 'Events', 'TournamentNavigator', 'Tournaments', 'Teams', 'GameNavigator', 'Games', 'GameView', 'DevConfig', ],
 
-    controllers: [ 'Main', 'Games', ],
+    controllers: [ 'Main', 'Tournaments', ],
 
     launch: function() {
         // load base config first
