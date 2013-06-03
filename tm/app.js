@@ -18,7 +18,7 @@ Ext.application({
     requires: [ 'TouchMill.data.proxy.ConfigurableRest', 'TouchMill.util.Config', ], //'Ext.ux.proxy.ProxyCache', ],
 
     models: [ 'Event', 'Tournament', 'TournamentTeam', 'Team', 'Game', 'GameScore', 'SpiritScore', 'TeamPlayer', 'Player', ],
-    stores: [ 'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'TeamPlayers', 'Players', 'Me', ],
+    stores: [ 'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'GameScores', 'TeamPlayers', 'Players', 'Me', ],
 
     views: [ 'Main', 'Home', 'Events', 'TournamentNavigator', 'Tournaments', 'Teams', 'GameNavigator', 'Games', 'GameView', 'DevConfig', ],
 

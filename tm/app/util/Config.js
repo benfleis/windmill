@@ -50,7 +50,8 @@ Ext.define('TouchMill.util.Config', {
         this.loadSession();
         this.session.urlParams = {};
         this.session.hashParams = {
-            access_token: 'b8a86a3289',
+            access_token: '1890b8d8c5',
+            token_type: 'bearer',
             expires_in: 1526456781664,
             scope: 'universal',
         };

@@ -15,6 +15,7 @@ Ext.define('TouchMill.store.Teams', {
             refresh: 'setMine',
         },
 
+        pageSize: 80,
         sorters: [
             { property: 'name', direction: 'ASC' },
             { property: 'country', direction: 'ASC' },

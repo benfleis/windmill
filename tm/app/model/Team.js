@@ -19,8 +19,6 @@ Ext.define('TouchMill.model.Team', {
             { name: 'time_created', },        // : "2011-09-03T15:30:16.987347+00:00",
             { name: 'time_last_updated', },   // : "2011-09-03T15:30:16.987347+00:00",
             { name: 'wins', },                // : 8
-
-            { name: 'is_mine', type: 'boolean', defaultValue: false, },
         ],
 
         /*

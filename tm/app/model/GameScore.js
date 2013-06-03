@@ -19,7 +19,27 @@ Ext.define('TouchMill.model.GameScore', {
             { name: 'time_last_updated', },         //": "2012-06-15T11:23:45.965099+00:00",
             { name: 'what_happened', },             //": ""
 
-            { name: 'is_mine', type: 'boolean', defaultValue: false, },
+            //{ name: 'is_mine', type: 'boolean', defaultValue: false, },
         ],
+
+        proxy: {
+            type: 'configurableRest',
+            url: 'game_scores/',
+            extraParams: {
+                limit: 1,
+                order_by: '[-is_final,-time_last_updated]',
+                fields: [
+                    //'game_id',
+                    'team_1_score',
+                    'team_2_score',
+                    'is_final',
+                    'id',
+                    'time',
+                    'time_last_updated',
+                    'what_happened',
+                ],
+            },
+            reader: { type: 'json', rootProperty: 'objects', },
+        },
     },
 });

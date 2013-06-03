@@ -1,0 +1,83 @@
+Request:
+http://api.playwithlv.com/v1/games/
+Request Headers (partial):
+Content-Type: application/json
+Accept: application/json
+Authorization: bearer c85519c2d1
+Request Body:
+{
+    "start_time": "2013-06-01T12:21:49.076518+02:00",
+    "season_id": "20067",
+    "team_1_id": "19083",
+    "team_2_id": "19093"
+}
+Response Code: 201 Created
+Response Headers:
+Content-Type: application/json; charset=utf-8
+Response Body:
+{
+    "bracket": null,
+    "bracket_id": null,
+    "game_site": null,
+    "game_site_id": null,
+    "id": 103925,
+    "leaguevine_url": "http://www.playwithlv.com/games/103925/",
+    "next_game_for_loser": null,
+    "next_game_for_loser_id": null,
+    "next_game_for_winner": null,
+    "next_game_for_winner_id": null,
+    "next_team_for_loser": 1,
+    "next_team_for_winner": 1,
+    "number_of_sets": null,
+    "pool": null,
+    "pool_id": null,
+    "pool_round": null,
+    "pool_round_id": null,
+    "resource_uri": "http://api.playwithlv.com/v1/games/103925/",
+    "season": {
+        "end_date": "2012-12-31",
+        "id": 20067,
+        "league": {
+            "id": 7512,
+            "leaguevine_url": "http://www.playwithlv.com/leagues/7512/club-mixed/",
+            "name": "Club Mixed",
+            "resource_uri": "http://api.playwithlv.com/v1/leagues/7512/"
+        },
+        "league_id": 7512,
+        "leaguevine_url": "http://www.playwithlv.com/seasons/20067/club-mixed-2012/",
+        "name": "2012",
+        "resource_uri": "http://api.playwithlv.com/v1/seasons/20067/",
+        "start_date": "2012-01-01",
+        "time_created": "2012-04-13T13:09:07+00:00",
+        "time_last_updated": "2012-04-13T13:09:12+00:00"
+    },
+    "season_id": 20067,
+    "start_time": "2013-06-01T12:21:49.076518+02:00",
+    "swiss_round": null,
+    "swiss_round_id": null,
+    "team_1": {
+        "id": 19083,
+        "leaguevine_url": "http://www.playwithlv.com/teams/19083/rusty-bikes/",
+        "name": "Rusty Bikes",
+        "resource_uri": "http://api.playwithlv.com/v1/teams/19083/",
+        "short_name": "Rusty Bikes"
+    },
+    "team_1_id": 19083,
+    "team_1_score": 0,
+    "team_2": {
+        "id": 19093,
+        "leaguevine_url": "http://www.playwithlv.com/teams/19093/jabba-the-huck/",
+        "name": "Jabba The Huck",
+        "resource_uri": "http://api.playwithlv.com/v1/teams/19093/",
+        "short_name": "Jabba"
+    },
+    "team_2_id": 19093,
+    "team_2_score": 0,
+    "time_created": "2013-06-01T10:35:34.876380+00:00",
+    "time_last_updated": "2013-06-01T10:35:34.876410+00:00",
+    "timezone": "Africa/Blantyre",
+    "tournament": null,
+    "tournament_id": null,
+    "winner": null,
+    "winner_id": null
+}

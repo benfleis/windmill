@@ -14,6 +14,12 @@ Ext.define('TouchMill.data.proxy.ConfigurableRest', {
     },
 
     buildUrl: function(request) {
+        //console.log(this.getModel());
+        //console.log(this.getModel().getFields());
+        // create extraParams in the proxy for all fields in 
+        //var fields = _.map(this.getModel().getFields().items, function(f) { return f.getName(); });
+        //console.log(fields);
+
         // build URL, respecting static url flags; to use a static URL, both
         // Config.active && this.config.useStaticUrls must be true.
         // if using static URL, convert trailing '/' -> '.json'
@@ -28,8 +34,8 @@ Ext.define('TouchMill.data.proxy.ConfigurableRest', {
         // to 200, all the time.  may have to handle this more gracefully,
         // later on.
         var reqParams = request.getParams();
-        if (Config.active.apiParams.limit !== undefined)
-            reqParams.limit = Config.active.apiParams.limit;
+        //if (Config.active.apiParams.limit !== undefined)
+        //  reqParams.limit = Config.active.apiParams.limit;
 
         // walk params -- if an array is in there, convert to [x,y,z] string form
         var params = _.assign({}, Config.active.apiParams, reqParams, function(obj, src) {

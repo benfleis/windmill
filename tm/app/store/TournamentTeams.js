@@ -11,6 +11,7 @@ Ext.define('TouchMill.store.TournamentTeams', {
             reader: { type: 'json', rootProperty: 'objects' },
         },
 
+        pageSize: 80,
         listeners: {
             refresh: function(store, data) {
                 //console.log('TournamentTeams: refresh called!');

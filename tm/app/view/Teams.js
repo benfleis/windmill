@@ -5,6 +5,6 @@ Ext.define('TouchMill.view.Teams', {
     config: {
         title: 'Teams',
         store: 'Teams',
-        itemTpl: '{name}: {city}, {country}',
+        itemTpl: '{name}: <em class="muted">({city}, {country})</em>',
     },
 });

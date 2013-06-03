@@ -4,17 +4,12 @@ Ext.define('TouchMill.store.Games', {
     config: {
         model: 'TouchMill.model.Game',
 
-        proxy: {
-            type: 'configurableRest',
-            url: 'games/',
-            reader: { type: 'json', rootProperty: 'objects', },
-        },
-
         listeners: {
-            refresh: 'setMine',
+            //refresh: 'setMine',
         },
     },
 
+/*
     // walk the whole store and update 'is_mine' across the board.
     setMine: function() {
         console.log('Games.setMine()');
@@ -23,6 +18,7 @@ Ext.define('TouchMill.store.Games', {
             rec.set('is_mine', !!my_tm_ids[rec.data.team_1_id] || !!my_tm_ids[rec.data.team_2_id]);
         });
     },
+*/
 
     loadByTeamId: function(team_id, opts) {
         console.log('Games.loadByTeamId(' + team_id + ')');

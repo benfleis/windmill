@@ -18,24 +18,28 @@ Ext.define('TouchMill.controller.Tournaments', {
             teams: 'teams',
             games: 'games',
             gameView: 'gameView',
+
+            addGameScoreButton:     'button[action=addScore]',
+            addGameSpiritButton:    'button[action=addSpirit]',
+            submitGameScoreButton:  'button[action=submitScore]',
+            submitGameSpiritButton: 'button[action=submitSpirit]',
         },
 
         control: {
-            tournaments: {
-                itemtap: 'onTournamentSelect',
-            },
-            teams: {
-                itemtap: 'onTeamSelect',
-            },
-            games: {
-                itemtap: 'onGameSelect',
-            },
+            tournaments:            { itemtap: 'onSelectTournament', },
+            teams:                  { itemtap: 'onSelectTeam', },
+            games:                  { itemtap: 'onSelectGame', },
+
+            addGameScoreButton:     { tap: 'onTapAddScore' },
+            addGameSpiritButton:    { tap: 'onTapAddSpirit' },
+            submitGameSpiritButton: { tap: 'onTapSubmitSpirit' },
+            submitGameScoreButton:  { tap: 'onTapSubmitScore' },
         },
     },
 
     // ------------------------------------------------------------------------
 
-    onTournamentSelect: function(list, idx, item, tourney, evt) {
+    onSelectTournament: function(list, idx, item, tourney, evt) {
         // convert tourneyId into teamIds
         var tourneyId = tourney.get('id');
         var teamIds = {};
@@ -49,7 +53,7 @@ Ext.define('TouchMill.controller.Tournaments', {
         this.getTournamentNavigator().push(teamsView);
     },
 
-    onTeamSelect: function(list, idx, item, team, evt) {
+    onSelectTeam: function(list, idx, item, team, evt) {
         var gamesView = Ext.create('TouchMill.view.Games');
         var teamId = team.get('id');
         gamesView.getStore().clearFilter();
@@ -57,7 +61,7 @@ Ext.define('TouchMill.controller.Tournaments', {
             { scope: this, callback: function() { this.getTournamentNavigator().push(gamesView); }, });
     },
 
-    onGameSelect: function(list, idx, item, game, evt) {
+    onSelectGame: function(list, idx, item, game, evt) {
         var gameView = this.getGameView();
         if (!gameView) {
             console.log('->  instantiate GameView');
@@ -65,26 +69,63 @@ Ext.define('TouchMill.controller.Tournaments', {
         }
 
         var loaded = 0;
-        var maybePushGameView = function() { if (++loaded == 2) this.getTournamentNavigator().push(gameView); }.bind(this);
-        gameView.setRecord(game);
+        var maybePushGameView;
+        this.getTournamentNavigator().push(gameView);
+        gameView.setMasked({ xtype: 'loadmask', message: 'Loading...' });
 
-        game.spiritScores().load({
-            params: { game_id: game.data.id, limit: 1, },
-            scope: this,
-            callback: function(spiritScores) {
-                console.log('LOADED spiritScores!');
-                console.log(spiritScores);
-                maybePushGameView();
-            },
-        });
         game.gameScores().load({
             params: { game_id: game.data.id, limit: 1, },
             scope: this,
             callback: function(gameScores) {
                 console.log('LOADED gameScores!');
-                console.log(gameScores);
+                console.log(game.gameScores());
                 maybePushGameView();
             },
         });
+        game.spiritScores().load({
+            params: { game_id: game.data.id, limit: 1, },
+            scope: this,
+            callback: function(spiritScores) {
+                console.log('LOADED spiritScores!');
+                console.log(game.spiritScores());
+                maybePushGameView();
+            },
+        });
+
+        maybePushGameView = function() {
+            if (++loaded == 2) {
+                var items = gameView.getItems();
+                var data = game.getData(true);      // binds associated data; I think this should be done some other way, but don't know how/what/where, can't find reference to proper way to do it.
+                items.each(function(i) { i.setRecord(game); }); // really?  shouldn't this automatically get recursively applied?
+                //gameView.setRecord(gameview.gameScores.getAt(0));
+                gameView.unmask();
+            }
+        }.bind(this);
+    },
+
+    onTapAddScore: function() {
+        // XXX unused
+        console.log('onTapAddScore');
+        //this.getGameView().showAddScore();
+    },
+
+    onTapSubmitScore: function() {
+        console.log('onTapSubmitScore');
+        var gameView = this.getGameView();
+        console.log(gameView);
+        //var scoreForm = Ext.getCmp('gameView');
+        var values = gameView.getValues();
+        var gameScore = Ext.create('TouchMill.model.GameScore', values);
+        console.log(values);
+        console.log(gameScore);
+        gameView.hideAddScore();
+    },
+
+    onTapAddSpirit: function() {
+        this.getGameView().showAddSpirit(true);
+    },
+
+    onTapSubmitSpirit: function() {
+        console.log('onTapSubmitSpirit');
     },
 });

@@ -14,6 +14,13 @@ Ext.define('TouchMill.model.SpiritScore', {
             // used for marking and shortcutting.  may be totally unnecessary.
             'is_mine',
         ],
+
+        proxy: {
+            type: 'configurableRest',
+            url: 'game_sportsmanship_scores/',
+            extraParams: { limit: 1, order_by: '[-time_last_updated]' },
+            reader: { type: 'json', rootProperty: 'objects', },
+        },
     },
 });
 
