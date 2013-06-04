@@ -13,27 +13,25 @@ Ext.define('TouchMill.controller.Tournaments', {
 
     config: {
         refs: {
-            tournamentNavigator: 'tournamentnavigator',
-            tournaments: 'tournaments',
-            teams: 'teams',
-            games: 'games',
-            gameView: 'gameView',
+            tournamentNavigator:            'tournamentnavigator',
+            tournaments:                    'tournaments',
+            teams:                          'teams',
+            games:                          'games',
+            gameView:                       'gameView',
 
-            addGameScoreButton:     'button[action=addScore]',
-            addGameSpiritButton:    'button[action=addSpirit]',
-            submitGameScoreButton:  'button[action=submitScore]',
-            submitGameSpiritButton: 'button[action=submitSpirit]',
+            submitScoreButton:              'button[action=submitScore]',
+            submitSpiritTeam1Button:        'button[action=submitSpiritTeam1]',
+            submitSpiritTeam2Button:        'button[action=submitSpiritTeam2]',
         },
 
         control: {
-            tournaments:            { itemtap: 'onSelectTournament', },
-            teams:                  { itemtap: 'onSelectTeam', },
-            games:                  { itemtap: 'onSelectGame', },
+            tournaments:                    { itemtap: 'onSelectTournament', },
+            teams:                          { itemtap: 'onSelectTeam', },
+            games:                          { itemtap: 'onSelectGame', },
 
-            addGameScoreButton:     { tap: 'onTapAddScore' },
-            addGameSpiritButton:    { tap: 'onTapAddSpirit' },
-            submitGameSpiritButton: { tap: 'onTapSubmitSpirit' },
-            submitGameScoreButton:  { tap: 'onTapSubmitScore' },
+            submitScoreButton:              { tap: 'onTapSubmitScore' },
+            submitSpiritTeam1Button:        { tap: 'onTapSubmitSpiritTeam1' },
+            submitSpiritTeam2Button:        { tap: 'onTapSubmitSpiritTeam2' },
         },
     },
 
@@ -96,6 +94,7 @@ Ext.define('TouchMill.controller.Tournaments', {
             if (++loaded == 2) {
                 var items = gameView.getItems();
                 var data = game.getData(true);      // binds associated data; I think this should be done some other way, but don't know how/what/where, can't find reference to proper way to do it.
+                gameView.setRecord(game);
                 items.each(function(i) { i.setRecord(game); }); // really?  shouldn't this automatically get recursively applied?
                 //gameView.setRecord(gameview.gameScores.getAt(0));
                 gameView.unmask();
@@ -103,29 +102,51 @@ Ext.define('TouchMill.controller.Tournaments', {
         }.bind(this);
     },
 
-    onTapAddScore: function() {
-        // XXX unused
-        console.log('onTapAddScore');
-        //this.getGameView().showAddScore();
-    },
-
     onTapSubmitScore: function() {
-        console.log('onTapSubmitScore');
         var gameView = this.getGameView();
-        console.log(gameView);
-        //var scoreForm = Ext.getCmp('gameView');
-        var values = gameView.getValues();
-        var gameScore = Ext.create('TouchMill.model.GameScore', values);
-        console.log(values);
-        console.log(gameScore);
+        var gameScores = gameView.getRecord().gameScores();
+
+        // add header: Authorization: <tok_type> <auth_tok>; this should happen @ startup
+        Config.addAuthorizationHeaderToProxy(gameScores.getProxy());
+
+        // add the real thing.  XXX add a popup that says 'uploading' or sth,
+        // with the spinner, and doesn't allow any interaction until the upload
+        // is confirmed (or failed)
+        gameScores.add(gameView.getValues());
+        gameScores.sync();
         gameView.hideAddScore();
     },
 
-    onTapAddSpirit: function() {
-        this.getGameView().showAddSpirit(true);
+    //
+    // This is a bit trickier.  If they already exist, we need to copy the last
+    // set of spirit scores, and override the new values.  That way we don't
+    // blow away the spirit scores received by Team2.  So, we must do this merge
+    // thing.
+    //
+    onTapSubmitSpiritTeam1: function() {
+        console.log('onTapSubmitSpiritTeam1');
+        var gameView = this.getGameView();
+        var spiritScores = gameView.getRecord().spiritScores();
+        var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
+        var curSS = gameView.getValues();
+        var spirit = Ext.Object.merge({}, prevSS, curSS);
+        delete spirit.id;
+
+        Config.addAuthorizationHeaderToProxy(spiritScores.getProxy());
+        spiritScores.add(spirit);
+        var spiritInst = spiritScores.getAt(1) || spiritScores.getAt(0);
+        spiritInst.encodeScores();
+        spiritScores.sync();
+        gameView.hideAddScore();
     },
 
-    onTapSubmitSpirit: function() {
-        console.log('onTapSubmitSpirit');
+    onTapSubmitSpiritTeam2: function() {
+        console.log('onTapSubmitSpiritTeam2');
+        var gameView = this.getGameView();
+        var spiritScores = gameView.getRecord().spiritScores();
+        Config.addAuthorizationHeaderToProxy(spiritScores.getProxy());
+        spiritScores.add(gameView.getValues());
+        spiritScores.sync();
+        gameView.hideAddScore();
     },
 });

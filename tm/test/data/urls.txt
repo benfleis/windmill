@@ -1,0 +1,13 @@
+http://api.playwithlv.com/v1/tournaments/18094/
+
+# (up to 2) games bound to a tournament
+http://api.playwithlv.com/v1/games/?tournament_id=18094&access_token=c6cd2f2923
+
+# all (up to 200) teams bound to a tournament
+http://api.playwithlv.com/v1/tournament_teams/?tournament_ids=%5B18094%5D&access_token=472468b205&limit=200
+
+# list of rounds; can also be sorted and limited to 1 to just get last round
+http://api.playwithlv.com/v1/swiss_rounds/?tournament_id=19178&fields=%5Bid%2C%20round_number%5D&access_token=4ca400cbc5
+
+# list of all standings in all rounds
+http://api.playwithlv.com/v1/swiss_rounds/?tournament_id=19178&fields=%5Bstandings%5D&access_token=4ca400cbc5

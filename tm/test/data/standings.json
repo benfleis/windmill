@@ -1,0 +1,2571 @@
+{
+    "meta": {
+        "previous": null,
+        "total_count": 8,
+        "offset": 0,
+        "limit": 20,
+        "next": null
+    },
+    "objects": [
+        {
+            "standings": [
+                {
+                    "ranking": 1,
+                    "wins": 5,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "0.44",
+                    "team_id": 22478,
+                    "swiss_score": "2.59",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22478/israel-mix/",
+                        "short_name": "",
+                        "id": 22478,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22478/",
+                        "name": "Israel Mix"
+                    }
+                },
+                {
+                    "ranking": 2,
+                    "wins": 6,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "1.52",
+                    "team_id": 22481,
+                    "swiss_score": "1.63",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22481/outernationals/",
+                        "short_name": "",
+                        "id": 22481,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22481/",
+                        "name": "Outernationals"
+                    }
+                },
+                {
+                    "ranking": 3,
+                    "wins": 4,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.20",
+                    "team_id": 22521,
+                    "swiss_score": "1.41",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22521/ufo-utrecht/",
+                        "short_name": "",
+                        "id": 22521,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22521/",
+                        "name": "UFO (Utrecht)"
+                    }
+                },
+                {
+                    "ranking": 4,
+                    "wins": 3,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "1.48",
+                    "team_id": 22491,
+                    "swiss_score": "0.46",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22491/gronical-dizziness/",
+                        "short_name": "",
+                        "id": 22491,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22491/",
+                        "name": "Gronical Dizziness"
+                    }
+                },
+                {
+                    "ranking": 5,
+                    "wins": 2,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "0.11",
+                    "team_id": 22499,
+                    "swiss_score": "-0.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22499/quijotesdulcineas-ultimate-madrid/",
+                        "short_name": "",
+                        "id": 22499,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22499/",
+                        "name": "Quijotes+Dulcineas Ultimate Madrid"
+                    }
+                },
+                {
+                    "ranking": 6,
+                    "wins": 2,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-0.80",
+                    "team_id": 22492,
+                    "swiss_score": "-0.67",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22492/thundering-herd/",
+                        "short_name": "",
+                        "id": 22492,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22492/",
+                        "name": "Thundering Herd"
+                    }
+                },
+                {
+                    "ranking": 7,
+                    "wins": 3,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-0.59",
+                    "team_id": 22501,
+                    "swiss_score": "-2.17",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22501/star-spangled-hammers/",
+                        "short_name": "",
+                        "id": 22501,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22501/",
+                        "name": "Star Spangled Hammers"
+                    }
+                },
+                {
+                    "ranking": 8,
+                    "wins": 1,
+                    "losses": 6,
+                    "swiss_opponent_score_avg": "0.02",
+                    "team_id": 22461,
+                    "swiss_score": "-2.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22461/sexy-legs/",
+                        "short_name": "",
+                        "id": 22461,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22461/",
+                        "name": "Sexy Legs"
+                    }
+                },
+                {
+                    "ranking": 9,
+                    "wins": 5,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-3.45",
+                    "team_id": 23150,
+                    "swiss_score": "-3.66",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/23150/fizzy-lifting-drinks/",
+                        "short_name": "",
+                        "id": 23150,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/23150/",
+                        "name": "Fizzy Lifting Drinks"
+                    }
+                },
+                {
+                    "ranking": 10,
+                    "wins": 5,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-4.36",
+                    "team_id": 22474,
+                    "swiss_score": "-4.66",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22474/prague-devils/",
+                        "short_name": "",
+                        "id": 22474,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22474/",
+                        "name": "Prague Devils"
+                    }
+                },
+                {
+                    "ranking": 11,
+                    "wins": 5,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-4.53",
+                    "team_id": 22515,
+                    "swiss_score": "-5.25",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22515/rusty-bikes/",
+                        "short_name": "",
+                        "id": 22515,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22515/",
+                        "name": "Rusty Bikes"
+                    }
+                },
+                {
+                    "ranking": 12,
+                    "wins": 3,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "-4.62",
+                    "team_id": 22470,
+                    "swiss_score": "-6.62",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22470/ireland-under-23-mixed/",
+                        "short_name": "",
+                        "id": 22470,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22470/",
+                        "name": "Ireland Under 23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 13,
+                    "wins": 3,
+                    "losses": 5,
+                    "swiss_opponent_score_avg": "-3.55",
+                    "team_id": 22522,
+                    "swiss_score": "-7.10",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22522/stockholm-syndromes/",
+                        "short_name": "",
+                        "id": 22522,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22522/",
+                        "name": "Stockholm Syndromes"
+                    }
+                },
+                {
+                    "ranking": 14,
+                    "wins": 1,
+                    "losses": 5,
+                    "swiss_opponent_score_avg": "-4.27",
+                    "team_id": 22484,
+                    "swiss_score": "-7.11",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22484/wombat-ultimate-willisau/",
+                        "short_name": "",
+                        "id": 22484,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22484/",
+                        "name": "Wombat Ultimate Willisau"
+                    }
+                },
+                {
+                    "ranking": 15,
+                    "wins": 0,
+                    "losses": 7,
+                    "swiss_opponent_score_avg": "-5.56",
+                    "team_id": 22525,
+                    "swiss_score": "-8.93",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22525/cranberry-snack/",
+                        "short_name": "",
+                        "id": 22525,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22525/",
+                        "name": "Cranberry Snack"
+                    }
+                },
+                {
+                    "ranking": 16,
+                    "wins": 1,
+                    "losses": 7,
+                    "swiss_opponent_score_avg": "-5.24",
+                    "team_id": 22527,
+                    "swiss_score": "-9.49",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22527/good-lord/",
+                        "short_name": "",
+                        "id": 22527,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22527/",
+                        "name": "Good Lord!"
+                    }
+                }
+            ],
+            "resource_uri": "http://api.playwithlv.com/v1/swiss_rounds/17265/"
+        },
+        {
+            "standings": [
+                {
+                    "ranking": 1,
+                    "wins": 4,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "0.60",
+                    "team_id": 22478,
+                    "swiss_score": "2.53",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22478/israel-mix/",
+                        "short_name": "",
+                        "id": 22478,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22478/",
+                        "name": "Israel Mix"
+                    }
+                },
+                {
+                    "ranking": 2,
+                    "wins": 5,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "1.84",
+                    "team_id": 22481,
+                    "swiss_score": "1.63",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22481/outernationals/",
+                        "short_name": "",
+                        "id": 22481,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22481/",
+                        "name": "Outernationals"
+                    }
+                },
+                {
+                    "ranking": 3,
+                    "wins": 3,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.91",
+                    "team_id": 22521,
+                    "swiss_score": "1.39",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22521/ufo-utrecht/",
+                        "short_name": "",
+                        "id": 22521,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22521/",
+                        "name": "UFO (Utrecht)"
+                    }
+                },
+                {
+                    "ranking": 4,
+                    "wins": 3,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "1.51",
+                    "team_id": 22491,
+                    "swiss_score": "0.59",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22491/gronical-dizziness/",
+                        "short_name": "",
+                        "id": 22491,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22491/",
+                        "name": "Gronical Dizziness"
+                    }
+                },
+                {
+                    "ranking": 5,
+                    "wins": 2,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "-0.09",
+                    "team_id": 22499,
+                    "swiss_score": "-0.76",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22499/quijotesdulcineas-ultimate-madrid/",
+                        "short_name": "",
+                        "id": 22499,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22499/",
+                        "name": "Quijotes+Dulcineas Ultimate Madrid"
+                    }
+                },
+                {
+                    "ranking": 6,
+                    "wins": 1,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "0.08",
+                    "team_id": 22492,
+                    "swiss_score": "-0.77",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22492/thundering-herd/",
+                        "short_name": "",
+                        "id": 22492,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22492/",
+                        "name": "Thundering Herd"
+                    }
+                },
+                {
+                    "ranking": 7,
+                    "wins": 3,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-1.26",
+                    "team_id": 22501,
+                    "swiss_score": "-2.18",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22501/star-spangled-hammers/",
+                        "short_name": "",
+                        "id": 22501,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22501/",
+                        "name": "Star Spangled Hammers"
+                    }
+                },
+                {
+                    "ranking": 8,
+                    "wins": 1,
+                    "losses": 5,
+                    "swiss_opponent_score_avg": "-0.39",
+                    "team_id": 22461,
+                    "swiss_score": "-2.62",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22461/sexy-legs/",
+                        "short_name": "",
+                        "id": 22461,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22461/",
+                        "name": "Sexy Legs"
+                    }
+                },
+                {
+                    "ranking": 9,
+                    "wins": 4,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-2.67",
+                    "team_id": 23150,
+                    "swiss_score": "-3.63",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/23150/fizzy-lifting-drinks/",
+                        "short_name": "",
+                        "id": 23150,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/23150/",
+                        "name": "Fizzy Lifting Drinks"
+                    }
+                },
+                {
+                    "ranking": 10,
+                    "wins": 4,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-3.88",
+                    "team_id": 22474,
+                    "swiss_score": "-4.74",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22474/prague-devils/",
+                        "short_name": "",
+                        "id": 22474,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22474/",
+                        "name": "Prague Devils"
+                    }
+                },
+                {
+                    "ranking": 11,
+                    "wins": 4,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-4.26",
+                    "team_id": 22515,
+                    "swiss_score": "-5.09",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22515/rusty-bikes/",
+                        "short_name": "",
+                        "id": 22515,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22515/",
+                        "name": "Rusty Bikes"
+                    }
+                },
+                {
+                    "ranking": 12,
+                    "wins": 3,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-5.47",
+                    "team_id": 22470,
+                    "swiss_score": "-6.62",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22470/ireland-under-23-mixed/",
+                        "short_name": "",
+                        "id": 22470,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22470/",
+                        "name": "Ireland Under 23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 13,
+                    "wins": 3,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "-4.19",
+                    "team_id": 22522,
+                    "swiss_score": "-6.99",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22522/stockholm-syndromes/",
+                        "short_name": "",
+                        "id": 22522,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22522/",
+                        "name": "Stockholm Syndromes"
+                    }
+                },
+                {
+                    "ranking": 14,
+                    "wins": 1,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "-4.29",
+                    "team_id": 22484,
+                    "swiss_score": "-7.22",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22484/wombat-ultimate-willisau/",
+                        "short_name": "",
+                        "id": 22484,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22484/",
+                        "name": "Wombat Ultimate Willisau"
+                    }
+                },
+                {
+                    "ranking": 15,
+                    "wins": 0,
+                    "losses": 6,
+                    "swiss_opponent_score_avg": "-5.68",
+                    "team_id": 22525,
+                    "swiss_score": "-8.82",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22525/cranberry-snack/",
+                        "short_name": "",
+                        "id": 22525,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22525/",
+                        "name": "Cranberry Snack"
+                    }
+                },
+                {
+                    "ranking": 16,
+                    "wins": 1,
+                    "losses": 6,
+                    "swiss_opponent_score_avg": "-5.44",
+                    "team_id": 22527,
+                    "swiss_score": "-9.44",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22527/good-lord/",
+                        "short_name": "",
+                        "id": 22527,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22527/",
+                        "name": "Good Lord!"
+                    }
+                }
+            ],
+            "resource_uri": "http://api.playwithlv.com/v1/swiss_rounds/17262/"
+        },
+        {
+            "standings": [
+                {
+                    "ranking": 1,
+                    "wins": 3,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "0.70",
+                    "team_id": 22478,
+                    "swiss_score": "2.49",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22478/israel-mix/",
+                        "short_name": "",
+                        "id": 22478,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22478/",
+                        "name": "Israel Mix"
+                    }
+                },
+                {
+                    "ranking": 2,
+                    "wins": 4,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "2.33",
+                    "team_id": 22481,
+                    "swiss_score": "1.87",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22481/outernationals/",
+                        "short_name": "",
+                        "id": 22481,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22481/",
+                        "name": "Outernationals"
+                    }
+                },
+                {
+                    "ranking": 3,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.95",
+                    "team_id": 22521,
+                    "swiss_score": "1.32",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22521/ufo-utrecht/",
+                        "short_name": "",
+                        "id": 22521,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22521/",
+                        "name": "UFO (Utrecht)"
+                    }
+                },
+                {
+                    "ranking": 4,
+                    "wins": 2,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "2.01",
+                    "team_id": 22491,
+                    "swiss_score": "0.89",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22491/gronical-dizziness/",
+                        "short_name": "",
+                        "id": 22491,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22491/",
+                        "name": "Gronical Dizziness"
+                    }
+                },
+                {
+                    "ranking": 5,
+                    "wins": 2,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-0.43",
+                    "team_id": 22499,
+                    "swiss_score": "-0.58",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22499/quijotesdulcineas-ultimate-madrid/",
+                        "short_name": "",
+                        "id": 22499,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22499/",
+                        "name": "Quijotes+Dulcineas Ultimate Madrid"
+                    }
+                },
+                {
+                    "ranking": 6,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-0.26",
+                    "team_id": 22492,
+                    "swiss_score": "-0.59",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22492/thundering-herd/",
+                        "short_name": "",
+                        "id": 22492,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22492/",
+                        "name": "Thundering Herd"
+                    }
+                },
+                {
+                    "ranking": 7,
+                    "wins": 3,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-1.91",
+                    "team_id": 22501,
+                    "swiss_score": "-2.28",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22501/star-spangled-hammers/",
+                        "short_name": "",
+                        "id": 22501,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22501/",
+                        "name": "Star Spangled Hammers"
+                    }
+                },
+                {
+                    "ranking": 8,
+                    "wins": 1,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "-0.73",
+                    "team_id": 22461,
+                    "swiss_score": "-2.78",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22461/sexy-legs/",
+                        "short_name": "",
+                        "id": 22461,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22461/",
+                        "name": "Sexy Legs"
+                    }
+                },
+                {
+                    "ranking": 9,
+                    "wins": 3,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-2.16",
+                    "team_id": 23150,
+                    "swiss_score": "-3.47",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/23150/fizzy-lifting-drinks/",
+                        "short_name": "",
+                        "id": 23150,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/23150/",
+                        "name": "Fizzy Lifting Drinks"
+                    }
+                },
+                {
+                    "ranking": 10,
+                    "wins": 3,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-3.31",
+                    "team_id": 22474,
+                    "swiss_score": "-4.73",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22474/prague-devils/",
+                        "short_name": "",
+                        "id": 22474,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22474/",
+                        "name": "Prague Devils"
+                    }
+                },
+                {
+                    "ranking": 11,
+                    "wins": 3,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-3.73",
+                    "team_id": 22515,
+                    "swiss_score": "-5.21",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22515/rusty-bikes/",
+                        "short_name": "",
+                        "id": 22515,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22515/",
+                        "name": "Rusty Bikes"
+                    }
+                },
+                {
+                    "ranking": 12,
+                    "wins": 3,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-5.86",
+                    "team_id": 22470,
+                    "swiss_score": "-6.86",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22470/ireland-under-23-mixed/",
+                        "short_name": "",
+                        "id": 22470,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22470/",
+                        "name": "Ireland Under 23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 13,
+                    "wins": 1,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-4.14",
+                    "team_id": 22484,
+                    "swiss_score": "-7.18",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22484/wombat-ultimate-willisau/",
+                        "short_name": "",
+                        "id": 22484,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22484/",
+                        "name": "Wombat Ultimate Willisau"
+                    }
+                },
+                {
+                    "ranking": 14,
+                    "wins": 2,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "-4.10",
+                    "team_id": 22522,
+                    "swiss_score": "-7.23",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22522/stockholm-syndromes/",
+                        "short_name": "",
+                        "id": 22522,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22522/",
+                        "name": "Stockholm Syndromes"
+                    }
+                },
+                {
+                    "ranking": 15,
+                    "wins": 0,
+                    "losses": 5,
+                    "swiss_opponent_score_avg": "-5.83",
+                    "team_id": 22525,
+                    "swiss_score": "-8.83",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22525/cranberry-snack/",
+                        "short_name": "",
+                        "id": 22525,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22525/",
+                        "name": "Cranberry Snack"
+                    }
+                },
+                {
+                    "ranking": 16,
+                    "wins": 1,
+                    "losses": 5,
+                    "swiss_opponent_score_avg": "-5.66",
+                    "team_id": 22527,
+                    "swiss_score": "-9.66",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22527/good-lord/",
+                        "short_name": "",
+                        "id": 22527,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22527/",
+                        "name": "Good Lord!"
+                    }
+                }
+            ],
+            "resource_uri": "http://api.playwithlv.com/v1/swiss_rounds/17259/"
+        },
+        {
+            "standings": [
+                {
+                    "ranking": 1,
+                    "wins": 4,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "3.48",
+                    "team_id": 22528,
+                    "swiss_score": "9.08",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22528/southern-skies/",
+                        "short_name": "",
+                        "id": 22528,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22528/",
+                        "name": "Southern Skies"
+                    }
+                },
+                {
+                    "ranking": 2,
+                    "wins": 5,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "5.16",
+                    "team_id": 22508,
+                    "swiss_score": "8.76",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22508/happy-hour/",
+                        "short_name": "",
+                        "id": 22508,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22508/",
+                        "name": "Happy Hour"
+                    }
+                },
+                {
+                    "ranking": 3,
+                    "wins": 3,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "4.82",
+                    "team_id": 22490,
+                    "swiss_score": "7.42",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22490/puf/",
+                        "short_name": "",
+                        "id": 22490,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22490/",
+                        "name": "PUF"
+                    }
+                },
+                {
+                    "ranking": 4,
+                    "wins": 2,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "5.82",
+                    "team_id": 22520,
+                    "swiss_score": "6.62",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22520/germany-u23-mixed/",
+                        "short_name": "",
+                        "id": 22520,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22520/",
+                        "name": "Germany U23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 5,
+                    "wins": 5,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "2.10",
+                    "team_id": 22464,
+                    "swiss_score": "6.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22464/headless-ultimate-zurich/",
+                        "short_name": "",
+                        "id": 22464,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22464/",
+                        "name": "Headless Ultimate Z\u00fcrich"
+                    }
+                },
+                {
+                    "ranking": 6,
+                    "wins": 3,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "3.99",
+                    "team_id": 22512,
+                    "swiss_score": "6.19",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22512/rebel-ultimate/",
+                        "short_name": "",
+                        "id": 22512,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22512/",
+                        "name": "Rebel Ultimate"
+                    }
+                },
+                {
+                    "ranking": 7,
+                    "wins": 1,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "3.83",
+                    "team_id": 22494,
+                    "swiss_score": "4.63",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22494/mubidisk-lanzarote/",
+                        "short_name": "",
+                        "id": 22494,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22494/",
+                        "name": "Mubidisk Lanzarote"
+                    }
+                },
+                {
+                    "ranking": 8,
+                    "wins": 3,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "2.57",
+                    "team_id": 22473,
+                    "swiss_score": "4.37",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22473/father-abrahams-soup-of-the-day/",
+                        "short_name": "",
+                        "id": 22473,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22473/",
+                        "name": "Father Abraham's soup of the day"
+                    }
+                },
+                {
+                    "ranking": 9,
+                    "wins": 2,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "0.65",
+                    "team_id": 22478,
+                    "swiss_score": "2.25",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22478/israel-mix/",
+                        "short_name": "",
+                        "id": 22478,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22478/",
+                        "name": "Israel Mix"
+                    }
+                },
+                {
+                    "ranking": 10,
+                    "wins": 3,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "2.28",
+                    "team_id": 22481,
+                    "swiss_score": "1.88",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22481/outernationals/",
+                        "short_name": "",
+                        "id": 22481,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22481/",
+                        "name": "Outernationals"
+                    }
+                },
+                {
+                    "ranking": 11,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.84",
+                    "team_id": 22521,
+                    "swiss_score": "1.64",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22521/ufo-utrecht/",
+                        "short_name": "",
+                        "id": 22521,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22521/",
+                        "name": "UFO (Utrecht)"
+                    }
+                },
+                {
+                    "ranking": 12,
+                    "wins": 2,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "1.60",
+                    "team_id": 22491,
+                    "swiss_score": "0.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22491/gronical-dizziness/",
+                        "short_name": "",
+                        "id": 22491,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22491/",
+                        "name": "Gronical Dizziness"
+                    }
+                },
+                {
+                    "ranking": 13,
+                    "wins": 2,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-1.24",
+                    "team_id": 22499,
+                    "swiss_score": "-0.44",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22499/quijotesdulcineas-ultimate-madrid/",
+                        "short_name": "",
+                        "id": 22499,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22499/",
+                        "name": "Quijotes+Dulcineas Ultimate Madrid"
+                    }
+                },
+                {
+                    "ranking": 14,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-0.41",
+                    "team_id": 22492,
+                    "swiss_score": "-0.81",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22492/thundering-herd/",
+                        "short_name": "",
+                        "id": 22492,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22492/",
+                        "name": "Thundering Herd"
+                    }
+                },
+                {
+                    "ranking": 15,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-1.55",
+                    "team_id": 22501,
+                    "swiss_score": "-1.95",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22501/star-spangled-hammers/",
+                        "short_name": "",
+                        "id": 22501,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22501/",
+                        "name": "Star Spangled Hammers"
+                    }
+                },
+                {
+                    "ranking": 16,
+                    "wins": 1,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-0.34",
+                    "team_id": 22461,
+                    "swiss_score": "-2.34",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22461/sexy-legs/",
+                        "short_name": "",
+                        "id": 22461,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22461/",
+                        "name": "Sexy Legs"
+                    }
+                },
+                {
+                    "ranking": 17,
+                    "wins": 2,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-2.24",
+                    "team_id": 23150,
+                    "swiss_score": "-3.84",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/23150/fizzy-lifting-drinks/",
+                        "short_name": "",
+                        "id": 23150,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/23150/",
+                        "name": "Fizzy Lifting Drinks"
+                    }
+                },
+                {
+                    "ranking": 18,
+                    "wins": 3,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-3.81",
+                    "team_id": 22474,
+                    "swiss_score": "-5.01",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22474/prague-devils/",
+                        "short_name": "",
+                        "id": 22474,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22474/",
+                        "name": "Prague Devils"
+                    }
+                },
+                {
+                    "ranking": 19,
+                    "wins": 2,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-2.72",
+                    "team_id": 22515,
+                    "swiss_score": "-5.12",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22515/rusty-bikes/",
+                        "short_name": "",
+                        "id": 22515,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22515/",
+                        "name": "Rusty Bikes"
+                    }
+                },
+                {
+                    "ranking": 20,
+                    "wins": 1,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-3.57",
+                    "team_id": 22484,
+                    "swiss_score": "-6.97",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22484/wombat-ultimate-willisau/",
+                        "short_name": "",
+                        "id": 22484,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22484/",
+                        "name": "Wombat Ultimate Willisau"
+                    }
+                },
+                {
+                    "ranking": 21,
+                    "wins": 2,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-4.03",
+                    "team_id": 22522,
+                    "swiss_score": "-7.03",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22522/stockholm-syndromes/",
+                        "short_name": "",
+                        "id": 22522,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22522/",
+                        "name": "Stockholm Syndromes"
+                    }
+                },
+                {
+                    "ranking": 22,
+                    "wins": 2,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-5.76",
+                    "team_id": 22470,
+                    "swiss_score": "-7.36",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22470/ireland-under-23-mixed/",
+                        "short_name": "",
+                        "id": 22470,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22470/",
+                        "name": "Ireland Under 23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 23,
+                    "wins": 0,
+                    "losses": 5,
+                    "swiss_opponent_score_avg": "-5.69",
+                    "team_id": 22525,
+                    "swiss_score": "-9.29",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22525/cranberry-snack/",
+                        "short_name": "",
+                        "id": 22525,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22525/",
+                        "name": "Cranberry Snack"
+                    }
+                },
+                {
+                    "ranking": 24,
+                    "wins": 1,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "-5.80",
+                    "team_id": 22527,
+                    "swiss_score": "-9.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22527/good-lord/",
+                        "short_name": "",
+                        "id": 22527,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22527/",
+                        "name": "Good Lord!"
+                    }
+                }
+            ],
+            "resource_uri": "http://api.playwithlv.com/v1/swiss_rounds/17256/"
+        },
+        {
+            "standings": [
+                {
+                    "ranking": 1,
+                    "wins": 4,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "4.80",
+                    "team_id": 22508,
+                    "swiss_score": "9.10",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22508/happy-hour/",
+                        "short_name": "",
+                        "id": 22508,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22508/",
+                        "name": "Happy Hour"
+                    }
+                },
+                {
+                    "ranking": 2,
+                    "wins": 3,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "2.70",
+                    "team_id": 22528,
+                    "swiss_score": "9",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22528/southern-skies/",
+                        "short_name": "",
+                        "id": 22528,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22528/",
+                        "name": "Southern Skies"
+                    }
+                },
+                {
+                    "ranking": 3,
+                    "wins": 3,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "3.70",
+                    "team_id": 22490,
+                    "swiss_score": "7.20",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22490/puf/",
+                        "short_name": "",
+                        "id": 22490,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22490/",
+                        "name": "PUF"
+                    }
+                },
+                {
+                    "ranking": 4,
+                    "wins": 2,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "4.90",
+                    "team_id": 22520,
+                    "swiss_score": "6.70",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22520/germany-u23-mixed/",
+                        "short_name": "",
+                        "id": 22520,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22520/",
+                        "name": "Germany U23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 5,
+                    "wins": 4,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "1.40",
+                    "team_id": 22464,
+                    "swiss_score": "6.20",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22464/headless-ultimate-zurich/",
+                        "short_name": "",
+                        "id": 22464,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22464/",
+                        "name": "Headless Ultimate Z\u00fcrich"
+                    }
+                },
+                {
+                    "ranking": 6,
+                    "wins": 2,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "3.80",
+                    "team_id": 22512,
+                    "swiss_score": "6.10",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22512/rebel-ultimate/",
+                        "short_name": "",
+                        "id": 22512,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22512/",
+                        "name": "Rebel Ultimate"
+                    }
+                },
+                {
+                    "ranking": 7,
+                    "wins": 1,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "3.10",
+                    "team_id": 22494,
+                    "swiss_score": "4.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22494/mubidisk-lanzarote/",
+                        "short_name": "",
+                        "id": 22494,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22494/",
+                        "name": "Mubidisk Lanzarote"
+                    }
+                },
+                {
+                    "ranking": 8,
+                    "wins": 3,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "1.80",
+                    "team_id": 22473,
+                    "swiss_score": "4.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22473/father-abrahams-soup-of-the-day/",
+                        "short_name": "",
+                        "id": 22473,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22473/",
+                        "name": "Father Abraham's soup of the day"
+                    }
+                },
+                {
+                    "ranking": 9,
+                    "wins": 3,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "2.70",
+                    "team_id": 22481,
+                    "swiss_score": "2.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22481/outernationals/",
+                        "short_name": "",
+                        "id": 22481,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22481/",
+                        "name": "Outernationals"
+                    }
+                },
+                {
+                    "ranking": 10,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "0.50",
+                    "team_id": 22478,
+                    "swiss_score": "2",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22478/israel-mix/",
+                        "short_name": "",
+                        "id": 22478,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22478/",
+                        "name": "Israel Mix"
+                    }
+                },
+                {
+                    "ranking": 11,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.70",
+                    "team_id": 22521,
+                    "swiss_score": "1.40",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22521/ufo-utrecht/",
+                        "short_name": "",
+                        "id": 22521,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22521/",
+                        "name": "UFO (Utrecht)"
+                    }
+                },
+                {
+                    "ranking": 12,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "1.60",
+                    "team_id": 22491,
+                    "swiss_score": "1.10",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22491/gronical-dizziness/",
+                        "short_name": "",
+                        "id": 22491,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22491/",
+                        "name": "Gronical Dizziness"
+                    }
+                },
+                {
+                    "ranking": 13,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-0.70",
+                    "team_id": 22499,
+                    "swiss_score": "0.10",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22499/quijotesdulcineas-ultimate-madrid/",
+                        "short_name": "",
+                        "id": 22499,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22499/",
+                        "name": "Quijotes+Dulcineas Ultimate Madrid"
+                    }
+                },
+                {
+                    "ranking": 14,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "0.30",
+                    "team_id": 22492,
+                    "swiss_score": "-0.20",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22492/thundering-herd/",
+                        "short_name": "",
+                        "id": 22492,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22492/",
+                        "name": "Thundering Herd"
+                    }
+                },
+                {
+                    "ranking": 15,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-1.80",
+                    "team_id": 22501,
+                    "swiss_score": "-2.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22501/star-spangled-hammers/",
+                        "short_name": "",
+                        "id": 22501,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22501/",
+                        "name": "Star Spangled Hammers"
+                    }
+                },
+                {
+                    "ranking": 16,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-0.30",
+                    "team_id": 22461,
+                    "swiss_score": "-2.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22461/sexy-legs/",
+                        "short_name": "",
+                        "id": 22461,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22461/",
+                        "name": "Sexy Legs"
+                    }
+                },
+                {
+                    "ranking": 17,
+                    "wins": 1,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-1.60",
+                    "team_id": 23150,
+                    "swiss_score": "-3.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/23150/fizzy-lifting-drinks/",
+                        "short_name": "",
+                        "id": 23150,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/23150/",
+                        "name": "Fizzy Lifting Drinks"
+                    }
+                },
+                {
+                    "ranking": 18,
+                    "wins": 2,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-2.60",
+                    "team_id": 22515,
+                    "swiss_score": "-5.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22515/rusty-bikes/",
+                        "short_name": "",
+                        "id": 22515,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22515/",
+                        "name": "Rusty Bikes"
+                    }
+                },
+                {
+                    "ranking": 19,
+                    "wins": 2,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-3.20",
+                    "team_id": 22474,
+                    "swiss_score": "-5.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22474/prague-devils/",
+                        "short_name": "",
+                        "id": 22474,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22474/",
+                        "name": "Prague Devils"
+                    }
+                },
+                {
+                    "ranking": 20,
+                    "wins": 1,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-2.80",
+                    "team_id": 22522,
+                    "swiss_score": "-6.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22522/stockholm-syndromes/",
+                        "short_name": "",
+                        "id": 22522,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22522/",
+                        "name": "Stockholm Syndromes"
+                    }
+                },
+                {
+                    "ranking": 21,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-3.40",
+                    "team_id": 22484,
+                    "swiss_score": "-6.90",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22484/wombat-ultimate-willisau/",
+                        "short_name": "",
+                        "id": 22484,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22484/",
+                        "name": "Wombat Ultimate Willisau"
+                    }
+                },
+                {
+                    "ranking": 22,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-5",
+                    "team_id": 22470,
+                    "swiss_score": "-8",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22470/ireland-under-23-mixed/",
+                        "short_name": "",
+                        "id": 22470,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22470/",
+                        "name": "Ireland Under 23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 23,
+                    "wins": 1,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-5.50",
+                    "team_id": 22527,
+                    "swiss_score": "-9.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22527/good-lord/",
+                        "short_name": "",
+                        "id": 22527,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22527/",
+                        "name": "Good Lord!"
+                    }
+                },
+                {
+                    "ranking": 24,
+                    "wins": 0,
+                    "losses": 4,
+                    "swiss_opponent_score_avg": "-5.30",
+                    "team_id": 22525,
+                    "swiss_score": "-9.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22525/cranberry-snack/",
+                        "short_name": "",
+                        "id": 22525,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22525/",
+                        "name": "Cranberry Snack"
+                    }
+                }
+            ],
+            "resource_uri": "http://api.playwithlv.com/v1/swiss_rounds/17253/"
+        },
+        {
+            "standings": [
+                {
+                    "ranking": 1,
+                    "wins": 3,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "1",
+                    "team_id": 22528,
+                    "swiss_score": "9.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22528/southern-skies/",
+                        "short_name": "",
+                        "id": 22528,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22528/",
+                        "name": "Southern Skies"
+                    }
+                },
+                {
+                    "ranking": 2,
+                    "wins": 3,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "3.20",
+                    "team_id": 22508,
+                    "swiss_score": "8.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22508/happy-hour/",
+                        "short_name": "",
+                        "id": 22508,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22508/",
+                        "name": "Happy Hour"
+                    }
+                },
+                {
+                    "ranking": 3,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "4.70",
+                    "team_id": 22520,
+                    "swiss_score": "7.40",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22520/germany-u23-mixed/",
+                        "short_name": "",
+                        "id": 22520,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22520/",
+                        "name": "Germany U23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 4,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "3.10",
+                    "team_id": 22490,
+                    "swiss_score": "7.40",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22490/puf/",
+                        "short_name": "",
+                        "id": 22490,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22490/",
+                        "name": "PUF"
+                    }
+                },
+                {
+                    "ranking": 5,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "3.80",
+                    "team_id": 22512,
+                    "swiss_score": "7.10",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22512/rebel-ultimate/",
+                        "short_name": "",
+                        "id": 22512,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22512/",
+                        "name": "Rebel Ultimate"
+                    }
+                },
+                {
+                    "ranking": 6,
+                    "wins": 3,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-0.40",
+                    "team_id": 22464,
+                    "swiss_score": "5.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22464/headless-ultimate-zurich/",
+                        "short_name": "",
+                        "id": 22464,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22464/",
+                        "name": "Headless Ultimate Z\u00fcrich"
+                    }
+                },
+                {
+                    "ranking": 7,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "3",
+                    "team_id": 22494,
+                    "swiss_score": "5.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22494/mubidisk-lanzarote/",
+                        "short_name": "",
+                        "id": 22494,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22494/",
+                        "name": "Mubidisk Lanzarote"
+                    }
+                },
+                {
+                    "ranking": 8,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0",
+                    "team_id": 22473,
+                    "swiss_score": "3.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22473/father-abrahams-soup-of-the-day/",
+                        "short_name": "",
+                        "id": 22473,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22473/",
+                        "name": "Father Abraham's soup of the day"
+                    }
+                },
+                {
+                    "ranking": 9,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-0.10",
+                    "team_id": 22478,
+                    "swiss_score": "2.20",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22478/israel-mix/",
+                        "short_name": "",
+                        "id": 22478,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22478/",
+                        "name": "Israel Mix"
+                    }
+                },
+                {
+                    "ranking": 10,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.90",
+                    "team_id": 22521,
+                    "swiss_score": "1.90",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22521/ufo-utrecht/",
+                        "short_name": "",
+                        "id": 22521,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22521/",
+                        "name": "UFO (Utrecht)"
+                    }
+                },
+                {
+                    "ranking": 11,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "2.50",
+                    "team_id": 22481,
+                    "swiss_score": "1.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22481/outernationals/",
+                        "short_name": "",
+                        "id": 22481,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22481/",
+                        "name": "Outernationals"
+                    }
+                },
+                {
+                    "ranking": 12,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "1.10",
+                    "team_id": 22491,
+                    "swiss_score": "0.40",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22491/gronical-dizziness/",
+                        "short_name": "",
+                        "id": 22491,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22491/",
+                        "name": "Gronical Dizziness"
+                    }
+                },
+                {
+                    "ranking": 13,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "0.30",
+                    "team_id": 22492,
+                    "swiss_score": "-0.40",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22492/thundering-herd/",
+                        "short_name": "",
+                        "id": 22492,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22492/",
+                        "name": "Thundering Herd"
+                    }
+                },
+                {
+                    "ranking": 14,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-1.70",
+                    "team_id": 22499,
+                    "swiss_score": "-0.70",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22499/quijotesdulcineas-ultimate-madrid/",
+                        "short_name": "",
+                        "id": 22499,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22499/",
+                        "name": "Quijotes+Dulcineas Ultimate Madrid"
+                    }
+                },
+                {
+                    "ranking": 15,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-0.40",
+                    "team_id": 22501,
+                    "swiss_score": "-1.40",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22501/star-spangled-hammers/",
+                        "short_name": "",
+                        "id": 22501,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22501/",
+                        "name": "Star Spangled Hammers"
+                    }
+                },
+                {
+                    "ranking": 16,
+                    "wins": 0,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "1.90",
+                    "team_id": 22461,
+                    "swiss_score": "-1.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22461/sexy-legs/",
+                        "short_name": "",
+                        "id": 22461,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22461/",
+                        "name": "Sexy Legs"
+                    }
+                },
+                {
+                    "ranking": 17,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-2.20",
+                    "team_id": 23150,
+                    "swiss_score": "-4.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/23150/fizzy-lifting-drinks/",
+                        "short_name": "",
+                        "id": 23150,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/23150/",
+                        "name": "Fizzy Lifting Drinks"
+                    }
+                },
+                {
+                    "ranking": 18,
+                    "wins": 2,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-2.20",
+                    "team_id": 22515,
+                    "swiss_score": "-5.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22515/rusty-bikes/",
+                        "short_name": "",
+                        "id": 22515,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22515/",
+                        "name": "Rusty Bikes"
+                    }
+                },
+                {
+                    "ranking": 19,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-2",
+                    "team_id": 22474,
+                    "swiss_score": "-5.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22474/prague-devils/",
+                        "short_name": "",
+                        "id": 22474,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22474/",
+                        "name": "Prague Devils"
+                    }
+                },
+                {
+                    "ranking": 20,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-1.70",
+                    "team_id": 22522,
+                    "swiss_score": "-6.40",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22522/stockholm-syndromes/",
+                        "short_name": "",
+                        "id": 22522,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22522/",
+                        "name": "Stockholm Syndromes"
+                    }
+                },
+                {
+                    "ranking": 21,
+                    "wins": 0,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-1.20",
+                    "team_id": 22484,
+                    "swiss_score": "-6.90",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22484/wombat-ultimate-willisau/",
+                        "short_name": "",
+                        "id": 22484,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22484/",
+                        "name": "Wombat Ultimate Willisau"
+                    }
+                },
+                {
+                    "ranking": 22,
+                    "wins": 0,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-3.40",
+                    "team_id": 22470,
+                    "swiss_score": "-7.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22470/ireland-under-23-mixed/",
+                        "short_name": "",
+                        "id": 22470,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22470/",
+                        "name": "Ireland Under 23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 23,
+                    "wins": 1,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-4.90",
+                    "team_id": 22527,
+                    "swiss_score": "-9.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22527/good-lord/",
+                        "short_name": "",
+                        "id": 22527,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22527/",
+                        "name": "Good Lord!"
+                    }
+                },
+                {
+                    "ranking": 24,
+                    "wins": 0,
+                    "losses": 3,
+                    "swiss_opponent_score_avg": "-4.90",
+                    "team_id": 22525,
+                    "swiss_score": "-10.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22525/cranberry-snack/",
+                        "short_name": "",
+                        "id": 22525,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22525/",
+                        "name": "Cranberry Snack"
+                    }
+                }
+            ],
+            "resource_uri": "http://api.playwithlv.com/v1/swiss_rounds/17250/"
+        },
+        {
+            "standings": [
+                {
+                    "ranking": 1,
+                    "wins": 2,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-1.30",
+                    "team_id": 22528,
+                    "swiss_score": "10.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22528/southern-skies/",
+                        "short_name": "",
+                        "id": 22528,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22528/",
+                        "name": "Southern Skies"
+                    }
+                },
+                {
+                    "ranking": 2,
+                    "wins": 2,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-0.50",
+                    "team_id": 22490,
+                    "swiss_score": "7",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22490/puf/",
+                        "short_name": "",
+                        "id": 22490,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22490/",
+                        "name": "PUF"
+                    }
+                },
+                {
+                    "ranking": 3,
+                    "wins": 2,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-0.50",
+                    "team_id": 22464,
+                    "swiss_score": "7",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22464/headless-ultimate-zurich/",
+                        "short_name": "",
+                        "id": 22464,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22464/",
+                        "name": "Headless Ultimate Z\u00fcrich"
+                    }
+                },
+                {
+                    "ranking": 4,
+                    "wins": 2,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "0.30",
+                    "team_id": 22473,
+                    "swiss_score": "6.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22473/father-abrahams-soup-of-the-day/",
+                        "short_name": "",
+                        "id": 22473,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22473/",
+                        "name": "Father Abraham's soup of the day"
+                    }
+                },
+                {
+                    "ranking": 5,
+                    "wins": 2,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-1.40",
+                    "team_id": 22508,
+                    "swiss_score": "5.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22508/happy-hour/",
+                        "short_name": "",
+                        "id": 22508,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22508/",
+                        "name": "Happy Hour"
+                    }
+                },
+                {
+                    "ranking": 6,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.50",
+                    "team_id": 22494,
+                    "swiss_score": "5",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22494/mubidisk-lanzarote/",
+                        "short_name": "",
+                        "id": 22494,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22494/",
+                        "name": "Mubidisk Lanzarote"
+                    }
+                },
+                {
+                    "ranking": 7,
+                    "wins": 2,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-0.10",
+                    "team_id": 22520,
+                    "swiss_score": "4.90",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22520/germany-u23-mixed/",
+                        "short_name": "",
+                        "id": 22520,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22520/",
+                        "name": "Germany U23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 8,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.10",
+                    "team_id": 22512,
+                    "swiss_score": "4.10",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22512/rebel-ultimate/",
+                        "short_name": "",
+                        "id": 22512,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22512/",
+                        "name": "Rebel Ultimate"
+                    }
+                },
+                {
+                    "ranking": 9,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.50",
+                    "team_id": 22478,
+                    "swiss_score": "4",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22478/israel-mix/",
+                        "short_name": "",
+                        "id": 22478,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22478/",
+                        "name": "Israel Mix"
+                    }
+                },
+                {
+                    "ranking": 10,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "1.30",
+                    "team_id": 22521,
+                    "swiss_score": "2.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22521/ufo-utrecht/",
+                        "short_name": "",
+                        "id": 22521,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22521/",
+                        "name": "UFO (Utrecht)"
+                    }
+                },
+                {
+                    "ranking": 11,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-0.30",
+                    "team_id": 22499,
+                    "swiss_score": "2.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22499/quijotesdulcineas-ultimate-madrid/",
+                        "short_name": "",
+                        "id": 22499,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22499/",
+                        "name": "Quijotes+Dulcineas Ultimate Madrid"
+                    }
+                },
+                {
+                    "ranking": 12,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "1.40",
+                    "team_id": 22481,
+                    "swiss_score": "-0.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22481/outernationals/",
+                        "short_name": "",
+                        "id": 22481,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22481/",
+                        "name": "Outernationals"
+                    }
+                },
+                {
+                    "ranking": 13,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-0.30",
+                    "team_id": 23150,
+                    "swiss_score": "-1.80",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/23150/fizzy-lifting-drinks/",
+                        "short_name": "",
+                        "id": 23150,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/23150/",
+                        "name": "Fizzy Lifting Drinks"
+                    }
+                },
+                {
+                    "ranking": 14,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "1.40",
+                    "team_id": 22491,
+                    "swiss_score": "-2.10",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22491/gronical-dizziness/",
+                        "short_name": "",
+                        "id": 22491,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22491/",
+                        "name": "Gronical Dizziness"
+                    }
+                },
+                {
+                    "ranking": 15,
+                    "wins": 0,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-1.40",
+                    "team_id": 22492,
+                    "swiss_score": "-2.90",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22492/thundering-herd/",
+                        "short_name": "",
+                        "id": 22492,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22492/",
+                        "name": "Thundering Herd"
+                    }
+                },
+                {
+                    "ranking": 16,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.10",
+                    "team_id": 22461,
+                    "swiss_score": "-4.40",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22461/sexy-legs/",
+                        "short_name": "",
+                        "id": 22461,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22461/",
+                        "name": "Sexy Legs"
+                    }
+                },
+                {
+                    "ranking": 17,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-0.10",
+                    "team_id": 22501,
+                    "swiss_score": "-4.60",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22501/star-spangled-hammers/",
+                        "short_name": "",
+                        "id": 22501,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22501/",
+                        "name": "Star Spangled Hammers"
+                    }
+                },
+                {
+                    "ranking": 18,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.50",
+                    "team_id": 22484,
+                    "swiss_score": "-5",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22484/wombat-ultimate-willisau/",
+                        "short_name": "",
+                        "id": 22484,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22484/",
+                        "name": "Wombat Ultimate Willisau"
+                    }
+                },
+                {
+                    "ranking": 19,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "1.30",
+                    "team_id": 22522,
+                    "swiss_score": "-5.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22522/stockholm-syndromes/",
+                        "short_name": "",
+                        "id": 22522,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22522/",
+                        "name": "Stockholm Syndromes"
+                    }
+                },
+                {
+                    "ranking": 20,
+                    "wins": 1,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-0.50",
+                    "team_id": 22515,
+                    "swiss_score": "-6",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22515/rusty-bikes/",
+                        "short_name": "",
+                        "id": 22515,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22515/",
+                        "name": "Rusty Bikes"
+                    }
+                },
+                {
+                    "ranking": 21,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "-0.50",
+                    "team_id": 22470,
+                    "swiss_score": "-6",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22470/ireland-under-23-mixed/",
+                        "short_name": "",
+                        "id": 22470,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22470/",
+                        "name": "Ireland Under 23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 22,
+                    "wins": 0,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "0.50",
+                    "team_id": 22474,
+                    "swiss_score": "-6",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22474/prague-devils/",
+                        "short_name": "",
+                        "id": 22474,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22474/",
+                        "name": "Prague Devils"
+                    }
+                },
+                {
+                    "ranking": 23,
+                    "wins": 0,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "0.30",
+                    "team_id": 22525,
+                    "swiss_score": "-7.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22525/cranberry-snack/",
+                        "short_name": "",
+                        "id": 22525,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22525/",
+                        "name": "Cranberry Snack"
+                    }
+                },
+                {
+                    "ranking": 24,
+                    "wins": 0,
+                    "losses": 2,
+                    "swiss_opponent_score_avg": "-1.30",
+                    "team_id": 22527,
+                    "swiss_score": "-8.30",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22527/good-lord/",
+                        "short_name": "",
+                        "id": 22527,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22527/",
+                        "name": "Good Lord!"
+                    }
+                }
+            ],
+            "resource_uri": "http://api.playwithlv.com/v1/swiss_rounds/17247/"
+        },
+        {
+            "standings": [
+                {
+                    "ranking": 1,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-7",
+                    "team_id": 22528,
+                    "swiss_score": "7",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22528/southern-skies/",
+                        "short_name": "",
+                        "id": 22528,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22528/",
+                        "name": "Southern Skies"
+                    }
+                },
+                {
+                    "ranking": 2,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-6.50",
+                    "team_id": 22521,
+                    "swiss_score": "6.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22521/ufo-utrecht/",
+                        "short_name": "",
+                        "id": 22521,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22521/",
+                        "name": "UFO (Utrecht)"
+                    }
+                },
+                {
+                    "ranking": 3,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-6",
+                    "team_id": 22490,
+                    "swiss_score": "6",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22490/puf/",
+                        "short_name": "",
+                        "id": 22490,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22490/",
+                        "name": "PUF"
+                    }
+                },
+                {
+                    "ranking": 4,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-6",
+                    "team_id": 22494,
+                    "swiss_score": "6",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22494/mubidisk-lanzarote/",
+                        "short_name": "",
+                        "id": 22494,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22494/",
+                        "name": "Mubidisk Lanzarote"
+                    }
+                },
+                {
+                    "ranking": 5,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-5.50",
+                    "team_id": 22478,
+                    "swiss_score": "5.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22478/israel-mix/",
+                        "short_name": "",
+                        "id": 22478,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22478/",
+                        "name": "Israel Mix"
+                    }
+                },
+                {
+                    "ranking": 6,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-5.50",
+                    "team_id": 22464,
+                    "swiss_score": "5.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22464/headless-ultimate-zurich/",
+                        "short_name": "",
+                        "id": 22464,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22464/",
+                        "name": "Headless Ultimate Z\u00fcrich"
+                    }
+                },
+                {
+                    "ranking": 7,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-4.50",
+                    "team_id": 22520,
+                    "swiss_score": "4.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22520/germany-u23-mixed/",
+                        "short_name": "",
+                        "id": 22520,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22520/",
+                        "name": "Germany U23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 8,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-4.50",
+                    "team_id": 22512,
+                    "swiss_score": "4.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22512/rebel-ultimate/",
+                        "short_name": "",
+                        "id": 22512,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22512/",
+                        "name": "Rebel Ultimate"
+                    }
+                },
+                {
+                    "ranking": 9,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-4.50",
+                    "team_id": 22499,
+                    "swiss_score": "4.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22499/quijotesdulcineas-ultimate-madrid/",
+                        "short_name": "",
+                        "id": 22499,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22499/",
+                        "name": "Quijotes+Dulcineas Ultimate Madrid"
+                    }
+                },
+                {
+                    "ranking": 10,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-4.50",
+                    "team_id": 22473,
+                    "swiss_score": "4.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22473/father-abrahams-soup-of-the-day/",
+                        "short_name": "",
+                        "id": 22473,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22473/",
+                        "name": "Father Abraham's soup of the day"
+                    }
+                },
+                {
+                    "ranking": 11,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-3",
+                    "team_id": 22508,
+                    "swiss_score": "3",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22508/happy-hour/",
+                        "short_name": "",
+                        "id": 22508,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22508/",
+                        "name": "Happy Hour"
+                    }
+                },
+                {
+                    "ranking": 12,
+                    "wins": 1,
+                    "losses": 0,
+                    "swiss_opponent_score_avg": "-0.50",
+                    "team_id": 22491,
+                    "swiss_score": "0.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22491/gronical-dizziness/",
+                        "short_name": "",
+                        "id": 22491,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22491/",
+                        "name": "Gronical Dizziness"
+                    }
+                },
+                {
+                    "ranking": 13,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "0.50",
+                    "team_id": 22492,
+                    "swiss_score": "-0.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22492/thundering-herd/",
+                        "short_name": "",
+                        "id": 22492,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22492/",
+                        "name": "Thundering Herd"
+                    }
+                },
+                {
+                    "ranking": 14,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "3",
+                    "team_id": 22481,
+                    "swiss_score": "-3",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22481/outernationals/",
+                        "short_name": "",
+                        "id": 22481,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22481/",
+                        "name": "Outernationals"
+                    }
+                },
+                {
+                    "ranking": 15,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "4.50",
+                    "team_id": 22461,
+                    "swiss_score": "-4.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22461/sexy-legs/",
+                        "short_name": "",
+                        "id": 22461,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22461/",
+                        "name": "Sexy Legs"
+                    }
+                },
+                {
+                    "ranking": 16,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "4.50",
+                    "team_id": 22501,
+                    "swiss_score": "-4.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22501/star-spangled-hammers/",
+                        "short_name": "",
+                        "id": 22501,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22501/",
+                        "name": "Star Spangled Hammers"
+                    }
+                },
+                {
+                    "ranking": 17,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "4.50",
+                    "team_id": 22525,
+                    "swiss_score": "-4.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22525/cranberry-snack/",
+                        "short_name": "",
+                        "id": 22525,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22525/",
+                        "name": "Cranberry Snack"
+                    }
+                },
+                {
+                    "ranking": 18,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "4.50",
+                    "team_id": 23150,
+                    "swiss_score": "-4.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/23150/fizzy-lifting-drinks/",
+                        "short_name": "",
+                        "id": 23150,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/23150/",
+                        "name": "Fizzy Lifting Drinks"
+                    }
+                },
+                {
+                    "ranking": 19,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "5.50",
+                    "team_id": 22470,
+                    "swiss_score": "-5.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22470/ireland-under-23-mixed/",
+                        "short_name": "",
+                        "id": 22470,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22470/",
+                        "name": "Ireland Under 23 Mixed"
+                    }
+                },
+                {
+                    "ranking": 20,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "5.50",
+                    "team_id": 22484,
+                    "swiss_score": "-5.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22484/wombat-ultimate-willisau/",
+                        "short_name": "",
+                        "id": 22484,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22484/",
+                        "name": "Wombat Ultimate Willisau"
+                    }
+                },
+                {
+                    "ranking": 21,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "6",
+                    "team_id": 22474,
+                    "swiss_score": "-6",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22474/prague-devils/",
+                        "short_name": "",
+                        "id": 22474,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22474/",
+                        "name": "Prague Devils"
+                    }
+                },
+                {
+                    "ranking": 22,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "6",
+                    "team_id": 22515,
+                    "swiss_score": "-6",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22515/rusty-bikes/",
+                        "short_name": "",
+                        "id": 22515,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22515/",
+                        "name": "Rusty Bikes"
+                    }
+                },
+                {
+                    "ranking": 23,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "6.50",
+                    "team_id": 22527,
+                    "swiss_score": "-6.50",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22527/good-lord/",
+                        "short_name": "",
+                        "id": 22527,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22527/",
+                        "name": "Good Lord!"
+                    }
+                },
+                {
+                    "ranking": 24,
+                    "wins": 0,
+                    "losses": 1,
+                    "swiss_opponent_score_avg": "7",
+                    "team_id": 22522,
+                    "swiss_score": "-7",
+                    "team": {
+                        "leaguevine_url": "http://www.playwithlv.com/teams/22522/stockholm-syndromes/",
+                        "short_name": "",
+                        "id": 22522,
+                        "resource_uri": "http://api.playwithlv.com/v1/teams/22522/",
+                        "name": "Stockholm Syndromes"
+                    }
+                }
+            ],
+            "resource_uri": "http://api.playwithlv.com/v1/swiss_rounds/17244/"
+        }
+    ]
+}

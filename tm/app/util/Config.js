@@ -50,11 +50,20 @@ Ext.define('TouchMill.util.Config', {
         this.loadSession();
         this.session.urlParams = {};
         this.session.hashParams = {
-            access_token: '1890b8d8c5',
-            token_type: 'bearer',
-            expires_in: 1526456781664,
-            scope: 'universal',
+            access_token:       '1890b8d8c5',
+            token_type:         'bearer',
+            expires_in:         1526456781664,
+            scope:              'universal',
         };
+    },
+
+    // ------------------------------------------------------------------------
+
+    addAuthorizationHeaderToProxy: function(proxy) {
+        var hp = this.session.hashParams;
+        proxy.setHeaders(_.merge(proxy.getHeaders(),
+            { Authorization: hp.token_type + ' ' + hp.access_token }
+        ));
     },
 
     // ------------------------------------------------------------------------

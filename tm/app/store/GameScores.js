@@ -15,6 +15,7 @@ Ext.define('TouchMill.store.GameScores', {
         console.log("Just use .findRecord('game_id', game_id)");
         this.findRecord('game_id', game_id);
     },
+
 });
 
 /*
