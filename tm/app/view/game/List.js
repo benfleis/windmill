@@ -1,6 +1,6 @@
-Ext.define('TouchMill.view.Games', {
+Ext.define('TouchMill.view.game.List', {
     extend: 'Ext.List',
-    xtype: 'games',
+    xtype: 'gameList',
 
     config: {
         title: 'Games',

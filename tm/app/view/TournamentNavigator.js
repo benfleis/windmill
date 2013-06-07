@@ -1,17 +1,17 @@
 Ext.define('TouchMill.view.TournamentNavigator', {
     extend: 'Ext.navigation.View',
-    xtype: 'tournamentnavigator',
+    xtype: 'tournamentNavigator',
 
     requires: [
-        'TouchMill.view.Tournaments',
-        'TouchMill.view.Teams',
-        'TouchMill.view.Games',
-        'TouchMill.view.GameView',
+        'TouchMill.view.TournamentList',
+        'TouchMill.view.TeamList',
+        'TouchMill.view.game.List',
+        'TouchMill.view.game.Details',
     ],
 
     config: {
         iconCls: 'star',
-        items: [ { xtype: 'tournaments', }, ],
+        items: [ { xtype: 'tournamentList', }, ],
     },
 });
 

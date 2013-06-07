@@ -23,7 +23,7 @@ function spiritFormItems(team) {
     return scores.concat([
         {
             xtype: 'button', text: 'Cancel', ui: 'decline',
-            handler: function(btn) { Ext.getCmp('gameSummary')['hideAddSpiritTeam' + team](); },
+            handler: function(btn) { Ext.getCmp('gameDetails')['hideAddSpiritTeam' + team](); },
         },
         { xtype: 'button', text: 'Submit Game Score', ui: 'confirm', action: 'submitSpiritTeam' + team, },
     ]);
@@ -34,20 +34,21 @@ function showIds() { _.each(arguments, function(id) { Ext.getCmp(id).show(); });
 function disableIds() { _.each(arguments, function(id) { Ext.getCmp(id).set('disabled', true); }); };
 function enableIds() { _.each(arguments, function(id) { Ext.getCmp(id).set('disabled', false); }); };
 
-Ext.define('TouchMill.view.GameView', {
+Ext.define('TouchMill.view.game.Details', {
     extend: 'Ext.form.Panel',
-    xtype: 'gameView',
+    xtype: 'gameDetails',
 
     requires: [ 'Ext.form.FieldSet' ],
 
+    // REQUIRES that Game.stitchAssociations() has already run.
     initialize: function() {
         this.setupForm();
         this.showViewScore();
     },
 
     config: {
-        title: 'Game Summary',
-        id: 'gameSummary',
+        title: 'Game Details',
+        id: 'gameDetails',
         items: [
             {
                 xtype: 'panel',
@@ -96,7 +97,7 @@ Ext.define('TouchMill.view.GameView', {
                         text: 'Edit',
                         ui: 'confirm',
                         handler: function(btn) {
-                            Ext.getCmp('gameSummary').showEditScore();
+                            Ext.getCmp('gameDetails').showEditScore();
                         },
                     },
                     {
@@ -105,9 +106,9 @@ Ext.define('TouchMill.view.GameView', {
                         text: 'Cancel',
                         ui: 'decline',
                         handler: function(btn) {
-                            var gameSummary = Ext.getCmp('gameSummary');
-                            gameSummary.resetForm();
-                            gameSummary.showViewScore();
+                            var gameDetails = Ext.getCmp('gameDetails');
+                            gameDetails.resetForm();
+                            gameDetails.showViewScore();
                         },
                     },
                     {
@@ -139,27 +140,10 @@ Ext.define('TouchMill.view.GameView', {
         ],
     },
 
-    // REQUIRES that Game.stitchAssociations() already called.
     setupForm: function() {
-        console.log('GameView.setupForm()');
         var game = this.getRecord();
         Ext.getCmp('gameScoreTeam1').setLabel(game.get('team_1_name'));
         Ext.getCmp('gameScoreTeam2').setLabel(game.get('team_2_name'));
-        /*
-        var spiritScore = Ext.create('TouchMill.model.SpiritScore', {
-            game_id: game.get('id'),
-            team_1_score: game.get('spirit_score_team_1'),
-            team_2_score: game.get('spirit_score_team_2'),
-            team_1_comment: game.get('spirit_comment_team_1'),
-            team_2_comment: game.get('spirit_comment_team_2'),
-        });
-        if (Ext.getCmp('spiritScoreTeam1Form')) {
-            Ext.getCmp('spiritScoreTeam1Form').setRecord(spiritScore);
-        }
-        if (Ext.getCmp('spiritScoreTeam2Form')) {
-            Ext.getCmp('spiritScoreTeam2Form').setRecord(spiritScore);
-        }
-        */
     },
 
     resetForm: function() {
@@ -187,25 +171,6 @@ Ext.define('TouchMill.view.GameView', {
             is_final: vals.game_score_is_final,
         };
     },
-
-    /*
-    showAddSpiritTeam1: function() {
-        Ext.getCmp('spiritFormTeam1').show();
-    },
-
-    hideAddSpiritTeam1: function() {
-        Ext.getCmp('spiritFormTeam1').hide();
-    },
-
-    showAddSpiritTeam2: function() {
-        Ext.getCmp('spiritFormTeam2').show();
-    },
-
-    hideAddSpiritTeam2: function() {
-        Ext.getCmp('spiritFormTeam2').hide();
-    },
-
-    */
 });
 
 })();

@@ -1,6 +1,6 @@
-Ext.define('TouchMill.view.Tournaments', {
+Ext.define('TouchMill.view.TournamentList', {
     extend: 'Ext.List',
-    xtype: 'tournaments',
+    xtype: 'tournamentList',
 
     config: {
         title: 'Tournaments',

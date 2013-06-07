@@ -10,7 +10,5 @@ Ext.define('TouchMill.store.Tournaments', {
             useStaticUrls: true,
             reader: { type: 'json', rootProperty: 'objects', },
         },
-
-        listeners: { refresh: function(store, data) { }, },
     },
 });

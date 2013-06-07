@@ -20,7 +20,7 @@ Ext.application({
     models: [ 'Event', 'Tournament', 'TournamentTeam', 'Team', 'Game', 'GameScore', 'SpiritScore', 'TeamPlayer', 'Player', ],
     stores: [ 'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'GameScores', 'TeamPlayers', 'Players', 'Me', ],
 
-    views: [ 'Main', 'Events', 'TournamentNavigator', 'Tournaments', 'Teams', 'GameNavigator', 'Games', 'GameView', 'DevConfig', ],
+    views: [ 'Main', 'EventList', 'TournamentNavigator', 'TournamentList', 'TeamList', 'game.List', 'game.Details', 'DevConfig', ],
 
     controllers: [ 'Main', 'Tournaments', ],
 

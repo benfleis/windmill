@@ -1,6 +1,6 @@
-Ext.define('TouchMill.view.Events', {
+Ext.define('TouchMill.view.EventList', {
     extend: 'Ext.List',
-    xtype: 'events',
+    xtype: 'eventList',
 
     config: {
         iconCls: 'calendar',
