@@ -12,7 +12,10 @@ Ext.define('TouchMill.controller.Main', {
         Ext.getStore('Me').removeAll();
         Ext.getStore('Events').load();
         this.loadTournaments();
-        this.loadMe();
+        // XXX turn off Me loading for now since it's unused and causes a race
+        // with games loading against/before? the team is available in the
+        // potentially filtered store.
+        //this.loadMe();
     },
 
     loadTournaments: function() {

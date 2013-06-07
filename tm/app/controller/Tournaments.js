@@ -60,7 +60,6 @@ Ext.define('TouchMill.controller.Tournaments', {
         this.mask();
         var gameList = Ext.create('TouchMill.view.game.List');
         var teamId = team.get('id');
-        gameList.getStore().clearFilter();
         gameList.getStore().loadByTeamId(team.get('id'), {
             scope: this,
             callback: function() {
@@ -103,28 +102,39 @@ Ext.define('TouchMill.controller.Tournaments', {
     },
 
     onTapSubmitScore: function() {
-        this.mask();
         var gameDetails = this.getGameDetails();
         var vals = gameDetails.getGameScoreValues();
-        var gameScore = Ext.create('TouchMill.model.GameScore', vals)
-        Config.addAuthorizationHeaderToProxy(gameScore.getProxy());
-        gameScore.save({
-            failure: function(gs, operation) {
-                // can I inspect the operation and log the failure?  email it?
-                // post it?
-                console.log('GameScore save failed!');
-                this.unmask();
-                Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
-            }.bind(this),
-            success: function() {
-                var game = gameDetails.getRecord();
-                game.set('game_score_team_1', vals.team_1_score);
-                game.set('game_score_team_2', vals.team_2_score);
-                game.set('game_score_is_final', vals.is_final);
-                this.unmask();
-                gameDetails.showViewScore();
-            }.bind(this),
-        });
+        var submit = function() {
+            this.mask();
+            var gameScore = Ext.create('TouchMill.model.GameScore', vals)
+            Config.addAuthorizationHeaderToProxy(gameScore.getProxy());
+            gameScore.save({
+                failure: function(gs, operation) {
+                    // can I inspect the operation and log the failure?  email it?
+                    // post it?
+                    console.log('GameScore save failed!');
+                    this.unmask();
+                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
+                }.bind(this),
+                success: function() {
+                    var game = gameDetails.getRecord();
+                    game.set('game_score_team_1', vals.team_1_score);
+                    game.set('game_score_team_2', vals.team_2_score);
+                    game.set('game_score_is_final', vals.is_final);
+                    this.unmask();
+                    gameDetails.showViewScore();
+                }.bind(this),
+            });
+        }.bind(this);
+        if (vals.is_final) {
+            Ext.Msg.confirm('Score IS FINAL?', 'Is it really final?  This is serious business!', function(answer) {
+                if (answer === 'yes')
+                    submit();
+            });
+        }
+        else {
+            submit();
+        }
     },
 
     //

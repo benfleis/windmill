@@ -24,7 +24,7 @@ Ext.define('TouchMill.model.GameScore', {
             url: 'game_scores/',
             extraParams: {
                 limit: 1,
-                order_by: '[-is_final,-time_last_updated]',
+                order_by: '[-time_last_updated]', //[-is_final,-time_last_updated]',
                 fields: [
                     'id', /*'game_id',*/ 'team_1_score', 'team_2_score',
                     'is_final', 'time', 'time_last_updated', 'what_happened',
