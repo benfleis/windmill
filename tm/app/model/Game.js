@@ -108,14 +108,16 @@ Ext.define('TouchMill.model.Game', {
 
     // only call after all associated data is loaded/set
     stitchAssociations: function() {
-        this.getData(true);         // binds associated data; I think this should be done some other way, but don't know how/what/where, can't find reference to proper way to do it.
+        // binds associated data; prolly should be done some other way, but
+        // don't know how/what/where, can't find ref to proper way to do it.
+        this.getData(true);
 
-        var gameScore = this.gameScores().getAt(0).getData(true);
+        var gameScore = this.gameScores().getCount() ? this.gameScores().getAt(0).getData() : {};
         this.set('game_score_team_1', gameScore.team_1_score);
         this.set('game_score_team_2', gameScore.team_2_score);
         this.set('game_score_is_final', gameScore.is_final);
 
-        var spiritScore = this.spiritScores().getAt(0).getData();
+        var spiritScore = this.spiritScores().getCount() ? this.spiritScores().getAt(0).getData() : {};
         this.set('spirit_score_team_1', spiritScore.team_1_score);
         this.set('spirit_score_team_2', spiritScore.team_2_score);
 
