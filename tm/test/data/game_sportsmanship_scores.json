@@ -9,18 +9,16 @@
     "objects": [
         {
             "game_id": 28582,
-            "game_sets": [],
             "id": 27903,
-            "is_final": true,
-            "resource_uri": "http://api.playwithlv.com/v1/game_scores/27903/",
             "team_1_id": 19083,
-            "team_1_score": 8,
+            "team_1_score": "[1,2,3,4,5]",
+            "team_1_comment": 8,
             "team_2_id": 19087,
-            "team_2_score": 9,
+            "team_2_score": "[2,3,4,3,2]",
+            "team_2_comment": 19087,
             "time": "2012-06-15T13:23:45.965067+02:00",
             "time_created": "2012-06-15T11:23:45.965067+00:00",
-            "time_last_updated": "2012-06-15T11:23:45.965099+00:00",
-            "what_happened": ""
+            "time_last_updated": "2012-06-15T11:23:45.965099+00:00"
         }
     ]
 }

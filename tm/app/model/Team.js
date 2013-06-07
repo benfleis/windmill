@@ -27,6 +27,11 @@ Ext.define('TouchMill.model.Team', {
                 type: 'hasMany',
                 model: 'TouchMill.model.Game',
                 name: 'games',
+            }
+        ],
+        */
+
+        /*
                 // autoLoad: true,
                 // kill store to revert to original model.
                 store: {

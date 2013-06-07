@@ -5,7 +5,9 @@ Ext.define('TouchMill.view.Games', {
     config: {
         title: 'Games',
         store: 'Games',
-        itemTpl: '{team_1_id} vs. {team_2_id}<br/><small>{start_time} @ {game_site_id}</small>',
+        itemTpl: [
+            '{team_1_short_name} vs. {team_2_short_name}<br/><small>{start_time} @ {game_site_id}</small>',
+        ],
     },
 });
 

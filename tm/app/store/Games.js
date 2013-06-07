@@ -5,20 +5,24 @@ Ext.define('TouchMill.store.Games', {
         model: 'TouchMill.model.Game',
 
         listeners: {
-            //refresh: 'setMine',
+            refresh: 'bindAssociatedStaticData',
         },
     },
 
-/*
-    // walk the whole store and update 'is_mine' across the board.
-    setMine: function() {
-        console.log('Games.setMine()');
-        var my_tm_ids = Ext.getStore('Teams').getMyTeamIds();
-        this.each(function(rec) {
-            rec.set('is_mine', !!my_tm_ids[rec.data.team_1_id] || !!my_tm_ids[rec.data.team_2_id]);
+    bindAssociatedStaticData: function(recs) {
+        console.log('setTeams()');
+        recs.each(function(game) {
+            // works, but not in templates???
+            game.setTeam1(Ext.getStore('Teams').findRecord('id', game.get('team_1_id')))
+            game.setTeam2(Ext.getStore('Teams').findRecord('id', game.get('team_2_id')))
+            game.set('team_1_name', game.team1().get('name'));
+            game.set('team_1_short_name', game.team1().get('short_name'));
+            game.set('team_2_name', game.team2().get('name'));
+            game.set('team_2_short_name', game.team2().get('short_name'));
+            // model.Game.stitchAssociations() does the rest after the
+            // dynamically loaded data is available.
         });
     },
-*/
 
     loadByTeamId: function(team_id, opts) {
         console.log('Games.loadByTeamId(' + team_id + ')');

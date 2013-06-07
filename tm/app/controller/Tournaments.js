@@ -37,6 +37,11 @@ Ext.define('TouchMill.controller.Tournaments', {
 
     // ------------------------------------------------------------------------
 
+    mask: function() { this.getTournamentNavigator().setMasked({ xtype: 'loadmask', message: 'Loading...' }); },
+    unmask: function() { this.getTournamentNavigator().unmask(); },
+
+    // ------------------------------------------------------------------------
+
     onSelectTournament: function(list, idx, item, tourney, evt) {
         // convert tourneyId into teamIds
         var tourneyId = tourney.get('id');
@@ -52,69 +57,74 @@ Ext.define('TouchMill.controller.Tournaments', {
     },
 
     onSelectTeam: function(list, idx, item, team, evt) {
+        this.mask();
         var gamesView = Ext.create('TouchMill.view.Games');
         var teamId = team.get('id');
         gamesView.getStore().clearFilter();
-        gamesView.getStore().loadByTeamId(team.get('id'),
-            { scope: this, callback: function() { this.getTournamentNavigator().push(gamesView); }, });
+        gamesView.getStore().loadByTeamId(team.get('id'), {
+            scope: this,
+            callback: function() {
+                this.unmask();
+                this.getTournamentNavigator().push(gamesView);
+            },
+        });
     },
 
     onSelectGame: function(list, idx, item, game, evt) {
-        var gameView = this.getGameView();
-        if (!gameView) {
-            console.log('->  instantiate GameView');
-            gameView = Ext.create('TouchMill.view.GameView');
-        }
-
+        this.mask();
         var loaded = 0;
-        var maybePushGameView;
-        this.getTournamentNavigator().push(gameView);
-        gameView.setMasked({ xtype: 'loadmask', message: 'Loading...' });
+        var maybePushGameView = function() {
+            if (++loaded == 2) {
+                game.stitchAssociations();
+                var gameView = Ext.create('TouchMill.view.GameView', { record: game });
+                this.unmask();
+                this.getTournamentNavigator().push(gameView);
+            }
+        }.bind(this);
 
         game.gameScores().load({
-            params: { game_id: game.data.id, limit: 1, },
+            params: { game_id: game.get('id'), limit: 1, },
             scope: this,
             callback: function(gameScores) {
-                console.log('LOADED gameScores!');
+                console.log('LOADED gameScores from ' + game.get('id'));
                 console.log(game.gameScores());
                 maybePushGameView();
             },
         });
         game.spiritScores().load({
-            params: { game_id: game.data.id, limit: 1, },
+            params: { game_id: game.get('id'), limit: 1, },
             scope: this,
             callback: function(spiritScores) {
-                console.log('LOADED spiritScores!');
+                console.log('LOADED spiritScores from ' + game.get('id'));
                 console.log(game.spiritScores());
                 maybePushGameView();
             },
         });
-
-        maybePushGameView = function() {
-            if (++loaded == 2) {
-                var items = gameView.getItems();
-                var data = game.getData(true);      // binds associated data; I think this should be done some other way, but don't know how/what/where, can't find reference to proper way to do it.
-                gameView.setRecord(game);
-                items.each(function(i) { i.setRecord(game); }); // really?  shouldn't this automatically get recursively applied?
-                //gameView.setRecord(gameview.gameScores.getAt(0));
-                gameView.unmask();
-            }
-        }.bind(this);
     },
 
     onTapSubmitScore: function() {
+        this.mask();
         var gameView = this.getGameView();
-        var gameScores = gameView.getRecord().gameScores();
-
-        // add header: Authorization: <tok_type> <auth_tok>; this should happen @ startup
-        Config.addAuthorizationHeaderToProxy(gameScores.getProxy());
-
-        // add the real thing.  XXX add a popup that says 'uploading' or sth,
-        // with the spinner, and doesn't allow any interaction until the upload
-        // is confirmed (or failed)
-        gameScores.add(gameView.getValues());
-        gameScores.sync();
-        gameView.hideAddScore();
+        var vals = gameView.getGameScoreValues();
+        var gameScore = Ext.create('TouchMill.model.GameScore', vals)
+        Config.addAuthorizationHeaderToProxy(gameScore.getProxy());
+        gameScore.save({
+            failure: function(gs, operation) {
+                // can I inspect the operation and log the failure?  email it?
+                // post it?
+                console.log('GameScore save failed!');
+                this.unmask();
+                Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
+            }.bind(this),
+            success: function() {
+                var game = gameView.getRecord();
+                game.set('game_score_team_1', vals.team_1_score);
+                game.set('game_score_team_2', vals.team_2_score);
+                game.set('game_score_is_final', vals.is_final);
+                this.unmask();
+                gameView.showViewScore();
+            }.bind(this),
+        });
     },
 
     //
