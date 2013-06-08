@@ -5,14 +5,14 @@
 function _scoreDecoder1(idx) {
     return function(v, r) {
         var s = r.getData().team_1_score;
-        return s ? JSON.parse(s)[idx] : -1;
+        return s ? JSON.parse(s)[idx] : v;
     };
 }
 
 function _scoreDecoder2(idx) {
     return function(v, r) {
         var s = r.getData().team_2_score;
-        return s ? JSON.parse(s)[idx] : -1;
+        return s ? JSON.parse(s)[idx] : v;
     };
 }
 
@@ -27,8 +27,6 @@ Ext.define('TouchMill.model.SpiritScore', {
             { name: 'team_2_score',             type: 'string' },
             { name: 'team_1_comment',           type: 'string' },
             { name: 'team_2_comment',           type: 'string' },
-            { name: 'team_1_id',                type: 'int' },
-            { name: 'team_2_id',                type: 'int' },
 
             // added, not in DB
             // computational, is just string split/join; the scores above are the combined string value
@@ -42,6 +40,14 @@ Ext.define('TouchMill.model.SpiritScore', {
             { name: 'team_2_fairness_score',    type: 'int',        convert: _scoreDecoder2(2) },
             { name: 'team_2_attitude_score',    type: 'int',        convert: _scoreDecoder2(3) },
             { name: 'team_2_compare_score',     type: 'int',        convert: _scoreDecoder2(4) },
+        ],
+
+        validations: [
+            {
+                type: 'format',
+                field: 'team_1_score',
+                matcher: /^$|([[]\d,\d,\d,\d,\d])/,
+            },
         ],
 
         proxy: {
@@ -69,18 +75,18 @@ Ext.define('TouchMill.model.SpiritScore', {
 
     encodeScores: function() {
         this.set('team_1_score', JSON.stringify([
-            this.get('team_1_rules_score'),
-            this.get('team_1_fouls_score'),
-            this.get('team_1_fairness_score'),
-            this.get('team_1_attitude_score'),
-            this.get('team_1_compare_score'),
+            this.get('team_1_rules_score') || '',
+            this.get('team_1_fouls_score') || '',
+            this.get('team_1_fairness_score') || '',
+            this.get('team_1_attitude_score') || '',
+            this.get('team_1_compare_score') || '',
         ]));
         this.set('team_2_score', JSON.stringify([
-            this.get('team_2_rules_score'),
-            this.get('team_2_fouls_score'),
-            this.get('team_2_fairness_score'),
-            this.get('team_2_attitude_score'),
-            this.get('team_2_compare_score'),
+            this.get('team_2_rules_score') || '',
+            this.get('team_2_fouls_score') || '',
+            this.get('team_2_fairness_score') || '',
+            this.get('team_2_attitude_score') || '',
+            this.get('team_2_compare_score') || '',
         ]));
     },
 });

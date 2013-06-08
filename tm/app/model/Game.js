@@ -118,8 +118,18 @@ Ext.define('TouchMill.model.Game', {
         this.set('game_score_is_final', gameScore.is_final);
 
         var spiritScore = this.spiritScores().getCount() ? this.spiritScores().getAt(0).getData() : {};
-        this.set('spirit_score_team_1', spiritScore.team_1_score);
-        this.set('spirit_score_team_2', spiritScore.team_2_score);
+        this.set('attitude_score_team_1', spiritScore.team_1_attitude_score);
+        this.set('compare_score_team_1', spiritScore.team_1_compare_score);
+        this.set('fairness_score_team_1', spiritScore.team_1_fairness_score);
+        this.set('fouls_score_team_1', spiritScore.team_1_fouls_score);
+        this.set('rules_score_team_1', spiritScore.team_1_rules_score);
+        this.set('comment_team_1', spiritScore.team_1_comment);
+        this.set('attitude_score_team_2', spiritScore.team_2_attitude_score);
+        this.set('compare_score_team_2', spiritScore.team_2_compare_score);
+        this.set('fairness_score_team_2', spiritScore.team_2_fairness_score);
+        this.set('fouls_score_team_2', spiritScore.team_2_fouls_score);
+        this.set('rules_score_team_2', spiritScore.team_2_rules_score);
+        this.set('comment_team_2', spiritScore.team_2_comment);
 
         this.set('team_1_name', this.team1().get('name'));
         this.set('team_1_short_name', this.team1().get('short_name'));

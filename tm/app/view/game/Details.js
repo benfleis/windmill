@@ -1,15 +1,29 @@
 (function() {
 
-function spiritFormItems(team) {
-    var basis = [
-        { label: 'Rules & Use',         name: 'team_' + team + '_rules_score', },
-        { label: 'Fouls & Contact',     name: 'team_' + team + '_fouls_score', },
-        { label: 'Fair-Mindedness',     name: 'team_' + team + '_fairness_score', },
-        { label: 'Attitude & Control',  name: 'team_' + team + '_attitude_score', },
-        { label: 'Opponent Spirit',     name: 'team_' + team + '_compare_score', },
+function spiritFormItems(teamFieldNum, teamName) {
+    // only non hidden starter button, to expand the rest
+    var items = [
+        {
+            xtype: 'button', id: 'gameSpirit' + teamFieldNum + 'Update', ui: 'action',
+            text: '<em>Rate</em> ' + teamName + ' <em>for Spirit</em>',
+            handler: function(btn) {
+                Ext.getCmp('gameDetails')['showEditSpirit' + teamFieldNum](); }
+        }
     ];
-    var spiritSelectOpts = [
-        { text: 'X - Unset',            value: 'X' },
+
+    // all the rule variants
+    var i = 0;
+    var id = function() { return 'gameSpirit' + teamFieldNum + 'Field' + i++; };
+    var basis = [
+        { id: id(), hidden: true, label: 'Rules & Use',         name: 'rules_score_team_' + teamFieldNum },
+        { id: id(), hidden: true, label: 'Fouls & Contact',     name: 'fouls_score_team_' + teamFieldNum },
+        { id: id(), hidden: true, label: 'Fair-Mindedness',     name: 'fairness_score_team_' + teamFieldNum },
+        { id: id(), hidden: true, label: 'Attitude & Control',  name: 'attitude_score_team_' + teamFieldNum },
+        { id: id(), hidden: true, label: 'Opponent Spirit',     name: 'compare_score_team_' + teamFieldNum },
+    ];
+    // and each has 6 options
+    var opts = [
+        { text: 'Unset',                value: null },
         { text: '0 - Poor',             value: 0 },
         { text: '1 - Not Good',         value: 1 },
         { text: '2 - Good',             value: 2 },
@@ -17,15 +31,23 @@ function spiritFormItems(team) {
         { text: '4 - Excellent',        value: 4 },
     ];
 
-    var scores = _.map(basis, function(x) {
-        return _.extend({ xtype: 'selectfield', options: spiritSelectOpts }, x);
-    });
-    return scores.concat([
+    // combine and concat
+    items = items.concat(_.map(basis, function(x) {
+        return _.extend({ xtype: 'selectfield', options: opts }, x);
+    }));
+
+    // then add the submit button and return
+    return items.concat([
         {
-            xtype: 'button', text: 'Cancel', ui: 'decline',
-            handler: function(btn) { Ext.getCmp('gameDetails')['hideAddSpiritTeam' + team](); },
+            xtype: 'button', id: id(), hidden: true,
+            text: 'Cancel', ui: 'decline',
+            handler: function(btn) { Ext.getCmp('gameDetails')['hideEditSpirit' + teamFieldNum](); },
         },
-        { xtype: 'button', text: 'Submit Game Score', ui: 'confirm', action: 'submitSpiritTeam' + team, },
+        {
+            xtype: 'button', id: id(), hidden: true,
+            text: 'Submit Spirit', ui: 'confirm',
+            action: 'submitSpirit' + teamFieldNum,
+        },
     ]);
 }
 
@@ -37,13 +59,12 @@ function enableIds() { _.each(arguments, function(id) { Ext.getCmp(id).set('disa
 Ext.define('TouchMill.view.game.Details', {
     extend: 'Ext.form.Panel',
     xtype: 'gameDetails',
-
     requires: [ 'Ext.form.FieldSet' ],
 
     // REQUIRES that Game.stitchAssociations() has already run.
     initialize: function() {
         this.setupForm();
-        this.showViewScore();
+        this.showDisplayScore();
     },
 
     config: {
@@ -69,7 +90,6 @@ Ext.define('TouchMill.view.game.Details', {
             {
                 xtype: 'fieldset',
                 id: 'gameScoreForm',
-                hidden: false,
                 defaults: { labelWidth: '80%' },
                 items: [
                     {
@@ -94,7 +114,7 @@ Ext.define('TouchMill.view.game.Details', {
                     {
                         xtype: 'button',
                         id: 'gameScoreEditButton',
-                        text: 'Edit',
+                        text: 'Edit Game Scores',
                         ui: 'confirm',
                         handler: function(btn) {
                             Ext.getCmp('gameDetails').showEditScore();
@@ -108,13 +128,13 @@ Ext.define('TouchMill.view.game.Details', {
                         handler: function(btn) {
                             var gameDetails = Ext.getCmp('gameDetails');
                             gameDetails.resetForm();
-                            gameDetails.showViewScore();
+                            gameDetails.showDisplayScore();
                         },
                     },
                     {
                         xtype: 'button',
                         id: 'gameScoreSaveButton',
-                        text: 'Save',
+                        text: 'Save Game Scores',
                         ui: 'confirm',
                         action: 'submitScore',
                     },
@@ -124,33 +144,54 @@ Ext.define('TouchMill.view.game.Details', {
             {
                 xtype: 'fieldset',
                 id: 'spiritScoreTeam1Form',
+                defaults: { labelWidth: '60%' },
                 hidden: true,
-                defaults: { labelWidth: '65%' },
-                items: spiritFormItems(1),
+                items: null,    // filled in @ setupForm()
             },
 
             {
                 xtype: 'fieldset',
                 id: 'spiritScoreTeam2Form',
+                defaults: { labelWidth: '60%' },
                 hidden: true,
-                defaults: { labelWidth: '65%' },
-                items: spiritFormItems(2),
+                items: null,    // filled in @ setupForm()
             },
 
         ],
     },
 
+    // ------------------------------------------------------------------------
+
     setupForm: function() {
         var game = this.getRecord();
+        // set name labels in score bits
         Ext.getCmp('gameScoreTeam1').setLabel(game.get('team_1_name'));
         Ext.getCmp('gameScoreTeam2').setLabel(game.get('team_2_name'));
+
+        // setup spirit score labels; if team_perspective_id is set on 'this',
+        // then we only display the ability to submit a score for the other
+        // team.
+        console.log('game.Details'); console.log(this);
+        var item = Ext.getCmp('spiritScoreTeam1Form');
+        if (game.team_perspective_id !== game.get('team_1_id')) {
+            item.setItems(spiritFormItems(1, game.get('team_1_name')));
+            item.show();
+        }
+
+        item = Ext.getCmp('spiritScoreTeam2Form');
+        if (game.team_perspective_id !== game.get('team_2_id')) {
+            item.setItems(spiritFormItems(2, game.get('team_2_name')));
+            item.show();
+        }
     },
 
     resetForm: function() {
         this.setValues(this.getRecord().getData());
     },
 
-    showViewScore: function() {
+    // ------------------------------------------------------------------------
+
+    showDisplayScore: function() {
         disableIds('gameScoreTeam1', 'gameScoreTeam2', 'gameScoreIsFinal');
         showIds('gameScoreEditButton');
         hideIds('gameScoreCancelButton', 'gameScoreSaveButton');
@@ -171,6 +212,41 @@ Ext.define('TouchMill.view.game.Details', {
             is_final: vals.game_score_is_final,
         };
     },
+
+    // ------------------------------------------------------------------------
+
+    hideEditSpirit1: function() {
+        console.log('showDisplaySpirit1');
+        showIds('gameSpirit1Update');
+        hideIds('gameSpirit1Field0', 'gameSpirit1Field1', 'gameSpirit1Field2',
+            'gameSpirit1Field3', 'gameSpirit1Field4', 'gameSpirit1Field5',
+            'gameSpirit1Field6');
+    },
+
+    showEditSpirit1: function() {
+        console.log('showEditSpirit1');
+        hideIds('gameSpirit1Update');
+        showIds('gameSpirit1Field0', 'gameSpirit1Field1', 'gameSpirit1Field2',
+            'gameSpirit1Field3', 'gameSpirit1Field4', 'gameSpirit1Field5',
+            'gameSpirit1Field6');
+    },
+
+    hideEditSpirit2: function() {
+        console.log('showDisplaySpirit2');
+        showIds('gameSpirit2Update');
+        hideIds('gameSpirit2Field0', 'gameSpirit2Field1', 'gameSpirit2Field2',
+            'gameSpirit2Field3', 'gameSpirit2Field4', 'gameSpirit2Field5',
+            'gameSpirit2Field6');
+    },
+
+    showEditSpirit2: function() {
+        console.log('showEditSpirit2');
+        hideIds('gameSpirit2Update');
+        showIds('gameSpirit2Field0', 'gameSpirit2Field1', 'gameSpirit2Field2',
+            'gameSpirit2Field3', 'gameSpirit2Field4', 'gameSpirit2Field5',
+            'gameSpirit2Field6');
+    },
+
 });
 
 })();

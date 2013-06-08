@@ -20,7 +20,13 @@ favorites localstorage
 ----
 
 game -
+    fields!
+    basic routes working for deep-ish links
     add 'what happened'?
-    add confirmation when saving score as 'final'
     button/spacing/layout
-    disabled CSS
+    score refreshing
+
+CSS -
+    disabled form elements
+    button text / <em>, etc.
+

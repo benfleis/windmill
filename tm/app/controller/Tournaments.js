@@ -20,8 +20,8 @@ Ext.define('TouchMill.controller.Tournaments', {
             gameDetails:                    'gameDetails',
 
             submitScoreButton:              'button[action=submitScore]',
-            submitSpiritTeam1Button:        'button[action=submitSpiritTeam1]',
-            submitSpiritTeam2Button:        'button[action=submitSpiritTeam2]',
+            submitSpiritTeam1Button:        'button[action=submitSpirit1]',
+            submitSpiritTeam2Button:        'button[action=submitSpirit2]',
         },
 
         control: {
@@ -30,8 +30,8 @@ Ext.define('TouchMill.controller.Tournaments', {
             gameList:                       { itemtap: 'onSelectGame', },
 
             submitScoreButton:              { tap: 'onTapSubmitScore' },
-            submitSpiritTeam1Button:        { tap: 'onTapSubmitSpiritTeam1' },
-            submitSpiritTeam2Button:        { tap: 'onTapSubmitSpiritTeam2' },
+            submitSpiritTeam1Button:        { tap: 'onTapSubmitSpirit1' },
+            submitSpiritTeam2Button:        { tap: 'onTapSubmitSpirit2' },
         },
     },
 
@@ -58,9 +58,9 @@ Ext.define('TouchMill.controller.Tournaments', {
 
     onSelectTeam: function(list, idx, item, team, evt) {
         this.mask();
-        var gameList = Ext.create('TouchMill.view.game.List');
         var teamId = team.get('id');
-        gameList.getStore().loadByTeamId(team.get('id'), {
+        var gameList = Ext.create('TouchMill.view.game.List');
+        gameList.getStore().loadByTeamId(teamId, {
             scope: this,
             callback: function() {
                 this.unmask();
@@ -75,6 +75,7 @@ Ext.define('TouchMill.controller.Tournaments', {
         var maybePushGameDetails = function() {
             if (++loaded == 2) {
                 game.stitchAssociations();
+                game.team_perspective_id = this.getTeamList().selected.get(0).get('id');        // XXX dirty?
                 var gameDetails = Ext.create('TouchMill.view.game.Details', { record: game });
                 this.unmask();
                 this.getTournamentNavigator().push(gameDetails);
@@ -143,30 +144,91 @@ Ext.define('TouchMill.controller.Tournaments', {
     // blow away the spirit scores received by Team2.  So, we must do this merge
     // thing.
     //
-    onTapSubmitSpiritTeam1: function() {
-        console.log('onTapSubmitSpiritTeam1');
+    onTapSubmitSpirit1: function() {
+        console.log('onTapSubmitSpirit1');
         var gameDetails = this.getGameDetails();
         var spiritScores = gameDetails.getRecord().spiritScores();
         var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
         var curSS = gameDetails.getValues();
-        var spirit = Ext.Object.merge({}, prevSS, curSS);
+        var spirit = Ext.Object.merge({}, prevSS, {
+            team_1_score: null,
+            team_1_rules_score:     curSS.rules_score_team_1,
+            team_1_fouls_score:     curSS.fouls_score_team_1,
+            team_1_fairness_score:  curSS.fairness_score_team_1,
+            team_1_attitude_score:  curSS.attitude_score_team_1,
+            team_1_compare_score:   curSS.compare_score_team_1,
+            team_1_comment:         curSS.comment_team_1,
+        });
         delete spirit.id;
-
-        Config.addAuthorizationHeaderToProxy(spiritScores.getProxy());
-        spiritScores.add(spirit);
-        var spiritInst = spiritScores.getAt(1) || spiritScores.getAt(0);
-        spiritInst.encodeScores();
-        spiritScores.sync();
-        gameDetails.hideAddScore();
+        var spiritScore = Ext.create('TouchMill.model.SpiritScore', spirit);
+        spiritScore.encodeScores();
+        var spiritValidation = spiritScore.validate();
+        // Validation breaks on the mobiles, so the RE method must not be
+        // portable :/  Later add a custom validator to just do split and
+        // numeric check.
+        if (spiritValidation.isValid() || true /* XXX XXX XXX */) {
+            Config.addAuthorizationHeaderToProxy(spiritScore.getProxy());
+            spiritScore.save({
+                failure: function(gs, operation) {
+                    // can I inspect the operation and log the failure?  email it? post it?
+                    console.log('SpiritScore save failed!');
+                    this.unmask();
+                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
+                }.bind(this),
+                success: function() {
+                    gameDetails.hideEditSpirit1();
+                    this.unmask();
+                    Ext.Msg.alert('Spirit scores submitted!');
+                }.bind(this),
+            });
+        }
+        else {
+            this.unmask();
+            Ext.Msg.alert('Spirit scores incomplete!');
+        }
     },
 
-    onTapSubmitSpiritTeam2: function() {
-        console.log('onTapSubmitSpiritTeam2');
+    onTapSubmitSpirit2: function() {
+        console.log('onTapSubmitSpirit2');
         var gameDetails = this.getGameDetails();
         var spiritScores = gameDetails.getRecord().spiritScores();
-        Config.addAuthorizationHeaderToProxy(spiritScores.getProxy());
-        spiritScores.add(gameDetails.getValues());
-        spiritScores.sync();
-        gameDetails.hideAddScore();
+        var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
+        var curSS = gameDetails.getValues();
+        var spirit = Ext.Object.merge({}, prevSS, {
+            team_2_score: null,
+            team_2_rules_score:     curSS.rules_score_team_2,
+            team_2_fouls_score:     curSS.fouls_score_team_2,
+            team_2_fairness_score:  curSS.fairness_score_team_2,
+            team_2_attitude_score:  curSS.attitude_score_team_2,
+            team_2_compare_score:   curSS.compare_score_team_2,
+            team_2_comment:         curSS.comment_team_2,
+        });
+        delete spirit.id;
+        var spiritScore = Ext.create('TouchMill.model.SpiritScore', spirit);
+        spiritScore.encodeScores();
+        var spiritValidation = spiritScore.validate();
+        // Validation breaks on the mobiles, so the RE method must not be
+        // portable :/  Later add a custom validator to just do split and
+        // numeric check.
+        if (spiritValidation.isValid() || true /* XXX XXX XXX */) {
+            Config.addAuthorizationHeaderToProxy(spiritScore.getProxy());
+            spiritScore.save({
+                failure: function(gs, operation) {
+                    // can I inspect the operation and log the failure?  email it? post it?
+                    console.log('SpiritScore save failed!');
+                    this.unmask();
+                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
+                }.bind(this),
+                success: function() {
+                    gameDetails.hideEditSpirit2();
+                    this.unmask();
+                    Ext.Msg.alert('Spirit scores submitted!');
+                }.bind(this),
+            });
+        }
+        else {
+            this.unmask();
+            Ext.Msg.alert('Spirit scores incomplete!');
+        }
     },
 });
