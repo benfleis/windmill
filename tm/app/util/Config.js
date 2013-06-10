@@ -50,11 +50,16 @@ Ext.define('TouchMill.util.Config', {
         this.loadSession();
         this.session.urlParams = {};
         this.session.hashParams = {
-            access_token:       '1890b8d8c5',
+            access_token:       '67e8862ea3',
             token_type:         'bearer',
             expires_in:         1526456781664,
             scope:              'universal',
         };
+    },
+
+    // is somebody logged in?
+    sessionIsLoggedIn: function() {
+        return !!(this.session && this.session.hashParams && this.session.hashParams.access_token);
     },
 
     // ------------------------------------------------------------------------
@@ -87,22 +92,24 @@ Ext.define('TouchMill.util.Config', {
     production: {
         useStaticUrls:      true,
 
-        appUrl:             'http://monkey.org/~ben/tm/real.html',
+        appUrl:             'http://m.windmillwindup.com/',
         apiUrlBase:         'https://api.leaguevine.com/v1/',
         apiClientId:        'ec72ad44ea54d9af1d38d56f41a738',
-        apiLoginUrl:        'http://leaguevine.com/oauth2/authorize/?scope=universal&response_type=token'
+        apiLoginUrl:        'http://leaguevine.com/oauth2/authorize/?scope=universal&response_type=token',
+        apiLogoutUrl:       'http://www.playwithlv.com/users/logout/?next=',
     },
 
     play: {
         useStaticUrls:      true,
         staticUrlBase:      'test/data/',
 
-        appUrl:             'http://monkey.org/~ben/tm/play.html',
+        appUrl:             'http://m.windmillwindup.com/play.html',
         apiUrlBase:         'http://api.playwithlv.com/v1/',
         apiClientId:        'ec72ad44ea54d9af1d38d56f41a738',
         apiLoginUrl:        'http://playwithlv.com/oauth2/authorize/?scope=universal&response_type=token',
+        apiLogoutUrl:       'http://www.playwithlv.com/users/logout/?next=',
 
-        tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
+        //tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
     },
 
     local: {
@@ -113,8 +120,22 @@ Ext.define('TouchMill.util.Config', {
         apiUrlBase:         'http://api.playwithlv.com/v1/',
         apiClientId:        'ec72ad44ea54d9af1d38d56f41a738',
         apiLoginUrl:        'http://local.apiLoginUrl/not/used',
+        apiLogoutUrl:       'http://local.apiLoginUrl/not/used/?next=',
 
-        tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
+        //tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
+    },
+
+    local: {
+        useStaticUrls:      true,
+        staticUrlBase:      'test/data/',
+
+        appUrl:             'http://local.appUrl/not/used',
+        apiUrlBase:         'http://api.playwithlv.com/v1/',
+        apiClientId:        'ec72ad44ea54d9af1d38d56f41a738',
+        apiLoginUrl:        'http://local.apiLoginUrl/not/used',
+        apiLogoutUrl:       'http://local.apiLoginUrl/not/used/?next=',
+
+        //tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
     },
 
 });

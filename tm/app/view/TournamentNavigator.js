@@ -11,6 +11,7 @@ Ext.define('TouchMill.view.TournamentNavigator', {
 
     config: {
         iconCls: 'star',
+        id: 'tournamentNavigator',
         items: [ { xtype: 'tournamentList', }, ],
     },
 });

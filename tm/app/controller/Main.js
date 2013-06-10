@@ -3,6 +3,44 @@ Ext.define('TouchMill.controller.Main', {
 
     init: function() {},
 
+    requires: [ 'TouchMill.view.Login', 'TouchMill.view.Logout', ],
+
+    config: {
+        control: {
+            '#login': { activate: 'onLoginTap', },
+            '#logout': { activate: 'onLogoutTap', },
+        },
+    },
+
+    // ------------------------------------------------------------------------
+
+    onLoginTap: function() {
+        // redir to LV login, which redirs to the app
+        window.open(Config.active.apiLoginUrl, '_self');
+    },
+
+    onLogoutTap: function() {
+        // clear session and reset to clean URL, without urlParams or hashParams
+        Config.clearSession();
+        window.location.href = window.location.pathname;
+    },
+
+    /*
+    displayLoginOnly: function() {
+        var main = Ext.getCmp('main');
+        var items = main.getItems();
+        main.remove(items.getAt(items.getCount()), true);
+        main.add({ xtype: 'login' });
+    },
+
+    displayLogoutOnly: function() {
+        var main = Ext.getCmp('main');
+        var items = main.getItems();
+        main.remove(items.getAt(items.getCount()), true);
+        main.add({ xtype: 'logout' });
+    },
+    */
+
     // ------------------------------------------------------------------------
 
     loadInitialData: function() {

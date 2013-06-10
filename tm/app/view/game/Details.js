@@ -109,7 +109,6 @@ Ext.define('TouchMill.view.game.Details', {
                         id: 'gameScoreIsFinal',
                         label: 'Final Score?',
                         name: 'game_score_is_final',
-                        //checked: true,
                     },
                     {
                         xtype: 'button',
@@ -164,9 +163,12 @@ Ext.define('TouchMill.view.game.Details', {
 
     setupForm: function() {
         var game = this.getRecord();
+        var loggedIn = Config.sessionIsLoggedIn();
+
         // set name labels in score bits
         Ext.getCmp('gameScoreTeam1').setLabel(game.get('team_1_name'));
         Ext.getCmp('gameScoreTeam2').setLabel(game.get('team_2_name'));
+        Ext.getCmp('gameScoreEditButton').set('disabled', !loggedIn);
 
         // setup spirit score labels; if team_perspective_id is set on 'this',
         // then we only display the ability to submit a score for the other
@@ -175,12 +177,20 @@ Ext.define('TouchMill.view.game.Details', {
         var item = Ext.getCmp('spiritScoreTeam1Form');
         if (game.team_perspective_id !== game.get('team_1_id')) {
             item.setItems(spiritFormItems(1, game.get('team_1_name')));
+            if (!loggedIn) {
+                Ext.getCmp('gameSpirit1Update').set('disabled', true);
+                Ext.getCmp('gameSpirit1Update').set('ui', undefined);
+            }
             item.show();
         }
 
         item = Ext.getCmp('spiritScoreTeam2Form');
         if (game.team_perspective_id !== game.get('team_2_id')) {
             item.setItems(spiritFormItems(2, game.get('team_2_name')));
+            if (!loggedIn) {
+                Ext.getCmp('gameSpirit2Update').set('disabled', true);
+                Ext.getCmp('gameSpirit2Update').set('ui', undefined);
+            }
             item.show();
         }
     },
@@ -231,6 +241,20 @@ Ext.define('TouchMill.view.game.Details', {
             'gameSpirit1Field6');
     },
 
+    getGameSpirit1Values: function() {
+        var vals = this.getValues();
+        return {
+            game_id:                this.getRecord().get('id'),
+            team_1_score:           null,
+            team_1_rules_score:     vals.rules_score_team_1,
+            team_1_fouls_score:     vals.fouls_score_team_1,
+            team_1_fairness_score:  vals.fairness_score_team_1,
+            team_1_attitude_score:  vals.attitude_score_team_1,
+            team_1_compare_score:   vals.compare_score_team_1,
+            team_1_comment:         vals.comment_team_1,
+        };
+    },
+
     hideEditSpirit2: function() {
         console.log('showDisplaySpirit2');
         showIds('gameSpirit2Update');
@@ -245,6 +269,20 @@ Ext.define('TouchMill.view.game.Details', {
         showIds('gameSpirit2Field0', 'gameSpirit2Field1', 'gameSpirit2Field2',
             'gameSpirit2Field3', 'gameSpirit2Field4', 'gameSpirit2Field5',
             'gameSpirit2Field6');
+    },
+
+    getGameSpirit2Values: function() {
+        var vals = this.getValues();
+        return {
+            game_id:                this.getRecord().get('id'),
+            team_2_score:           null,
+            team_2_rules_score:     vals.rules_score_team_2,
+            team_2_fouls_score:     vals.fouls_score_team_2,
+            team_2_fairness_score:  vals.fairness_score_team_2,
+            team_2_attitude_score:  vals.attitude_score_team_2,
+            team_2_compare_score:   vals.compare_score_team_2,
+            team_2_comment:         vals.comment_team_2,
+        };
     },
 
 });

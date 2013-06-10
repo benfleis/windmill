@@ -150,15 +150,7 @@ Ext.define('TouchMill.controller.Tournaments', {
         var spiritScores = gameDetails.getRecord().spiritScores();
         var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
         var curSS = gameDetails.getValues();
-        var spirit = Ext.Object.merge({}, prevSS, {
-            team_1_score: null,
-            team_1_rules_score:     curSS.rules_score_team_1,
-            team_1_fouls_score:     curSS.fouls_score_team_1,
-            team_1_fairness_score:  curSS.fairness_score_team_1,
-            team_1_attitude_score:  curSS.attitude_score_team_1,
-            team_1_compare_score:   curSS.compare_score_team_1,
-            team_1_comment:         curSS.comment_team_1,
-        });
+        var spirit = Ext.Object.merge({}, prevSS, gameDetails.getGameSpirit1Values());
         delete spirit.id;
         var spiritScore = Ext.create('TouchMill.model.SpiritScore', spirit);
         spiritScore.encodeScores();
@@ -194,15 +186,7 @@ Ext.define('TouchMill.controller.Tournaments', {
         var spiritScores = gameDetails.getRecord().spiritScores();
         var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
         var curSS = gameDetails.getValues();
-        var spirit = Ext.Object.merge({}, prevSS, {
-            team_2_score: null,
-            team_2_rules_score:     curSS.rules_score_team_2,
-            team_2_fouls_score:     curSS.fouls_score_team_2,
-            team_2_fairness_score:  curSS.fairness_score_team_2,
-            team_2_attitude_score:  curSS.attitude_score_team_2,
-            team_2_compare_score:   curSS.compare_score_team_2,
-            team_2_comment:         curSS.comment_team_2,
-        });
+        var spirit = Ext.Object.merge({}, prevSS, gameDetails.getGameSpirit2Values());
         delete spirit.id;
         var spiritScore = Ext.create('TouchMill.model.SpiritScore', spirit);
         spiritScore.encodeScores();
