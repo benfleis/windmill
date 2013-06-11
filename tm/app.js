@@ -17,15 +17,22 @@ Ext.application({
     // requires that are used all around
     requires: [ 'TouchMill.data.proxy.ConfigurableRest', 'TouchMill.util.Config', ], //'Ext.ux.proxy.ProxyCache', ],
 
-    models: [ 'Event', 'Tournament', 'TournamentTeam', 'Team', 'Game', 'GameScore', 'SpiritScore', 'TeamPlayer', 'Player', ],
-    stores: [ 'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'GameScores', 'TeamPlayers', 'Players', 'Me', ],
+    models: [
+        'Event', 'Tournament', 'TournamentTeam', 'Team', 'Game', 'GameScore', 'SpiritScore', 'TeamPlayer',
+        'Player', 'SwissStanding', 'SwissRound',
+    ],
+
+    stores: [
+        'Events', 'Tournaments', 'TournamentTeams', 'Teams', 'Games', 'GameScores', 'TeamPlayers', 'Players',
+        'Me', 'SwissRounds', 'SwissStandings',
+    ],
 
     views: [
         'Main', 'EventList', 'TournamentNavigator', 'TournamentList', 'TeamList', 'game.List', 'game.Details',
-        'DevConfig', 'Login', 'Logout',
+        'standing.Navigator', 'standing.RoundList', 'standing.StandingList', 'Stream', 'Login', 'Logout', 'DevConfig',
     ],
 
-    controllers: [ 'Main', 'Tournaments', ],
+    controllers: [ 'Main', 'Tournaments', 'Standings', ],
 
     launch: function() {
         // load base config first

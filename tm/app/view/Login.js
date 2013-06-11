@@ -3,9 +3,10 @@ Ext.define('TouchMill.view.Login', {
     xtype: 'login',
 
     config: {
-        iconCls: 'star',
         id: 'login',
-        html: 'LOGIN PAGE',
+        iconCls: 'user',
+        title: 'Login',
+        html: 'Redirecting to LeagueVine login...',
     },
 });
 

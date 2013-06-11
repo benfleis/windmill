@@ -4,6 +4,7 @@ Ext.define('TouchMill.view.EventList', {
 
     config: {
         iconCls: 'calendar',
+        title: 'Events',
         store: 'Events',
         itemTpl: '{name} / <small>{description}</small>',
     },

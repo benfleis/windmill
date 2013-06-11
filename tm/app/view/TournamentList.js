@@ -7,6 +7,4 @@ Ext.define('TouchMill.view.TournamentList', {
         store: 'Tournaments',
         itemTpl: '{name}',
     },
-
-
 });

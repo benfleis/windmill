@@ -19,23 +19,5 @@ favorites localstorage
 
 ----
 
-game -
-    verify functionality w/ and w/o auth.
-    disable edit buttons if not logged in
-    add logout
-    verify/fix localStorage???
-    fields!
-    basic routes working for deep-ish links
-    add 'what happened'?
-    button/spacing/layout
-    score refreshing
-
-CSS -
-    disabled form elements
-    button text / <em>, etc.
-
-
-----
-
 JavaScript code to log all Ext4 events.  Paste it into the JS debugger console:
 (function(){Ext.AbstractComponent.prototype.fireEvent=Ext.Function.createInterceptor(Ext.AbstractComponent.prototype.fireEvent, function(evt){a=arguments;console.log(this,' fired event ',evt,' with args ',Array.prototype.slice.call(a,1,a.length));});})();

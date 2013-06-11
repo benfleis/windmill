@@ -6,8 +6,9 @@ Ext.define('TouchMill.view.Logout', {
     },
 
     config: {
-        iconCls: 'more',
         id: 'logout',
-        html: 'LOGOUT PAGE',
+        iconCls: 'delete',
+        title: 'Logout',
+        html: 'Logging out of LeagueVine...',
     },
 });

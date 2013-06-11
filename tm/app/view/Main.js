@@ -18,11 +18,13 @@ Ext.define('TouchMill.view.Main', {
                 align: 'center',
             },
         },
-        tabBarPosition: 'top',
+        tabBarPosition: 'bottom',
 
         items: [
             { xtype: 'tournamentNavigator', },
+            { xtype: 'standingNavigator', },
             { xtype: 'eventList', },
+            { xtype: 'stream', },
         ],
     }
 });

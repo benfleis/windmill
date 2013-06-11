@@ -14,7 +14,7 @@ Ext.define('TouchMill.controller.Tournaments', {
     config: {
         refs: {
             tournamentNavigator:            'tournamentNavigator',
-            tournamentList:                 'tournamentList',
+            tournamentList:                 'tournamentList[owner=tournamentNavigator]',
             teamList:                       'teamList',
             gameList:                       'gameList',
             gameDetails:                    'gameDetails',
