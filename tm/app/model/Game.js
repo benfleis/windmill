@@ -1,28 +1,26 @@
 Ext.define('TouchMill.model.Game', {
     extend: 'Ext.data.Model',
-    //extend: 'TouchMill.data.StitchingModel',
 
     config: {
         fields: [
-            { name: 'id', },                        //": 74181,
-            { name: 'game_site_id', },              //": 20428,
-            //{ name: 'leaguevine_url', },            //": "http://www.playwithlv.com/games/74181/",
-            //{ name: 'resource_uri', },              //": "http://api.playwithlv.com/v1/games/74181/",
-            { name: 'start_time', },                //": "2012-06-17T12:00:00+02:00",
-            { name: 'team_1_id', },                 //": 19098,
-            //{ name: 'team_1_score', },              //": 13,
-            { name: 'team_2_id', },                 //": 19083,
-            //{ name: 'team_2_score', },              //": 15,
-            { name: 'time_created', },              //": "2012-06-17T09:09:39.285167+00:00",
-            { name: 'time_last_updated', },         //": "2012-06-17T09:09:39.285190+00:00",
+            { name: 'id',                   type: 'int' },
+            { name: 'game_site_id',         type: 'int' },
+            { name: 'start_time',           type: 'date' },
+            { name: 'team_1_id',            type: 'int' },
+            { name: 'team_2_id',            type: 'int' },
+            { name: 'time_created',         type: 'date' },
+            { name: 'time_last_updated',    type: 'date' },
             { name: 'timezone', },                  //": "Europe/Amsterdam",
-            { name: 'winner_id', },                 //": 19083
+            { name: 'winner_id',            type: 'int' },
 
             // filtering opts, but cannot be requested in fields.
-            { name: 'pool_id', },                   //": null,
-            { name: 'pool_round_id', },             //": null,
-            { name: 'swiss_round_id', },            //": 17039,
-            { name: 'tournament_id', },             //": 18093,
+            { name: 'pool_id',              type: 'int' },
+            { name: 'pool_round_id',        type: 'int' },
+            { name: 'swiss_round_id',       type: 'int' },
+            { name: 'tournament_id',        type: 'int' },
+
+            // could be relational, but is already RO and nested:
+            { name: 'game_site_name',       mapping: 'game_site.name' },
 
             // stuff that should work relationally, but doesn't.  i'm
             // disgusted, but doing it anywaiz.  would prefer to try and use
@@ -32,9 +30,9 @@ Ext.define('TouchMill.model.Game', {
             { name: 'team_2_name', },
             { name: 'team_1_short_name', },
             { name: 'team_2_short_name', },
-            { name: 'game_score_team_1', },         // appears redundant w/ score above, but not
-            { name: 'game_score_team_2', },         // appears redundant w/ score above, but not
-            { name: 'game_score_is_final', },
+            { name: 'game_score_team_1',    type: 'int' },         // appears redundant w/ score above, but not
+            { name: 'game_score_team_2',    type: 'int' },         // appears redundant w/ score above, but not
+            { name: 'game_score_is_final',  type: 'bool' },
             { name: 'spirit_score_team_1', },
             { name: 'spirit_score_team_2', },
             { name: 'spirit_comment_team_1', },
@@ -46,7 +44,7 @@ Ext.define('TouchMill.model.Game', {
             url: 'games/',
             extraParams: {
                 fields: [
-                    'id', 'game_site_id', 'leaguevine_url', 'resource_uri',
+                    'id', 'game_site', 'game_site_id', 'leaguevine_url', 'resource_uri',
                     'start_time', 'team_1_id', 'team_1_score',
                     'team_2_id', 'team_2_score', 'time_created',
                     'time_last_updated', 'timezone', 'winner_id',

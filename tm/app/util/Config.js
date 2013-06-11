@@ -85,7 +85,7 @@ Ext.define('TouchMill.util.Config', {
         },
 
         useStaticUrls:      true,                   // where appropriate, use static data instead of LV data
-        staticUrlBase:      'static/data/',         // static/cached LV rest url base
+        staticUrlBase:      'static/data/2013/',    // static/cached LV rest url base
         tournamentIds:      [],
     },
 
@@ -101,7 +101,6 @@ Ext.define('TouchMill.util.Config', {
 
     play: {
         useStaticUrls:      true,
-        staticUrlBase:      'test/data/',
 
         appUrl:             'http://m.windmillwindup.com/play.html',
         apiUrlBase:         'http://api.playwithlv.com/v1/',
@@ -109,12 +108,12 @@ Ext.define('TouchMill.util.Config', {
         apiLoginUrl:        'http://playwithlv.com/oauth2/authorize/?scope=universal&response_type=token',
         apiLogoutUrl:       'http://www.playwithlv.com/users/logout/?next=',
 
+        tournamentIds:      [ 19176, 19178, 19177, ],
         //tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
     },
 
     local: {
         useStaticUrls:      true,
-        staticUrlBase:      'test/data/',
 
         appUrl:             'http://local.appUrl/not/used',
         apiUrlBase:         'http://api.playwithlv.com/v1/',
@@ -122,19 +121,7 @@ Ext.define('TouchMill.util.Config', {
         apiLoginUrl:        'http://local.apiLoginUrl/not/used',
         apiLogoutUrl:       'http://local.apiLoginUrl/not/used/?next=',
 
-        //tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
-    },
-
-    local: {
-        useStaticUrls:      true,
-        staticUrlBase:      'test/data/',
-
-        appUrl:             'http://local.appUrl/not/used',
-        apiUrlBase:         'http://api.playwithlv.com/v1/',
-        apiClientId:        'ec72ad44ea54d9af1d38d56f41a738',
-        apiLoginUrl:        'http://local.apiLoginUrl/not/used',
-        apiLogoutUrl:       'http://local.apiLoginUrl/not/used/?next=',
-
+        tournamentIds:      [ 19176, 19178, 19177, ],
         //tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
     },
 

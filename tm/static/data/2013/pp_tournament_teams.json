@@ -1,0 +1,1771 @@
+{
+    "meta": {
+        "previous": null, 
+        "total_count": 80, 
+        "offset": 0, 
+        "limit": 80, 
+        "next": null
+    }, 
+    "objects": [
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-06-06T17:08:35.104738+00:00", 
+            "time_last_updated": "2013-06-06T17:08:35.104783+00:00", 
+            "team_id": 22527, 
+            "seed": 3, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22527/good-lord/", 
+                "short_name": "Good Lord!", 
+                "id": 22527, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22527/", 
+                "name": "Good Lord!"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22527/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:51:04.167677+00:00", 
+            "time_last_updated": "2013-06-03T18:24:14.189437+00:00", 
+            "team_id": 23150, 
+            "seed": 14, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/23150/fizzy-lifting-drinks/", 
+                "short_name": "Fizzy Lifting Drinks", 
+                "id": 23150, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/23150/", 
+                "name": "Fizzy Lifting Drinks"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/23150/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:50:52.019719+00:00", 
+            "time_last_updated": "2013-06-03T18:24:13.882394+00:00", 
+            "team_id": 22515, 
+            "seed": 15, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22515/rusty-bikes/", 
+                "short_name": "Rusty Bikes", 
+                "id": 22515, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22515/", 
+                "name": "Rusty Bikes"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22515/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:50:41.963007+00:00", 
+            "time_last_updated": "2013-06-03T18:24:14.407450+00:00", 
+            "team_id": 22508, 
+            "seed": 24, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22508/happy-hour/", 
+                "short_name": "Happy Hour", 
+                "id": 22508, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22508/", 
+                "name": "Happy Hour"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22508/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:50:35.510515+00:00", 
+            "time_last_updated": "2013-06-03T18:24:13.511497+00:00", 
+            "team_id": 22481, 
+            "seed": 10, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22481/outernationals/", 
+                "short_name": "Outernationals", 
+                "id": 22481, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22481/", 
+                "name": "Outernationals"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22481/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:50:29.439861+00:00", 
+            "time_last_updated": "2013-06-03T18:24:14.478036+00:00", 
+            "team_id": 22464, 
+            "seed": 11, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22464/headless-ultimate-zurich/", 
+                "short_name": "Headless", 
+                "id": 22464, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22464/", 
+                "name": "Headless Ultimate Z\u00fcrich"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22464/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:50:22.465464+00:00", 
+            "time_last_updated": "2013-06-03T18:21:13.402196+00:00", 
+            "team_id": 22484, 
+            "seed": 6, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22484/wombat-ultimate-willisau/", 
+                "short_name": "Wombat", 
+                "id": 22484, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22484/", 
+                "name": "Wombat Ultimate Willisau"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22484/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:50:08.758232+00:00", 
+            "time_last_updated": "2013-06-03T18:24:13.796017+00:00", 
+            "team_id": 22521, 
+            "seed": 5, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22521/ufo-utrecht/", 
+                "short_name": "UFO", 
+                "id": 22521, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22521/", 
+                "name": "UFO (Utrecht)"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22521/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:50:02.103660+00:00", 
+            "time_last_updated": "2013-06-03T18:24:14.106541+00:00", 
+            "team_id": 22473, 
+            "seed": 23, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22473/father-abrahams-soup-of-the-day/", 
+                "short_name": "Father Abraham", 
+                "id": 22473, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22473/", 
+                "name": "Father Abraham's soup of the day"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22473/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:49:55.356056+00:00", 
+            "time_last_updated": "2013-06-03T18:24:15.163949+00:00", 
+            "team_id": 22528, 
+            "seed": 22, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22528/southern-skies/", 
+                "short_name": "Southern Skies", 
+                "id": 22528, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22528/", 
+                "name": "Southern Skies"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22528/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:49:36.090977+00:00", 
+            "time_last_updated": "2013-06-02T11:55:14.834921+00:00", 
+            "team_id": 22522, 
+            "seed": 2, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22522/stockholm-syndromes/", 
+                "short_name": "Stockholm Syndromes", 
+                "id": 22522, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22522/", 
+                "name": "Stockholm Syndromes"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22522/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:49:28.603451+00:00", 
+            "time_last_updated": "2013-06-03T18:24:15.015826+00:00", 
+            "team_id": 22490, 
+            "seed": 17, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22490/puf/", 
+                "short_name": "PUF", 
+                "id": 22490, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22490/", 
+                "name": "PUF"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22490/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:49:22.029420+00:00", 
+            "time_last_updated": "2013-06-03T18:24:14.699174+00:00", 
+            "team_id": 22474, 
+            "seed": 18, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22474/prague-devils/", 
+                "short_name": "Devils", 
+                "id": 22474, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22474/", 
+                "name": "Prague Devils"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22474/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:49:15.085120+00:00", 
+            "time_last_updated": "2013-06-03T18:24:13.355757+00:00", 
+            "team_id": 22499, 
+            "seed": 9, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22499/quijotesdulcineas-ultimate-madrid/", 
+                "short_name": "Quijotes+Dulcineas", 
+                "id": 22499, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22499/", 
+                "name": "Quijotes+Dulcineas Ultimate Madrid"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22499/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:49:05.984593+00:00", 
+            "time_last_updated": "2013-06-03T18:24:13.974744+00:00", 
+            "team_id": 22525, 
+            "seed": 16, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22525/cranberry-snack/", 
+                "short_name": "Cranberry Snack", 
+                "id": 22525, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22525/", 
+                "name": "Cranberry Snack"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22525/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:48:59.513264+00:00", 
+            "time_last_updated": "2013-06-03T18:21:13.632611+00:00", 
+            "team_id": 22492, 
+            "seed": 12, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22492/thundering-herd/", 
+                "short_name": "Thundering Herd", 
+                "id": 22492, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22492/", 
+                "name": "Thundering Herd"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22492/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:48:53.223769+00:00", 
+            "time_last_updated": "2013-06-03T18:24:14.337261+00:00", 
+            "team_id": 22491, 
+            "seed": 20, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22491/gronical-dizziness/", 
+                "short_name": "Gronical Dizziness", 
+                "id": 22491, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22491/", 
+                "name": "Gronical Dizziness"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22491/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:48:46.493243+00:00", 
+            "time_last_updated": "2013-06-03T18:21:12.299575+00:00", 
+            "team_id": 22512, 
+            "seed": 4, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22512/rebel-ultimate/", 
+                "short_name": "Rebel", 
+                "id": 22512, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22512/", 
+                "name": "Rebel Ultimate"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22512/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:48:38.558667+00:00", 
+            "time_last_updated": "2013-06-03T18:24:15.307545+00:00", 
+            "team_id": 22501, 
+            "seed": 7, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22501/star-spangled-hammers/", 
+                "short_name": "Star Spangled Hammers", 
+                "id": 22501, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22501/", 
+                "name": "Star Spangled Hammers"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22501/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:48:26.176723+00:00", 
+            "time_last_updated": "2013-06-02T11:55:14.375724+00:00", 
+            "team_id": 22494, 
+            "seed": 1, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22494/mubidisk-lanzarote/", 
+                "short_name": "Mubidisk", 
+                "id": 22494, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22494/", 
+                "name": "Mubidisk Lanzarote"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22494/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:48:17.569625+00:00", 
+            "time_last_updated": "2013-06-03T18:24:14.264293+00:00", 
+            "team_id": 22520, 
+            "seed": 19, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22520/germany-u23-mixed/", 
+                "short_name": "Germany U23", 
+                "id": 22520, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22520/", 
+                "name": "Germany U23 Mixed"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22520/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:48:02.268699+00:00", 
+            "time_last_updated": "2013-06-03T18:24:13.684271+00:00", 
+            "team_id": 22461, 
+            "seed": 13, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22461/sexy-legs/", 
+                "short_name": "Sexy Legs", 
+                "id": 22461, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22461/", 
+                "name": "Sexy Legs"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22461/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:47:48.834590+00:00", 
+            "time_last_updated": "2013-06-03T18:24:14.566103+00:00", 
+            "team_id": 22470, 
+            "seed": 21, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22470/ireland-under-23-mixed/", 
+                "short_name": "Ireland U23", 
+                "id": 22470, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22470/", 
+                "name": "Ireland Under 23 Mixed"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22470/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19178/windmill-windup-2013-mixed/", 
+                "id": 19178, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19178/", 
+                "name": "Windmill Windup 2013 mixed"
+            }, 
+            "time_created": "2013-03-20T23:47:41.550128+00:00", 
+            "time_last_updated": "2013-06-03T18:24:13.187228+00:00", 
+            "team_id": 22478, 
+            "seed": 8, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22478/israel-mix/", 
+                "short_name": "Israel", 
+                "id": 22478, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22478/", 
+                "name": "Israel Mix"
+            }, 
+            "tournament_id": 19178, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19178/22478/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:44:51.218832+00:00", 
+            "time_last_updated": "2013-06-04T05:54:25.098842+00:00", 
+            "team_id": 22456, 
+            "seed": 5, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22456/purple-rhino/", 
+                "short_name": "Purple Rhino", 
+                "id": 22456, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22456/", 
+                "name": "Purple Rhino"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22456/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:44:42.933038+00:00", 
+            "time_last_updated": "2013-05-29T12:54:47.930054+00:00", 
+            "team_id": 22457, 
+            "seed": 8, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22457/release-the-kraken/", 
+                "short_name": "Kraken", 
+                "id": 22457, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22457/", 
+                "name": "Release the Kraken!"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22457/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:44:36.808089+00:00", 
+            "time_last_updated": "2013-06-04T05:54:24.647427+00:00", 
+            "team_id": 22454, 
+            "seed": 4, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22454/copenhagen-hucks/", 
+                "short_name": "Hucks", 
+                "id": 22454, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22454/", 
+                "name": "Copenhagen Hucks"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22454/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:44:30.150012+00:00", 
+            "time_last_updated": "2013-06-04T05:57:32.576756+00:00", 
+            "team_id": 22437, 
+            "seed": 11, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22437/lemon-grass/", 
+                "short_name": "Lemon Grass", 
+                "id": 22437, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22437/", 
+                "name": "Lemon Grass"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22437/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:44:23.388559+00:00", 
+            "time_last_updated": "2013-06-04T05:57:32.655407+00:00", 
+            "team_id": 22436, 
+            "seed": 9, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22436/women-on-fire/", 
+                "short_name": "Women on Fire", 
+                "id": 22436, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22436/", 
+                "name": "Women on Fire"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22436/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:44:16.573590+00:00", 
+            "time_last_updated": "2013-06-04T05:54:24.575029+00:00", 
+            "team_id": 22453, 
+            "seed": 2, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22453/cusb-women/", 
+                "short_name": "CUSB", 
+                "id": 22453, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22453/", 
+                "name": "CUSB women"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22453/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:44:07.707481+00:00", 
+            "time_last_updated": "2013-06-04T05:55:12.420920+00:00", 
+            "team_id": 22451, 
+            "seed": 13, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22451/heidees-damen/", 
+                "short_name": "Heidees", 
+                "id": 22451, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22451/", 
+                "name": "Heidees Damen"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22451/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:43:59.771504+00:00", 
+            "time_last_updated": "2013-05-29T13:16:32.558360+00:00", 
+            "team_id": 22449, 
+            "seed": 15, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22449/lay-ds/", 
+                "short_name": "Lay D's", 
+                "id": 22449, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22449/", 
+                "name": "Lay D's"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22449/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:43:53.587607+00:00", 
+            "time_last_updated": "2013-06-04T05:54:24.795167+00:00", 
+            "team_id": 22439, 
+            "seed": 16, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22439/eyecatchers/", 
+                "short_name": "Eyecatchers", 
+                "id": 22439, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22439/", 
+                "name": "Eyecatchers"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22439/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:43:47.780259+00:00", 
+            "time_last_updated": "2013-05-29T13:13:26.739234+00:00", 
+            "team_id": 22444, 
+            "seed": 7, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22444/jinx/", 
+                "short_name": "JinX", 
+                "id": 22444, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22444/", 
+                "name": "JinX"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22444/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:43:40.072130+00:00", 
+            "time_last_updated": "2013-06-04T05:54:24.852844+00:00", 
+            "team_id": 22452, 
+            "seed": 10, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22452/u-de-cologne/", 
+                "short_name": "Cologne", 
+                "id": 22452, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22452/", 
+                "name": "U de Cologne"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22452/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:43:33.102222+00:00", 
+            "time_last_updated": "2013-06-04T05:54:24.359728+00:00", 
+            "team_id": 22448, 
+            "seed": 3, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22448/woodchicas/", 
+                "short_name": "Woodchicas", 
+                "id": 22448, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22448/", 
+                "name": "Woodchicas"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22448/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:43:25.693415+00:00", 
+            "time_last_updated": "2013-06-04T05:54:24.712491+00:00", 
+            "team_id": 22438, 
+            "seed": 14, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22438/germany-u20-women/", 
+                "short_name": "Germany U20", 
+                "id": 22438, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22438/", 
+                "name": "Germany U20 Women"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22438/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:43:17.904933+00:00", 
+            "time_last_updated": "2013-06-04T05:54:24.974883+00:00", 
+            "team_id": 22447, 
+            "seed": 6, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22447/up/", 
+                "short_name": "Up!", 
+                "id": 22447, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22447/", 
+                "name": "Up!"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22447/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:43:10.247661+00:00", 
+            "time_last_updated": "2013-06-04T05:55:12.534415+00:00", 
+            "team_id": 22442, 
+            "seed": 12, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22442/hot-beaches/", 
+                "short_name": "Hot Beaches", 
+                "id": 22442, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22442/", 
+                "name": "Hot Beaches"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22442/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19177/windmill-windup-2013-women/", 
+                "id": 19177, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19177/", 
+                "name": "Windmill Windup 2013 women"
+            }, 
+            "time_created": "2013-03-20T23:43:00.477805+00:00", 
+            "time_last_updated": "2013-05-29T14:14:57.309979+00:00", 
+            "team_id": 22441, 
+            "seed": 1, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22441/lotus-switzerland/", 
+                "short_name": "Lotus", 
+                "id": 22441, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22441/", 
+                "name": "Lotus Switzerland"
+            }, 
+            "tournament_id": 19177, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19177/22441/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:40:50.331543+00:00", 
+            "time_last_updated": "2013-06-03T13:58:30.864880+00:00", 
+            "team_id": 22427, 
+            "seed": 31, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22427/broc-ultimate/", 
+                "short_name": "Broc", 
+                "id": 22427, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22427/", 
+                "name": "Broc Ultimate"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22427/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:40:42.577110+00:00", 
+            "time_last_updated": "2013-06-03T13:58:33.111811+00:00", 
+            "team_id": 22356, 
+            "seed": 39, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22356/flying-steps-frisbee-club/", 
+                "short_name": "Flying Steps", 
+                "id": 22356, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22356/", 
+                "name": "Flying Steps Frisbee Club"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22356/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:40:34.897252+00:00", 
+            "time_last_updated": "2013-06-03T13:58:31.431643+00:00", 
+            "team_id": 22351, 
+            "seed": 33, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22351/ufo-utrecht/", 
+                "short_name": "UFO", 
+                "id": 22351, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22351/", 
+                "name": "UFO (Utrecht)"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22351/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:40:28.213065+00:00", 
+            "time_last_updated": "2013-06-03T13:58:30.540031+00:00", 
+            "team_id": 22417, 
+            "seed": 28, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22417/wall-city-berlin/", 
+                "short_name": "Wall City", 
+                "id": 22417, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22417/", 
+                "name": "Wall City Berlin"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22417/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:40:08.628021+00:00", 
+            "time_last_updated": "2013-06-03T13:58:32.400141+00:00", 
+            "team_id": 22336, 
+            "seed": 36, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22336/funatics/", 
+                "short_name": "Funatics", 
+                "id": 22336, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22336/", 
+                "name": "Funatics"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22336/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:40:01.566987+00:00", 
+            "time_last_updated": "2013-06-03T13:58:28.652210+00:00", 
+            "team_id": 22346, 
+            "seed": 18, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22346/frizzly-bears/", 
+                "short_name": "Frizzly Bears", 
+                "id": 22346, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22346/", 
+                "name": "Frizzly Bears"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22346/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:39:54.215097+00:00", 
+            "time_last_updated": "2013-06-03T13:58:30.457609+00:00", 
+            "team_id": 22418, 
+            "seed": 27, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22418/rebel-ultimate/", 
+                "short_name": "Rebel", 
+                "id": 22418, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22418/", 
+                "name": "Rebel Ultimate"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22418/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:39:40.969821+00:00", 
+            "time_last_updated": "2013-06-03T13:58:29.837522+00:00", 
+            "team_id": 22460, 
+            "seed": 24, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22460/sun-creteil/", 
+                "short_name": "Sun", 
+                "id": 22460, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22460/", 
+                "name": "Sun Cr\u00e9teil"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22460/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:39:20.132527+00:00", 
+            "time_last_updated": "2013-06-03T12:52:32.504948+00:00", 
+            "team_id": 22366, 
+            "seed": 13, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22366/hardfisch/", 
+                "short_name": "Hardfisch", 
+                "id": 22366, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22366/", 
+                "name": "Hardfisch"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22366/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:39:12.821639+00:00", 
+            "time_last_updated": "2013-06-03T13:58:33.390625+00:00", 
+            "team_id": 22342, 
+            "seed": 30, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22342/breizh-united/", 
+                "short_name": "", 
+                "id": 22342, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22342/", 
+                "name": "Breizh United"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22342/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:39:04.189960+00:00", 
+            "time_last_updated": "2013-06-03T13:58:33.223378+00:00", 
+            "team_id": 22389, 
+            "seed": 40, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22389/ul-ninjas/", 
+                "short_name": "UL Ninjas", 
+                "id": 22389, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22389/", 
+                "name": "UL Ninjas"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22389/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:38:52.135462+00:00", 
+            "time_last_updated": "2013-06-03T12:52:32.674438+00:00", 
+            "team_id": 22375, 
+            "seed": 15, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22375/kfk-copenhagen/", 
+                "short_name": "KFK", 
+                "id": 22375, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22375/", 
+                "name": "KFK Copenhagen"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22375/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:38:45.935452+00:00", 
+            "time_last_updated": "2013-06-03T12:52:32.301067+00:00", 
+            "team_id": 22372, 
+            "seed": 11, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22372/mooncatchers/", 
+                "short_name": "Mooncatchers", 
+                "id": 22372, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22372/", 
+                "name": "Mooncatchers"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22372/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:38:38.044544+00:00", 
+            "time_last_updated": "2013-06-03T12:52:32.589983+00:00", 
+            "team_id": 22404, 
+            "seed": 14, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22404/iznogood/", 
+                "short_name": "Iznogood", 
+                "id": 22404, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22404/", 
+                "name": "Iznogood"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22404/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:38:28.875377+00:00", 
+            "time_last_updated": "2013-06-03T13:58:29.726937+00:00", 
+            "team_id": 22378, 
+            "seed": 23, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22378/deine-mudder-bremen/", 
+                "short_name": "Deine Mudder", 
+                "id": 22378, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22378/", 
+                "name": "Deine Mudder Bremen"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22378/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:38:20.941581+00:00", 
+            "time_last_updated": "2013-06-03T13:58:32.252630+00:00", 
+            "team_id": 22426, 
+            "seed": 35, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22426/blue-arse-flies/", 
+                "short_name": "Blue Arse Flies", 
+                "id": 22426, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22426/", 
+                "name": "Blue Arse Flies"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22426/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:38:12.617090+00:00", 
+            "time_last_updated": "2013-06-03T13:58:29.124840+00:00", 
+            "team_id": 22414, 
+            "seed": 20, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22414/fuj/", 
+                "short_name": "FUJ", 
+                "id": 22414, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22414/", 
+                "name": "FUJ"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22414/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:38:03.171894+00:00", 
+            "time_last_updated": "2013-06-03T13:58:30.640645+00:00", 
+            "team_id": 22422, 
+            "seed": 29, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22422/mor-ho/", 
+                "short_name": "Mor ho!", 
+                "id": 22422, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22422/", 
+                "name": "Mor ho!"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22422/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:37:55.279029+00:00", 
+            "time_last_updated": "2013-06-03T13:58:29.457077+00:00", 
+            "team_id": 22402, 
+            "seed": 21, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22402/frank-n/", 
+                "short_name": "Frank N", 
+                "id": 22402, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22402/", 
+                "name": "Frank N"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22402/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:37:48.556420+00:00", 
+            "time_last_updated": "2013-06-03T13:58:32.567858+00:00", 
+            "team_id": 22380, 
+            "seed": 37, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22380/ka-pow/", 
+                "short_name": "Ka-pow!", 
+                "id": 22380, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22380/", 
+                "name": "Ka-pow!"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22380/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:37:39.985410+00:00", 
+            "time_last_updated": "2013-06-03T12:52:31.775870+00:00", 
+            "team_id": 22424, 
+            "seed": 6, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22424/flying-bisc/", 
+                "short_name": "Flying Bisc", 
+                "id": 22424, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22424/", 
+                "name": "Flying Bisc"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22424/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:37:31.883436+00:00", 
+            "time_last_updated": "2013-06-03T12:49:43.854501+00:00", 
+            "team_id": 22374, 
+            "seed": 16, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22374/cambo-cakes/", 
+                "short_name": "Cambo Cakes", 
+                "id": 22374, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22374/", 
+                "name": "Cambo Cakes"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22374/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:37:24.451448+00:00", 
+            "time_last_updated": "2013-06-03T13:58:31.861594+00:00", 
+            "team_id": 22357, 
+            "seed": 34, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22357/aye-aye-ultimate-uea/", 
+                "short_name": "Aye-Aye", 
+                "id": 22357, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22357/", 
+                "name": "Aye-Aye Ultimate (UEA)"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22357/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:37:12.533343+00:00", 
+            "time_last_updated": "2013-06-03T12:52:31.863766+00:00", 
+            "team_id": 22386, 
+            "seed": 7, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22386/7-schwaben/", 
+                "short_name": "7 Schwaben", 
+                "id": 22386, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22386/", 
+                "name": "7 Schwaben"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22386/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:37:04.309245+00:00", 
+            "time_last_updated": "2013-06-03T13:58:33.524082+00:00", 
+            "team_id": 22383, 
+            "seed": 17, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22383/uprising/", 
+                "short_name": "Uprising", 
+                "id": 22383, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22383/", 
+                "name": "Uprising"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22383/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:36:55.667296+00:00", 
+            "time_last_updated": "2013-06-03T13:56:25.121184+00:00", 
+            "team_id": 22401, 
+            "seed": 9, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22401/chiniya-rada/", 
+                "short_name": "Chiniya Rada", 
+                "id": 22401, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22401/", 
+                "name": "Chiniya Rada"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22401/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:36:47.542892+00:00", 
+            "time_last_updated": "2013-06-03T13:58:30.276727+00:00", 
+            "team_id": 22403, 
+            "seed": 26, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22403/bad-skid/", 
+                "short_name": "Bad Skid", 
+                "id": 22403, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22403/", 
+                "name": "Bad Skid"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22403/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:36:37.839667+00:00", 
+            "time_last_updated": "2013-05-29T13:18:44.956583+00:00", 
+            "team_id": 22410, 
+            "seed": 2, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22410/ragnarok/", 
+                "short_name": "Ragnarok", 
+                "id": 22410, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22410/", 
+                "name": "Ragnarok"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22410/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:36:28.846802+00:00", 
+            "time_last_updated": "2013-05-29T13:18:44.684802+00:00", 
+            "team_id": 22333, 
+            "seed": 1, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22333/freespeed/", 
+                "short_name": "Freespeed", 
+                "id": 22333, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22333/", 
+                "name": "Freespeed"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22333/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:36:19.925877+00:00", 
+            "time_last_updated": "2013-06-03T12:52:31.957605+00:00", 
+            "team_id": 22360, 
+            "seed": 8, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22360/gentle-open/", 
+                "short_name": "Gentle", 
+                "id": 22360, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22360/", 
+                "name": "Gentle Open"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22360/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:36:11.879891+00:00", 
+            "time_last_updated": "2013-06-03T12:52:32.189052+00:00", 
+            "team_id": 22340, 
+            "seed": 10, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22340/crazy-dogs/", 
+                "short_name": "Crazy Dogs", 
+                "id": 22340, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22340/", 
+                "name": "Crazy Dogs"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22340/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:36:01.187844+00:00", 
+            "time_last_updated": "2013-06-03T13:58:28.891994+00:00", 
+            "team_id": 22407, 
+            "seed": 19, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22407/cusb-la-fotta-under-23/", 
+                "short_name": "CUSB U23", 
+                "id": 22407, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22407/", 
+                "name": "CUSB LA FOTTA Under 23"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22407/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:35:53.035414+00:00", 
+            "time_last_updated": "2013-06-03T12:52:32.416119+00:00", 
+            "team_id": 22352, 
+            "seed": 12, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22352/catchup-graz/", 
+                "short_name": "Catchup", 
+                "id": 22352, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22352/", 
+                "name": "Catchup Graz"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22352/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:35:44.948340+00:00", 
+            "time_last_updated": "2013-06-03T13:58:29.620002+00:00", 
+            "team_id": 22396, 
+            "seed": 22, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22396/friselis-versailles/", 
+                "short_name": "Friselis", 
+                "id": 22396, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22396/", 
+                "name": "Friselis Versailles"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22396/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:32:50.871951+00:00", 
+            "time_last_updated": "2013-06-03T12:35:42.711134+00:00", 
+            "team_id": 22341, 
+            "seed": 5, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22341/germany-junior-open/", 
+                "short_name": "Germany Junior", 
+                "id": 22341, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22341/", 
+                "name": "Germany Junior Open"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22341/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:32:43.177980+00:00", 
+            "time_last_updated": "2013-06-03T13:58:32.920116+00:00", 
+            "team_id": 22358, 
+            "seed": 38, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22358/luckygrass/", 
+                "short_name": "LuckyGrass", 
+                "id": 22358, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22358/", 
+                "name": "LuckyGrass"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22358/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:32:32.576159+00:00", 
+            "time_last_updated": "2013-06-03T13:58:30.068004+00:00", 
+            "team_id": 22430, 
+            "seed": 25, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22430/thebigez/", 
+                "short_name": "TheBigEz", 
+                "id": 22430, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22430/", 
+                "name": "TheBigEz"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22430/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:32:20.619267+00:00", 
+            "time_last_updated": "2013-06-03T12:52:31.691309+00:00", 
+            "team_id": 22398, 
+            "seed": 4, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22398/muc/", 
+                "short_name": "M.U.C.", 
+                "id": 22398, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22398/", 
+                "name": "M.U.C."
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22398/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:32:04.783031+00:00", 
+            "time_last_updated": "2013-06-03T12:15:31.069068+00:00", 
+            "team_id": 22362, 
+            "seed": 3, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22362/heidees/", 
+                "short_name": "Heidees", 
+                "id": 22362, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22362/", 
+                "name": "Heidees"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22362/"
+        }, 
+        {
+            "final_standing": null, 
+            "tournament": {
+                "leaguevine_url": "http://www.playwithlv.com/tournaments/19176/windmill-windup-2013-open/", 
+                "id": 19176, 
+                "resource_uri": "http://api.playwithlv.com/v1/tournaments/19176/", 
+                "name": "Windmill Windup 2013: Open"
+            }, 
+            "time_created": "2013-03-20T23:31:44.973548+00:00", 
+            "time_last_updated": "2013-06-03T13:58:31.228800+00:00", 
+            "team_id": 22376, 
+            "seed": 32, 
+            "team": {
+                "leaguevine_url": "http://www.playwithlv.com/teams/22376/israel-open-2013/", 
+                "short_name": "Israel Open", 
+                "id": 22376, 
+                "resource_uri": "http://api.playwithlv.com/v1/teams/22376/", 
+                "name": "Israel Open 2013"
+            }, 
+            "tournament_id": 19176, 
+            "resource_uri": "http://api.playwithlv.com/v1/tournament_teams/19176/22376/"
+        }
+    ]
+}

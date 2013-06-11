@@ -12,10 +12,5 @@ Ext.define('TouchMill.store.TournamentTeams', {
         },
 
         pageSize: 80,
-        listeners: {
-            refresh: function(store, data) {
-                //console.log('TournamentTeams: refresh called!');
-            },
-        },
     },
 });
