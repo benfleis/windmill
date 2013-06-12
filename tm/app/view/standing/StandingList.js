@@ -5,6 +5,6 @@ Ext.define('TouchMill.view.standing.StandingList', {
     config: {
         title: 'Swiss Standings',
         store: 'SwissStandings',
-        itemTpl: '#{ranking}: {team_short_name} <small class="muted">({wins}-{losses}; {swiss_score} vs. {swiss_opponent_score_avg})</small>',
+        itemTpl: '#{ranking}: {team_short_name} <small class="muted">({wins}-{losses}; {swiss_score})</small>',
     },
 });

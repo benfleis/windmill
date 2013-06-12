@@ -8,6 +8,8 @@ Ext.define('TouchMill.model.Game', {
             { name: 'start_time',           type: 'date' },
             { name: 'team_1_id',            type: 'int' },
             { name: 'team_2_id',            type: 'int' },
+            { name: 'team_1_score',         type: 'int' },
+            { name: 'team_2_score',         type: 'int' },
             { name: 'time_created',         type: 'date' },
             { name: 'time_last_updated',    type: 'date' },
             { name: 'timezone', },                  //": "Europe/Amsterdam",
@@ -37,6 +39,10 @@ Ext.define('TouchMill.model.Game', {
             { name: 'spirit_score_team_2', },
             { name: 'spirit_comment_team_1', },
             { name: 'spirit_comment_team_2', },
+
+            // I'm gonna hate myself in the morning for selling out to this.
+            // There is surely a more sencha sentric way to do this.
+            { name: 'team_perspective_id',  type: 'int',    defaultValue: undefined },
         ],
 
         proxy: {
@@ -105,9 +111,11 @@ Ext.define('TouchMill.model.Game', {
     },
 
     // only call after all associated data is loaded/set
-    stitchAssociations: function() {
+    stitchAssociations: function(team_perspective_id) {
         // binds associated data; prolly should be done some other way, but
         // don't know how/what/where, can't find ref to proper way to do it.
+        this.set('team_perspective_id', team_perspective_id);
+
         this.getData(true);
 
         var gameScore = this.gameScores().getCount() ? this.gameScores().getAt(0).getData() : {};

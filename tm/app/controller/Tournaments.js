@@ -107,6 +107,7 @@ Ext.define('TouchMill.controller.Tournaments', {
         var teamsList = Ext.create('TouchMill.view.TeamList');
         teamsList.getStore().clearFilter();
         teamsList.getStore().filterBy(function(r) { return teamIds[r.get('id')]; });
+        teamsList.setTitle(tourney.get('name').split(' ')[3] + ' Teams');
         this.getTournamentNavigator().push(teamsList);
     },
 
@@ -118,6 +119,7 @@ Ext.define('TouchMill.controller.Tournaments', {
             scope: this,
             callback: function() {
                 this.unmask();
+                gameList.setTitle(team.get('short_name'));
                 this.getTournamentNavigator().push(gameList);
             },
         });
@@ -128,8 +130,7 @@ Ext.define('TouchMill.controller.Tournaments', {
         var loaded = 0;
         var maybePushGameDetails = function() {
             if (++loaded == 2) {
-                game.stitchAssociations();
-                game.team_perspective_id = this.getTeamList().selected.get(0).get('id');        // XXX dirty?
+                game.stitchAssociations(this.getTeamList().selected.get(0).get('id'));
                 var gameDetails = Ext.create('TouchMill.view.game.Details', { record: game });
                 this.unmask();
                 this.getTournamentNavigator().push(gameDetails);

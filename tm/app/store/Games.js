@@ -28,6 +28,12 @@ Ext.define('TouchMill.store.Games', {
         console.log('Games.loadByTeamId(' + team_id + ')');
         opts = opts || {};
         opts.params = { team_ids: [team_id] };
+        var callback = opts.callback;
+        opts.callback = function(recs) {
+            _.each(recs, function(game) { game.set('team_perspective_id', team_id); });
+            if (callback)
+                callback.apply(opts.scope, arguments);
+        }
         this.load(opts);
     },
 });

@@ -90,7 +90,7 @@ Ext.define('TouchMill.view.game.Details', {
             {
                 xtype: 'fieldset',
                 id: 'gameScoreForm',
-                defaults: { labelWidth: '80%' },
+                defaults: { labelWidth: '70%' },
                 items: [
                     {
                         xtype: 'numberfield',
@@ -171,11 +171,10 @@ Ext.define('TouchMill.view.game.Details', {
         Ext.getCmp('gameScoreEditButton').set('disabled', !loggedIn);
 
         // setup spirit score labels; if team_perspective_id is set on 'this',
-        // then we only display the ability to submit a score for the other
-        // team.
+        // then only display the ability to submit a score for the other team.
         console.log('game.Details'); console.log(this);
         var item = Ext.getCmp('spiritScoreTeam1Form');
-        if (game.team_perspective_id !== game.get('team_1_id')) {
+        if (game.get('team_perspective_id') !== game.get('team_1_id')) {
             item.setItems(spiritFormItems(1, game.get('team_1_name')));
             if (!loggedIn) {
                 Ext.getCmp('gameSpirit1Update').set('disabled', true);
@@ -185,7 +184,7 @@ Ext.define('TouchMill.view.game.Details', {
         }
 
         item = Ext.getCmp('spiritScoreTeam2Form');
-        if (game.team_perspective_id !== game.get('team_2_id')) {
+        if (game.get('team_perspective_id') !== game.get('team_2_id')) {
             item.setItems(spiritFormItems(2, game.get('team_2_name')));
             if (!loggedIn) {
                 Ext.getCmp('gameSpirit2Update').set('disabled', true);
