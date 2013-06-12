@@ -33,7 +33,7 @@ function spiritFormItems(teamFieldNum, teamName) {
 
     // combine and concat
     items = items.concat(_.map(basis, function(x) {
-        return _.extend({ xtype: 'selectfield', options: opts }, x);
+        return _.extend({ xtype: 'selectfield', options: opts, value: null }, x);
     }));
 
     // then add the submit button and return
