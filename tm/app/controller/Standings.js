@@ -38,6 +38,7 @@ Ext.define('TouchMill.controller.Standings', {
             params: { tournament_id: tourney.get('id'), },
             scope: this,
             callback: function() {
+                roundList.tournament_id = tourney.get('id');
                 this.unmask();
                 this.push(roundList);
             },
@@ -51,8 +52,16 @@ Ext.define('TouchMill.controller.Standings', {
             params: { swiss_round_ids: [round.get('id')], },
             scope: this,
             callback: function() {
-                this.unmask();
-                this.push(standingList);
+                standingList.getStore().loadBracketTeamsToTop(
+                    this.getStandingRoundList().tournament_id,
+                    {
+                        scope: this,
+                        callback: function() {
+                            this.unmask();
+                            this.push(standingList);
+                        },
+                    }
+                );
             },
         });
     },

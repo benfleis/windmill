@@ -7,7 +7,7 @@ Ext.define('TouchMill.store.Teams', {
         proxy: {
             type: 'configurableRest',
             url: 'teams/',
-            useStaticUrls: true,
+            //useStaticUrls: true,
             extraParams: { order_by: '[name]' },
             reader: { type: 'json', rootProperty: 'objects', },
         },
@@ -45,7 +45,6 @@ Ext.define('TouchMill.store.Teams', {
     },
 
     getMyTeams: function() {
-        //console.log('Teams.getMyTeams()');
         return Ext.getStore('Teams').queryBy(function(rec) { return rec.data.is_mine; });
     },
 

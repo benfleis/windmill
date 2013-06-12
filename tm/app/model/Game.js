@@ -41,7 +41,10 @@ Ext.define('TouchMill.model.Game', {
             { name: 'spirit_comment_team_2', },
 
             // I'm gonna hate myself in the morning for selling out to this.
-            // There is surely a more sencha sentric way to do this.
+            // There is surely a more sencha centric way to do this.  When set,
+            // this means that the controlling view/perspective is from the
+            // given team, so that you can disambiguate which of team1/team2 is
+            // viewing.
             { name: 'team_perspective_id',  type: 'int',    defaultValue: undefined },
         ],
 

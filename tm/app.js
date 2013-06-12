@@ -74,7 +74,7 @@ Ext.application({
         // IFF it contains LV info; will this complicate using routes?
         if (window.location.hash && window.location.hash.search('access_token=') != -1) {
             var l = window.location;
-            //history.replaceState('', document.title, l.pathname + l.search);
+            history.replaceState('', document.title, l.pathname + l.search);
         }
         Config.mergeActive({ apiParams: { access_token: hashParams.access_token } });
         this.getController('Main').loadInitialData();

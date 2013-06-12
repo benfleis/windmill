@@ -19,6 +19,10 @@ function makeOnTapSubmitSpirit(num) {
     //
     return function() {
         console.log('onTapSubmitSpirit' + num);
+        if (!Config.sessionIsLoggedIn()) {
+            Ext.Msg.alert('Login to add Spirit Score! (Lower Right Corner)')
+            return;
+        }
         var gameDetails = this.getGameDetails();
         var spiritScores = gameDetails.getRecord().spiritScores();
         var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
@@ -73,6 +77,9 @@ Ext.define('TouchMill.controller.Tournaments', {
             gameList:                       'gameList',
             gameDetails:                    'gameDetails',
 
+            editScoreButton:                'button[action=editScore]',
+            editSpirit1Button:              'button[action=editSpirit1]',
+            editSpirit2Button:              'button[action=editSpirit2]',
             submitScoreButton:              'button[action=submitScore]',
             submitSpiritTeam1Button:        'button[action=submitSpirit1]',
             submitSpiritTeam2Button:        'button[action=submitSpirit2]',
@@ -83,6 +90,9 @@ Ext.define('TouchMill.controller.Tournaments', {
             teamList:                       { itemtap: 'onSelectTeam', },
             gameList:                       { itemtap: 'onSelectGame', },
 
+            editScoreButton:                { tap: 'onTapEditScore' },
+            editSpirit1Button:              { tap: 'onTapEditSpirit1' },
+            editSpirit2Button:              { tap: 'onTapEditSpirit2' },
             submitScoreButton:              { tap: 'onTapSubmitScore' },
             submitSpiritTeam1Button:        { tap: 'onTapSubmitSpirit1' },
             submitSpiritTeam2Button:        { tap: 'onTapSubmitSpirit2' },
@@ -157,6 +167,15 @@ Ext.define('TouchMill.controller.Tournaments', {
         });
     },
 
+    onTapEditScore: function() {
+        if (Config.sessionIsLoggedIn()) {
+            this.getGameDetails().showEditScore();
+        }
+        else {
+            Ext.Msg.alert('Must login to add Game Score!')
+        }
+    },
+
     onTapSubmitScore: function() {
         var gameDetails = this.getGameDetails();
         var vals = gameDetails.getGameScoreValues();
@@ -178,15 +197,15 @@ Ext.define('TouchMill.controller.Tournaments', {
                     game.set('game_score_team_2', vals.team_2_score);
                     game.set('game_score_is_final', vals.is_final);
                     this.unmask();
-                    gameDetails.showViewScore();
+                    gameDetails.showDisplayScore();
                 }.bind(this),
             });
         }.bind(this);
         if (vals.is_final) {
-            Ext.Msg.confirm('Score IS FINAL?', 'Is it really final?  This is serious business!', function(answer) {
-                if (answer === 'yes')
-                    submit();
-            });
+            Ext.Msg.confirm('Is this REALLY final?',
+                vals.team_1_score + ' - ' + vals.team_2_score,
+                function(answer) { if (answer === 'yes') submit(); }
+            );
         }
         else {
             submit();
@@ -195,6 +214,25 @@ Ext.define('TouchMill.controller.Tournaments', {
 
     onTapSubmitSpirit1: makeOnTapSubmitSpirit(1),
     onTapSubmitSpirit2: makeOnTapSubmitSpirit(2),
+
+    onTapEditSpirit1: function() {
+        if (Config.sessionIsLoggedIn()) {
+            this.getGameDetails().showEditSpirit1();
+        }
+        else {
+            Ext.Msg.alert('Must login to add Spirit Score!')
+        }
+    },
+
+    onTapEditSpirit2: function() {
+        if (Config.sessionIsLoggedIn()) {
+            this.getGameDetails().showEditSpirit2();
+        }
+        else {
+            Ext.Msg.alert('Must login to add Spirit Score!')
+        }
+    },
+
 });
 
 })();

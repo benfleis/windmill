@@ -9,7 +9,7 @@ Ext.define('TouchMill.model.SwissStanding', {
             { name: 'losses',                   type: 'int' },
             { name: 'swiss_score',              type: 'float' },
             { name: 'swiss_opponent_score_avg', type: 'float' },
-            { name: 'team_id',                  type: 'int',        mapping: 'team.id', },
+            { name: 'team_id',                  type: 'int', },
             { name: 'team_name',                type: 'string',     mapping: 'team.name', },
             { name: 'team_short_name',          type: 'string',     mapping: 'team.short_name', },
 

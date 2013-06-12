@@ -6,8 +6,7 @@ function spiritFormItems(teamFieldNum, teamName) {
         {
             xtype: 'button', id: 'gameSpirit' + teamFieldNum + 'Update', ui: 'action',
             text: '<em>Rate</em> ' + teamName + ' <em>for Spirit</em>',
-            handler: function(btn) {
-                Ext.getCmp('gameDetails')['showEditSpirit' + teamFieldNum](); }
+            action: 'editSpirit' + teamFieldNum,
         }
     ];
 
@@ -33,7 +32,7 @@ function spiritFormItems(teamFieldNum, teamName) {
 
     // combine and concat
     items = items.concat(_.map(basis, function(x) {
-        return _.extend({ xtype: 'selectfield', options: opts, value: null }, x);
+        return _.extend({ xtype: 'selectfield', options: opts, initialize: function() { this.setValue(null); } }, x);
     }));
 
     // then add the submit button and return
@@ -72,22 +71,6 @@ Ext.define('TouchMill.view.game.Details', {
         id: 'gameDetails',
         items: [
             {
-                xtype: 'panel',
-                id: 'gameHeader',
-                tpl: '{team_1_short_name} vs. {team_2_short_name}',
-            },
-
-            {
-                xtype: 'panel',
-                id: 'gameScoreView',
-                tpl: [
-                    '<p>Is Final: {game_score_is_final}</p>',
-                    '<p>Game - {game_score_team_1} / {game_score_team_2}</p>',
-                    '<p>Spirit Score - {spirit_score_team_1} / {spirit_score_team_2}</p>',
-                ],
-            },
-
-            {
                 xtype: 'fieldset',
                 id: 'gameScoreForm',
                 defaults: { labelWidth: '70%' },
@@ -115,9 +98,7 @@ Ext.define('TouchMill.view.game.Details', {
                         id: 'gameScoreEditButton',
                         text: 'Edit Game Scores',
                         ui: 'confirm',
-                        handler: function(btn) {
-                            Ext.getCmp('gameDetails').showEditScore();
-                        },
+                        action: 'editScore',
                     },
                     {
                         xtype: 'button',
@@ -168,7 +149,6 @@ Ext.define('TouchMill.view.game.Details', {
         // set name labels in score bits
         Ext.getCmp('gameScoreTeam1').setLabel(game.get('team_1_name'));
         Ext.getCmp('gameScoreTeam2').setLabel(game.get('team_2_name'));
-        Ext.getCmp('gameScoreEditButton').set('disabled', !loggedIn);
 
         // setup spirit score labels; if team_perspective_id is set on 'this',
         // then only display the ability to submit a score for the other team.
@@ -176,20 +156,12 @@ Ext.define('TouchMill.view.game.Details', {
         var item = Ext.getCmp('spiritScoreTeam1Form');
         if (game.get('team_perspective_id') !== game.get('team_1_id')) {
             item.setItems(spiritFormItems(1, game.get('team_1_name')));
-            if (!loggedIn) {
-                Ext.getCmp('gameSpirit1Update').set('disabled', true);
-                Ext.getCmp('gameSpirit1Update').set('ui', undefined);
-            }
             item.show();
         }
 
         item = Ext.getCmp('spiritScoreTeam2Form');
         if (game.get('team_perspective_id') !== game.get('team_2_id')) {
             item.setItems(spiritFormItems(2, game.get('team_2_name')));
-            if (!loggedIn) {
-                Ext.getCmp('gameSpirit2Update').set('disabled', true);
-                Ext.getCmp('gameSpirit2Update').set('ui', undefined);
-            }
             item.show();
         }
     },

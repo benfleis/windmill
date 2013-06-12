@@ -50,7 +50,7 @@ Ext.define('TouchMill.util.Config', {
         this.loadSession();
         this.session.urlParams = {};
         this.session.hashParams = {
-            access_token:       '67e8862ea3',
+            access_token:       '474ffcfcbc',
             token_type:         'bearer',
             expires_in:         1526456781664,
             scope:              'universal',
@@ -122,6 +122,19 @@ Ext.define('TouchMill.util.Config', {
         apiLogoutUrl:       'http://local.apiLoginUrl/not/used/?next=',
 
         tournamentIds:      [ 19176, 19178, 19177, ],
+        //tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
+    },
+
+    test: {
+        useStaticUrls:      false,
+
+        appUrl:             'http://m.windmillwindup.com/test.html',
+        apiUrlBase:         'https://api.leaguevine.com/v1/',
+        apiClientId:        'ec72ad44ea54d9af1d38d56f41a738',
+        apiLoginUrl:        'http://leaguevine.com/oauth2/authorize/?scope=universal&response_type=token',
+        apiLogoutUrl:       'http://www.playwithlv.com/users/logout/?next=',
+
+        tournamentIds:      [ 19284, 19292, 19290, ],
         //tournamentIds:      [ 18091, 18093, 18094, ],   // XXX playwithlv.com for 2012
     },
 
