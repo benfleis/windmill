@@ -1,3 +1,57 @@
+(function() {
+
+function makeOnTapSubmitSpirit(num) {
+    function validateSpiritScore(ss) {
+        vals = JSON.parse(ss.get('team_' + num + '_score'));
+        if (!vals)
+            return false;
+        for (var i = 0; i < vals.length; i++)
+            if (!(vals[i] === 0 || vals[i] > 0))
+                return false;
+        return true;
+    };
+
+    //
+    // This is a bit trickier.  If they already exist, we need to copy the last
+    // set of spirit scores, and override the new values.  That way we don't
+    // blow away the spirit scores received by other team.  So, we must do merge
+    // this thing.
+    //
+    return function() {
+        console.log('onTapSubmitSpirit' + num);
+        var gameDetails = this.getGameDetails();
+        var spiritScores = gameDetails.getRecord().spiritScores();
+        var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
+        var curSS = gameDetails.getValues();
+        var spirit = Ext.Object.merge(
+            {}, prevSS, gameDetails['getGameSpirit' + num + 'Values']());
+        delete spirit.id;
+        var spiritScore = Ext.create('TouchMill.model.SpiritScore', spirit);
+        spiritScore.encodeScores();
+        if (validateSpiritScore(spiritScore)) {
+            Config.addAuthorizationHeaderToProxy(spiritScore.getProxy());
+            spiritScore.save({
+                failure: function(gs, operation) {
+                    // can I inspect the operation and log the failure?  email it? post it?
+                    console.log('SpiritScore save failed!');
+                    this.unmask();
+                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
+                }.bind(this),
+                success: function() {
+                    gameDetails['hideEditSpirit' + num]();
+                    this.unmask();
+                    Ext.Msg.alert('Spirit scores submitted!');
+                }.bind(this),
+            });
+        }
+        else {
+            spiritScore.destroy();
+            this.unmask();
+            Ext.Msg.alert('Spirit scores incomplete!');
+        }
+    };
+}
+
 Ext.define('TouchMill.controller.Tournaments', {
     extend: 'Ext.app.Controller',
 
@@ -138,81 +192,8 @@ Ext.define('TouchMill.controller.Tournaments', {
         }
     },
 
-    //
-    // This is a bit trickier.  If they already exist, we need to copy the last
-    // set of spirit scores, and override the new values.  That way we don't
-    // blow away the spirit scores received by Team2.  So, we must do this merge
-    // thing.
-    //
-    onTapSubmitSpirit1: function() {
-        console.log('onTapSubmitSpirit1');
-        var gameDetails = this.getGameDetails();
-        var spiritScores = gameDetails.getRecord().spiritScores();
-        var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
-        var curSS = gameDetails.getValues();
-        var spirit = Ext.Object.merge({}, prevSS, gameDetails.getGameSpirit1Values());
-        delete spirit.id;
-        var spiritScore = Ext.create('TouchMill.model.SpiritScore', spirit);
-        spiritScore.encodeScores();
-        var spiritValidation = spiritScore.validate();
-        // Validation breaks on the mobiles, so the RE method must not be
-        // portable :/  Later add a custom validator to just do split and
-        // numeric check.
-        if (spiritValidation.isValid() || true /* XXX XXX XXX */) {
-            Config.addAuthorizationHeaderToProxy(spiritScore.getProxy());
-            spiritScore.save({
-                failure: function(gs, operation) {
-                    // can I inspect the operation and log the failure?  email it? post it?
-                    console.log('SpiritScore save failed!');
-                    this.unmask();
-                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
-                }.bind(this),
-                success: function() {
-                    gameDetails.hideEditSpirit1();
-                    this.unmask();
-                    Ext.Msg.alert('Spirit scores submitted!');
-                }.bind(this),
-            });
-        }
-        else {
-            this.unmask();
-            Ext.Msg.alert('Spirit scores incomplete!');
-        }
-    },
-
-    onTapSubmitSpirit2: function() {
-        console.log('onTapSubmitSpirit2');
-        var gameDetails = this.getGameDetails();
-        var spiritScores = gameDetails.getRecord().spiritScores();
-        var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
-        var curSS = gameDetails.getValues();
-        var spirit = Ext.Object.merge({}, prevSS, gameDetails.getGameSpirit2Values());
-        delete spirit.id;
-        var spiritScore = Ext.create('TouchMill.model.SpiritScore', spirit);
-        spiritScore.encodeScores();
-        var spiritValidation = spiritScore.validate();
-        // Validation breaks on the mobiles, so the RE method must not be
-        // portable :/  Later add a custom validator to just do split and
-        // numeric check.
-        if (spiritValidation.isValid() || true /* XXX XXX XXX */) {
-            Config.addAuthorizationHeaderToProxy(spiritScore.getProxy());
-            spiritScore.save({
-                failure: function(gs, operation) {
-                    // can I inspect the operation and log the failure?  email it? post it?
-                    console.log('SpiritScore save failed!');
-                    this.unmask();
-                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
-                }.bind(this),
-                success: function() {
-                    gameDetails.hideEditSpirit2();
-                    this.unmask();
-                    Ext.Msg.alert('Spirit scores submitted!');
-                }.bind(this),
-            });
-        }
-        else {
-            this.unmask();
-            Ext.Msg.alert('Spirit scores incomplete!');
-        }
-    },
+    onTapSubmitSpirit1: makeOnTapSubmitSpirit(1),
+    onTapSubmitSpirit2: makeOnTapSubmitSpirit(2),
 });
+
+})();
