@@ -1,0 +1,26 @@
+table.schedule-list {
+  width: 100%;
+}
+table.schedule-list tr {
+  background-color: #16A8C5;
+}
+table.schedule-list tr:nth-child(2n+1) {
+  background-color: #0b2f36;
+}
+table.schedule-list td {
+  padding: 8px 16px 8px 16px;
+  font-size: 16px;
+  height: 10px;
+  color: #fff;
+}
+
+table.schedule-list td.starttime, table.schedule-list td.endtime {
+  text-align: right;
+  width: 100px;
+}
+
+
+table.schedule-list td.title { 
+}
+table.schedule-list td.loc { 
+}
