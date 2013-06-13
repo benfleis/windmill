@@ -1,6 +1,6 @@
 Ext.Loader.setConfig({
     enabled: true,
-    disableCaching: false,      // false == disable "disable caching" -- confusing, yes.  in production, flip.
+    //disableCaching: false,      // false == disable "disable caching" -- confusing, yes.  in production, flip.
     paths: {
         'TouchMill': 'app',
         //'Ext.ux.proxy': 'app/ux/proxy',
