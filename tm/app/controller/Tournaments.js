@@ -6,7 +6,7 @@ function makeOnTapSubmitSpirit(num) {
         if (!vals)
             return false;
         for (var i = 0; i < vals.length; i++)
-            if (!(vals[i] === 0 || vals[i] > 0))
+            if (isNaN(parseInt(vals[i])))
                 return false;
         return true;
     };
@@ -117,7 +117,7 @@ Ext.define('TouchMill.controller.Tournaments', {
         var teamsList = Ext.create('TouchMill.view.TeamList');
         teamsList.getStore().clearFilter();
         teamsList.getStore().filterBy(function(r) { return teamIds[r.get('id')]; });
-        teamsList.setTitle(tourney.get('name').split(' ')[3] + ' Teams');
+        teamsList.setTitle(tourney.get('name').split(': ')[1] + ' Teams');
         this.getTournamentNavigator().push(teamsList);
     },
 
@@ -157,7 +157,7 @@ Ext.define('TouchMill.controller.Tournaments', {
             },
         });
         game.spiritScores().load({
-            params: { game_id: game.get('id'), limit: 1, },
+            params: { game_ids: [game.get('id')], limit: 1, },
             scope: this,
             callback: function(spiritScores) {
                 console.log('LOADED spiritScores from ' + game.get('id'));

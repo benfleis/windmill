@@ -217,11 +217,11 @@ Ext.define('TouchMill.view.game.Details', {
         return {
             game_id:                this.getRecord().get('id'),
             team_1_score:           null,
-            team_1_rules_score:     vals.rules_score_team_1,
-            team_1_fouls_score:     vals.fouls_score_team_1,
-            team_1_fairness_score:  vals.fairness_score_team_1,
-            team_1_attitude_score:  vals.attitude_score_team_1,
-            team_1_compare_score:   vals.compare_score_team_1,
+            team_1_rules_score:     parseInt(vals.rules_score_team_1),
+            team_1_fouls_score:     parseInt(vals.fouls_score_team_1),
+            team_1_fairness_score:  parseInt(vals.fairness_score_team_1),
+            team_1_attitude_score:  parseInt(vals.attitude_score_team_1),
+            team_1_compare_score:   parseInt(vals.compare_score_team_1),
             team_1_comment:         vals.comment_team_1,
         };
     },
@@ -247,11 +247,11 @@ Ext.define('TouchMill.view.game.Details', {
         return {
             game_id:                this.getRecord().get('id'),
             team_2_score:           null,
-            team_2_rules_score:     vals.rules_score_team_2,
-            team_2_fouls_score:     vals.fouls_score_team_2,
-            team_2_fairness_score:  vals.fairness_score_team_2,
-            team_2_attitude_score:  vals.attitude_score_team_2,
-            team_2_compare_score:   vals.compare_score_team_2,
+            team_2_rules_score:     parseInt(vals.rules_score_team_2),
+            team_2_fouls_score:     parseInt(vals.fouls_score_team_2),
+            team_2_fairness_score:  parseInt(vals.fairness_score_team_2),
+            team_2_attitude_score:  parseInt(vals.attitude_score_team_2),
+            team_2_compare_score:   parseInt(vals.compare_score_team_2),
             team_2_comment:         vals.comment_team_2,
         };
     },

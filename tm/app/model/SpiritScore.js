@@ -74,20 +74,29 @@ Ext.define('TouchMill.model.SpiritScore', {
     },
 
     encodeScores: function() {
-        this.set('team_1_score', JSON.stringify([
-            this.get('team_1_rules_score') || '',
-            this.get('team_1_fouls_score') || '',
-            this.get('team_1_fairness_score') || '',
-            this.get('team_1_attitude_score') || '',
-            this.get('team_1_compare_score') || '',
-        ]));
-        this.set('team_2_score', JSON.stringify([
-            this.get('team_2_rules_score') || '',
-            this.get('team_2_fouls_score') || '',
-            this.get('team_2_fairness_score') || '',
-            this.get('team_2_attitude_score') || '',
-            this.get('team_2_compare_score') || '',
-        ]));
+        var team_1_score = null;
+        if (!isNaN(parseInt(this.get('team_1_rules_score')))) {
+            team_1_score = JSON.stringify([
+                this.get('team_1_rules_score'),
+                this.get('team_1_fouls_score'),
+                this.get('team_1_fairness_score'),
+                this.get('team_1_attitude_score'),
+                this.get('team_1_compare_score'),
+            ]);
+        }
+        this.set('team_1_score', team_1_score);
+
+        var team_2_score = null;
+        if (!isNaN(parseInt(this.get('team_2_rules_score')))) {
+            team_2_score = JSON.stringify([
+                this.get('team_2_rules_score'),
+                this.get('team_2_fouls_score'),
+                this.get('team_2_fairness_score'),
+                this.get('team_2_attitude_score'),
+                this.get('team_2_compare_score'),
+            ]);
+        }
+        this.set('team_2_score', team_2_score);
     },
 });
 
