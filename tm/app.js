@@ -32,7 +32,7 @@ Ext.application({
         'standing.Navigator', 'standing.RoundList', 'standing.StandingList', 'Stream', 'Login', 'Logout', 'DevConfig',
     ],
 
-    controllers: [ 'Main', 'Tournaments', 'Standings', ],
+    controllers: [ 'Main', 'Tournaments', 'Standings', "Events" ],
 
     launch: function() {
         // load base config first

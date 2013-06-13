@@ -23,7 +23,7 @@ Ext.define('TouchMill.view.Main', {
         items: [
             { xtype: 'tournamentNavigator', },
             { xtype: 'standingNavigator', },
-            { xtype: 'eventList', },
+            { xtype: 'events', },
             { xtype: 'stream', },
         ],
     }
