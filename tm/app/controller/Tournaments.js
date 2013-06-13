@@ -1,12 +1,20 @@
 (function() {
 
+function mask() {
+    Ext.getCmp('tournamentNavigator').setMasked({ xtype: 'loadmask', message: 'Loading...' });
+};
+
+function unmask() {
+    Ext.getCmp('tournamentNavigator').unmask();
+};
+
 function makeOnTapSubmitSpirit(num) {
     function validateSpiritScore(ss) {
         vals = JSON.parse(ss.get('team_' + num + '_score'));
         if (!vals)
             return false;
         for (var i = 0; i < vals.length; i++)
-            if (!(vals[i] === 0 || vals[i] > 0))
+            if (isNaN(parseInt(vals[i])))
                 return false;
         return true;
     };
@@ -18,12 +26,12 @@ function makeOnTapSubmitSpirit(num) {
     // this thing.
     //
     return function() {
-        console.log('onTapSubmitSpirit' + num);
         if (!Config.sessionIsLoggedIn()) {
             Ext.Msg.alert('Login to add Spirit Score! (Lower Right Corner)')
             return;
         }
-        var gameDetails = this.getGameDetails();
+        mask();
+        var gameDetails = Ext.getCmp('gameDetails');
         var spiritScores = gameDetails.getRecord().spiritScores();
         var prevSS = spiritScores.getCount() > 0 ? spiritScores.getAt(0).getData() : {};
         var curSS = gameDetails.getValues();
@@ -35,22 +43,21 @@ function makeOnTapSubmitSpirit(num) {
         if (validateSpiritScore(spiritScore)) {
             Config.addAuthorizationHeaderToProxy(spiritScore.getProxy());
             spiritScore.save({
-                failure: function(gs, operation) {
+                failure: function(error, request) {
                     // can I inspect the operation and log the failure?  email it? post it?
                     console.log('SpiritScore save failed!');
-                    this.unmask();
-                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
-                }.bind(this),
+                    unmask();
+                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech! [err: ' + request.error.statusText + ']');
+                },
                 success: function() {
-                    gameDetails['hideEditSpirit' + num]();
-                    this.unmask();
+                    unmask();
                     Ext.Msg.alert('Spirit scores submitted!');
-                }.bind(this),
+                },
             });
         }
         else {
             spiritScore.destroy();
-            this.unmask();
+            unmask();
             Ext.Msg.alert('Spirit scores incomplete!');
         }
     };
@@ -77,9 +84,6 @@ Ext.define('TouchMill.controller.Tournaments', {
             gameList:                       'gameList',
             gameDetails:                    'gameDetails',
 
-            editScoreButton:                'button[action=editScore]',
-            editSpirit1Button:              'button[action=editSpirit1]',
-            editSpirit2Button:              'button[action=editSpirit2]',
             submitScoreButton:              'button[action=submitScore]',
             submitSpiritTeam1Button:        'button[action=submitSpirit1]',
             submitSpiritTeam2Button:        'button[action=submitSpirit2]',
@@ -90,19 +94,11 @@ Ext.define('TouchMill.controller.Tournaments', {
             teamList:                       { itemtap: 'onSelectTeam', },
             gameList:                       { itemtap: 'onSelectGame', },
 
-            editScoreButton:                { tap: 'onTapEditScore' },
-            editSpirit1Button:              { tap: 'onTapEditSpirit1' },
-            editSpirit2Button:              { tap: 'onTapEditSpirit2' },
             submitScoreButton:              { tap: 'onTapSubmitScore' },
             submitSpiritTeam1Button:        { tap: 'onTapSubmitSpirit1' },
             submitSpiritTeam2Button:        { tap: 'onTapSubmitSpirit2' },
         },
     },
-
-    // ------------------------------------------------------------------------
-
-    mask: function() { this.getTournamentNavigator().setMasked({ xtype: 'loadmask', message: 'Loading...' }); },
-    unmask: function() { this.getTournamentNavigator().unmask(); },
 
     // ------------------------------------------------------------------------
 
@@ -117,18 +113,18 @@ Ext.define('TouchMill.controller.Tournaments', {
         var teamsList = Ext.create('TouchMill.view.TeamList');
         teamsList.getStore().clearFilter();
         teamsList.getStore().filterBy(function(r) { return teamIds[r.get('id')]; });
-        teamsList.setTitle(tourney.get('name').split(' ')[3] + ' Teams');
+        teamsList.setTitle(tourney.get('name').split(': ')[1] + ' Teams');
         this.getTournamentNavigator().push(teamsList);
     },
 
     onSelectTeam: function(list, idx, item, team, evt) {
-        this.mask();
+        mask();
         var teamId = team.get('id');
         var gameList = Ext.create('TouchMill.view.game.List');
         gameList.getStore().loadByTeamId(teamId, {
             scope: this,
             callback: function() {
-                this.unmask();
+                unmask();
                 gameList.setTitle(team.get('short_name'));
                 this.getTournamentNavigator().push(gameList);
             },
@@ -136,13 +132,13 @@ Ext.define('TouchMill.controller.Tournaments', {
     },
 
     onSelectGame: function(list, idx, item, game, evt) {
-        this.mask();
+        mask();
         var loaded = 0;
         var maybePushGameDetails = function() {
             if (++loaded == 2) {
                 game.stitchAssociations(this.getTeamList().selected.get(0).get('id'));
                 var gameDetails = Ext.create('TouchMill.view.game.Details', { record: game });
-                this.unmask();
+                unmask();
                 this.getTournamentNavigator().push(gameDetails);
             }
         }.bind(this);
@@ -157,7 +153,7 @@ Ext.define('TouchMill.controller.Tournaments', {
             },
         });
         game.spiritScores().load({
-            params: { game_id: game.get('id'), limit: 1, },
+            params: { game_ids: [game.get('id')], limit: 1, },
             scope: this,
             callback: function(spiritScores) {
                 console.log('LOADED spiritScores from ' + game.get('id'));
@@ -167,40 +163,33 @@ Ext.define('TouchMill.controller.Tournaments', {
         });
     },
 
-    onTapEditScore: function() {
-        if (Config.sessionIsLoggedIn()) {
-            this.getGameDetails().showEditScore();
-        }
-        else {
-            Ext.Msg.alert('Must login to add Game Score!')
-        }
-    },
-
     onTapSubmitScore: function() {
         var gameDetails = this.getGameDetails();
         var vals = gameDetails.getGameScoreValues();
         var submit = function() {
-            this.mask();
+            mask();
             var gameScore = Ext.create('TouchMill.model.GameScore', vals)
             Config.addAuthorizationHeaderToProxy(gameScore.getProxy());
             gameScore.save({
-                failure: function(gs, operation) {
+                failure: function(error, request) {
                     // can I inspect the operation and log the failure?  email it?
                     // post it?
                     console.log('GameScore save failed!');
-                    this.unmask();
-                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech Nerd and ask for help!');
+                    unmask();
+                    Ext.Msg.alert('Submit FAILED', 'Find a Windmill Tech! [err: ' + request.error.statusText + ']');
                 }.bind(this),
                 success: function() {
                     var game = gameDetails.getRecord();
                     game.set('game_score_team_1', vals.team_1_score);
                     game.set('game_score_team_2', vals.team_2_score);
+                    game.set('team_1_score', vals.team_1_score);
+                    game.set('team_2_score', vals.team_2_score);
                     game.set('game_score_is_final', vals.is_final);
-                    this.unmask();
-                    gameDetails.showDisplayScore();
+                    unmask();
                 }.bind(this),
             });
         }.bind(this);
+
         if (vals.is_final) {
             Ext.Msg.confirm('Is this REALLY final?',
                 vals.team_1_score + ' - ' + vals.team_2_score,
@@ -214,24 +203,6 @@ Ext.define('TouchMill.controller.Tournaments', {
 
     onTapSubmitSpirit1: makeOnTapSubmitSpirit(1),
     onTapSubmitSpirit2: makeOnTapSubmitSpirit(2),
-
-    onTapEditSpirit1: function() {
-        if (Config.sessionIsLoggedIn()) {
-            this.getGameDetails().showEditSpirit1();
-        }
-        else {
-            Ext.Msg.alert('Must login to add Spirit Score!')
-        }
-    },
-
-    onTapEditSpirit2: function() {
-        if (Config.sessionIsLoggedIn()) {
-            this.getGameDetails().showEditSpirit2();
-        }
-        else {
-            Ext.Msg.alert('Must login to add Spirit Score!')
-        }
-    },
 
 });
 

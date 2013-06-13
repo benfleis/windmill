@@ -7,7 +7,7 @@ Ext.define('TouchMill.store.Teams', {
         proxy: {
             type: 'configurableRest',
             url: 'teams/',
-            //useStaticUrls: true,
+            useStaticUrls: true,
             extraParams: { order_by: '[name]' },
             reader: { type: 'json', rootProperty: 'objects', },
         },

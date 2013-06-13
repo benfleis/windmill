@@ -126,7 +126,7 @@ Ext.define('TouchMill.util.Config', {
     },
 
     test: {
-        useStaticUrls:      false,
+        useStaticUrls:      true,
 
         appUrl:             'http://m.windmillwindup.com/test.html',
         apiUrlBase:         'https://api.leaguevine.com/v1/',

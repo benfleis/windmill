@@ -5,7 +5,7 @@ Ext.define('TouchMill.view.standing.RoundList', {
     config: {
         title: 'Swiss Rounds',
         store: 'SwissRounds',
-        itemTpl: 'Round {round_number} : {time_last_updated:date("l H:i")}',
+        itemTpl: 'Round {round_number}',
     },
 });
 

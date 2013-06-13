@@ -11,8 +11,12 @@ Ext.define('TouchMill.store.Games', {
 
     bindAssociatedStaticData: function(recs) {
         console.log('setTeams()');
+        var toRemove = [];
         recs.each(function(game) {
-            // works, but not in templates???
+            if (game.get('team_1_id' === null) || game.get('team_2_id' === null)) {
+                toRemove.push(game);
+                return;
+            }
             game.setTeam1(Ext.getStore('Teams').findRecord('id', game.get('team_1_id')))
             game.setTeam2(Ext.getStore('Teams').findRecord('id', game.get('team_2_id')))
             game.set('team_1_name', game.team1().get('name'));
@@ -22,6 +26,7 @@ Ext.define('TouchMill.store.Games', {
             // model.Game.stitchAssociations() does the rest after the
             // dynamically loaded data is available.
         });
+        this.remove(toRemove);      // kills games with unspecified teams
     },
 
     loadByTeamId: function(team_id, opts) {

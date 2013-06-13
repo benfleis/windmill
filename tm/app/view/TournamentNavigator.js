@@ -12,7 +12,7 @@ Ext.define('TouchMill.view.TournamentNavigator', {
     config: {
         id: 'tournamentNavigator',
         iconCls: 'team',     // make sth else if not logged in?
-        title: 'Games',
+        title: 'Scores',
         items: [ { xtype: 'tournamentList', owner: 'tournamentNavigator' }, ],
     },
 });

@@ -3,7 +3,7 @@ Ext.define('TouchMill.view.game.List', {
     xtype: 'gameList',
 
     config: {
-        title: 'Games',
+        title: 'Scores',
         store: 'Games',
         itemTpl: [
             '<tpl if="team_perspective_id === team_2_id">',

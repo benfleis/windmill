@@ -2,23 +2,17 @@
 
 function spiritFormItems(teamFieldNum, teamName) {
     // only non hidden starter button, to expand the rest
-    var items = [
-        {
-            xtype: 'button', id: 'gameSpirit' + teamFieldNum + 'Update', ui: 'action',
-            text: '<em>Rate</em> ' + teamName + ' <em>for Spirit</em>',
-            action: 'editSpirit' + teamFieldNum,
-        }
-    ];
+    var items = [];
 
     // all the rule variants
     var i = 0;
     var id = function() { return 'gameSpirit' + teamFieldNum + 'Field' + i++; };
     var basis = [
-        { id: id(), hidden: true, label: 'Rules & Use',         name: 'rules_score_team_' + teamFieldNum },
-        { id: id(), hidden: true, label: 'Fouls & Contact',     name: 'fouls_score_team_' + teamFieldNum },
-        { id: id(), hidden: true, label: 'Fair-Mindedness',     name: 'fairness_score_team_' + teamFieldNum },
-        { id: id(), hidden: true, label: 'Attitude & Control',  name: 'attitude_score_team_' + teamFieldNum },
-        { id: id(), hidden: true, label: 'Opponent Spirit',     name: 'compare_score_team_' + teamFieldNum },
+        { id: id(), label: 'Rules & Use',         name: 'rules_score_team_' + teamFieldNum },
+        { id: id(), label: 'Fouls & Contact',     name: 'fouls_score_team_' + teamFieldNum },
+        { id: id(), label: 'Fair-Mindedness',     name: 'fairness_score_team_' + teamFieldNum },
+        { id: id(), label: 'Attitude & Control',  name: 'attitude_score_team_' + teamFieldNum },
+        { id: id(), label: 'Opponent Spirit',     name: 'compare_score_team_' + teamFieldNum },
     ];
     // and each has 6 options
     var opts = [
@@ -38,13 +32,8 @@ function spiritFormItems(teamFieldNum, teamName) {
     // then add the submit button and return
     return items.concat([
         {
-            xtype: 'button', id: id(), hidden: true,
-            text: 'Cancel', ui: 'decline',
-            handler: function(btn) { Ext.getCmp('gameDetails')['hideEditSpirit' + teamFieldNum](); },
-        },
-        {
-            xtype: 'button', id: id(), hidden: true,
-            text: 'Submit Spirit', ui: 'confirm',
+            xtype: 'button', id: id(),
+            text: 'Submit Spirit Scores', ui: 'confirm',
             action: 'submitSpirit' + teamFieldNum,
         },
     ]);
@@ -63,7 +52,6 @@ Ext.define('TouchMill.view.game.Details', {
     // REQUIRES that Game.stitchAssociations() has already run.
     initialize: function() {
         this.setupForm();
-        this.showDisplayScore();
     },
 
     config: {
@@ -92,24 +80,6 @@ Ext.define('TouchMill.view.game.Details', {
                         id: 'gameScoreIsFinal',
                         label: 'Final Score?',
                         name: 'game_score_is_final',
-                    },
-                    {
-                        xtype: 'button',
-                        id: 'gameScoreEditButton',
-                        text: 'Edit Game Scores',
-                        ui: 'confirm',
-                        action: 'editScore',
-                    },
-                    {
-                        xtype: 'button',
-                        id: 'gameScoreCancelButton',
-                        text: 'Cancel',
-                        ui: 'decline',
-                        handler: function(btn) {
-                            var gameDetails = Ext.getCmp('gameDetails');
-                            gameDetails.resetForm();
-                            gameDetails.showDisplayScore();
-                        },
                     },
                     {
                         xtype: 'button',
@@ -149,6 +119,13 @@ Ext.define('TouchMill.view.game.Details', {
         // set name labels in score bits
         Ext.getCmp('gameScoreTeam1').setLabel(game.get('team_1_name'));
         Ext.getCmp('gameScoreTeam2').setLabel(game.get('team_2_name'));
+        if (isNaN(parseInt(Ext.getCmp('gameScoreTeam1').getValue())) &&
+            isNaN(parseInt(Ext.getCmp('gameScoreTeam2').getValue()))) {
+            Ext.getCmp('gameScoreTeam1').setValue(0);
+            Ext.getCmp('gameScoreTeam2').setValue(0);
+            Ext.getCmp('gameScoreIsFinal').setValue(true);
+            Ext.getCmp('gameScoreIsFinal').setChecked(true);
+        }
 
         // setup spirit score labels; if team_perspective_id is set on 'this',
         // then only display the ability to submit a score for the other team.
@@ -172,18 +149,6 @@ Ext.define('TouchMill.view.game.Details', {
 
     // ------------------------------------------------------------------------
 
-    showDisplayScore: function() {
-        disableIds('gameScoreTeam1', 'gameScoreTeam2', 'gameScoreIsFinal');
-        showIds('gameScoreEditButton');
-        hideIds('gameScoreCancelButton', 'gameScoreSaveButton');
-    },
-
-    showEditScore: function() {
-        enableIds('gameScoreTeam1', 'gameScoreTeam2', 'gameScoreIsFinal');
-        hideIds('gameScoreEditButton');
-        showIds('gameScoreCancelButton', 'gameScoreSaveButton');
-    },
-
     getGameScoreValues: function() {
         var vals = this.getValues();
         return {
@@ -196,50 +161,18 @@ Ext.define('TouchMill.view.game.Details', {
 
     // ------------------------------------------------------------------------
 
-    hideEditSpirit1: function() {
-        console.log('showDisplaySpirit1');
-        showIds('gameSpirit1Update');
-        hideIds('gameSpirit1Field0', 'gameSpirit1Field1', 'gameSpirit1Field2',
-            'gameSpirit1Field3', 'gameSpirit1Field4', 'gameSpirit1Field5',
-            'gameSpirit1Field6');
-    },
-
-    showEditSpirit1: function() {
-        console.log('showEditSpirit1');
-        hideIds('gameSpirit1Update');
-        showIds('gameSpirit1Field0', 'gameSpirit1Field1', 'gameSpirit1Field2',
-            'gameSpirit1Field3', 'gameSpirit1Field4', 'gameSpirit1Field5',
-            'gameSpirit1Field6');
-    },
-
     getGameSpirit1Values: function() {
         var vals = this.getValues();
         return {
             game_id:                this.getRecord().get('id'),
             team_1_score:           null,
-            team_1_rules_score:     vals.rules_score_team_1,
-            team_1_fouls_score:     vals.fouls_score_team_1,
-            team_1_fairness_score:  vals.fairness_score_team_1,
-            team_1_attitude_score:  vals.attitude_score_team_1,
-            team_1_compare_score:   vals.compare_score_team_1,
+            team_1_rules_score:     parseInt(vals.rules_score_team_1),
+            team_1_fouls_score:     parseInt(vals.fouls_score_team_1),
+            team_1_fairness_score:  parseInt(vals.fairness_score_team_1),
+            team_1_attitude_score:  parseInt(vals.attitude_score_team_1),
+            team_1_compare_score:   parseInt(vals.compare_score_team_1),
             team_1_comment:         vals.comment_team_1,
         };
-    },
-
-    hideEditSpirit2: function() {
-        console.log('showDisplaySpirit2');
-        showIds('gameSpirit2Update');
-        hideIds('gameSpirit2Field0', 'gameSpirit2Field1', 'gameSpirit2Field2',
-            'gameSpirit2Field3', 'gameSpirit2Field4', 'gameSpirit2Field5',
-            'gameSpirit2Field6');
-    },
-
-    showEditSpirit2: function() {
-        console.log('showEditSpirit2');
-        hideIds('gameSpirit2Update');
-        showIds('gameSpirit2Field0', 'gameSpirit2Field1', 'gameSpirit2Field2',
-            'gameSpirit2Field3', 'gameSpirit2Field4', 'gameSpirit2Field5',
-            'gameSpirit2Field6');
     },
 
     getGameSpirit2Values: function() {
@@ -247,11 +180,11 @@ Ext.define('TouchMill.view.game.Details', {
         return {
             game_id:                this.getRecord().get('id'),
             team_2_score:           null,
-            team_2_rules_score:     vals.rules_score_team_2,
-            team_2_fouls_score:     vals.fouls_score_team_2,
-            team_2_fairness_score:  vals.fairness_score_team_2,
-            team_2_attitude_score:  vals.attitude_score_team_2,
-            team_2_compare_score:   vals.compare_score_team_2,
+            team_2_rules_score:     parseInt(vals.rules_score_team_2),
+            team_2_fouls_score:     parseInt(vals.fouls_score_team_2),
+            team_2_fairness_score:  parseInt(vals.fairness_score_team_2),
+            team_2_attitude_score:  parseInt(vals.attitude_score_team_2),
+            team_2_compare_score:   parseInt(vals.compare_score_team_2),
             team_2_comment:         vals.comment_team_2,
         };
     },
