@@ -119,8 +119,13 @@ Ext.define('TouchMill.view.game.Details', {
         // set name labels in score bits
         Ext.getCmp('gameScoreTeam1').setLabel(game.get('team_1_name'));
         Ext.getCmp('gameScoreTeam2').setLabel(game.get('team_2_name'));
-        Ext.getCmp('gameScoreIsFinal').setValue(true);
-        Ext.getCmp('gameScoreIsFinal').setChecked(true);
+        if (isNaN(parseInt(Ext.getCmp('gameScoreTeam1').getValue())) &&
+            isNaN(parseInt(Ext.getCmp('gameScoreTeam2').getValue()))) {
+            Ext.getCmp('gameScoreTeam1').setValue(0);
+            Ext.getCmp('gameScoreTeam2').setValue(0);
+            Ext.getCmp('gameScoreIsFinal').setValue(true);
+            Ext.getCmp('gameScoreIsFinal').setChecked(true);
+        }
 
         // setup spirit score labels; if team_perspective_id is set on 'this',
         // then only display the ability to submit a score for the other team.
